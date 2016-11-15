@@ -13,8 +13,7 @@ namespace QL3Lop2.Report
         {
             InitializeComponent();
             xrlFrom.Text = dateNgayBD;
-            xrlTo.Text = dateNgaKT;
-            
+            xrlTo.Text = dateNgaKT;            
         }
 
     }
