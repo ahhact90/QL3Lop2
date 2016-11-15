@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Mau21" targetNamespace="http://tempuri.org/DS_Mau21.xsd" xmlns:mstns="http://tempuri.org/DS_Mau21.xsd" xmlns="http://tempuri.org/DS_Mau21.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HMISConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HMISConnectionString (Settings)" PropertyReference="ApplicationSettings.QL3Lop2.Properties.Settings.GlobalReference.Default.HMISConnectionString" Provider="Npgsql" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableTableAdapter" GeneratorDataComponentClassName="DataTableTableAdapter" Name="DataTable" UserDataComponentName="DataTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HMISConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM "public"."his_vw_insurance_service_detail"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="service_name" DataSetColumn="service_name" />
+              <Mapping SourceColumn="service_origin" DataSetColumn="service_origin" />
+              <Mapping SourceColumn="service_ord" DataSetColumn="service_ord" />
+              <Mapping SourceColumn="service_code" DataSetColumn="service_code" />
+              <Mapping SourceColumn="content_name" DataSetColumn="content_name" />
+              <Mapping SourceColumn="unit_name" DataSetColumn="unit_name" />
+              <Mapping SourceColumn="registry_number" DataSetColumn="registry_number" />
+              <Mapping SourceColumn="quantity_inhosp" DataSetColumn="quantity_inhosp" />
+              <Mapping SourceColumn="quantity_outhosp" DataSetColumn="quantity_outhosp" />
+              <Mapping SourceColumn="price_import" DataSetColumn="price_import" />
+              <Mapping SourceColumn="price_export" DataSetColumn="price_export" />
+              <Mapping SourceColumn="money" DataSetColumn="money" />
+              <Mapping SourceColumn="used_type" DataSetColumn="used_type" />
+              <Mapping SourceColumn="group_id" DataSetColumn="group_id" />
+              <Mapping SourceColumn="group_name" DataSetColumn="group_name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Mau21" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Mau21" msprop:Generator_UserDSName="DS_Mau21">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable" msprop:Generator_TableClassName="DataTableDataTable" msprop:Generator_TableVarName="tableDataTable" msprop:Generator_TablePropName="DataTable" msprop:Generator_RowDeletingName="DataTableRowDeleting" msprop:Generator_RowChangingName="DataTableRowChanging" msprop:Generator_RowEvHandlerName="DataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableRowDeleted" msprop:Generator_UserTableName="DataTable" msprop:Generator_RowChangedName="DataTableRowChanged" msprop:Generator_RowEvArgName="DataTableRowChangeEvent" msprop:Generator_RowClassName="DataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="service_name" msprop:Generator_ColumnVarNameInTable="columnservice_name" msprop:Generator_ColumnPropNameInRow="service_name" msprop:Generator_ColumnPropNameInTable="service_nameColumn" msprop:Generator_UserColumnName="service_name" type="xs:string" minOccurs="0" />
+              <xs:element name="service_origin" msprop:Generator_ColumnVarNameInTable="columnservice_origin" msprop:Generator_ColumnPropNameInRow="service_origin" msprop:Generator_ColumnPropNameInTable="service_originColumn" msprop:Generator_UserColumnName="service_origin" type="xs:string" minOccurs="0" />
+              <xs:element name="service_ord" msprop:Generator_ColumnVarNameInTable="columnservice_ord" msprop:Generator_ColumnPropNameInRow="service_ord" msprop:Generator_ColumnPropNameInTable="service_ordColumn" msprop:Generator_UserColumnName="service_ord" type="xs:string" minOccurs="0" />
+              <xs:element name="service_code" msprop:Generator_ColumnVarNameInTable="columnservice_code" msprop:Generator_ColumnPropNameInRow="service_code" msprop:Generator_ColumnPropNameInTable="service_codeColumn" msprop:Generator_UserColumnName="service_code" type="xs:string" minOccurs="0" />
+              <xs:element name="content_name" msprop:Generator_ColumnVarNameInTable="columncontent_name" msprop:Generator_ColumnPropNameInRow="content_name" msprop:Generator_ColumnPropNameInTable="content_nameColumn" msprop:Generator_UserColumnName="content_name" type="xs:string" minOccurs="0" />
+              <xs:element name="unit_name" msprop:Generator_ColumnVarNameInTable="columnunit_name" msprop:Generator_ColumnPropNameInRow="unit_name" msprop:Generator_ColumnPropNameInTable="unit_nameColumn" msprop:Generator_UserColumnName="unit_name" type="xs:string" minOccurs="0" />
+              <xs:element name="registry_number" msprop:Generator_ColumnVarNameInTable="columnregistry_number" msprop:Generator_ColumnPropNameInRow="registry_number" msprop:Generator_ColumnPropNameInTable="registry_numberColumn" msprop:Generator_UserColumnName="registry_number" type="xs:string" minOccurs="0" />
+              <xs:element name="quantity_inhosp" msprop:Generator_ColumnVarNameInTable="columnquantity_inhosp" msprop:Generator_ColumnPropNameInRow="quantity_inhosp" msprop:Generator_ColumnPropNameInTable="quantity_inhospColumn" msprop:Generator_UserColumnName="quantity_inhosp" type="xs:decimal" minOccurs="0" />
+              <xs:element name="quantity_outhosp" msprop:Generator_ColumnVarNameInTable="columnquantity_outhosp" msprop:Generator_ColumnPropNameInRow="quantity_outhosp" msprop:Generator_ColumnPropNameInTable="quantity_outhospColumn" msprop:Generator_UserColumnName="quantity_outhosp" type="xs:decimal" minOccurs="0" />
+              <xs:element name="price_import" msprop:Generator_ColumnVarNameInTable="columnprice_import" msprop:Generator_ColumnPropNameInRow="price_import" msprop:Generator_ColumnPropNameInTable="price_importColumn" msprop:Generator_UserColumnName="price_import" type="xs:decimal" minOccurs="0" />
+              <xs:element name="price_export" msprop:Generator_ColumnVarNameInTable="columnprice_export" msprop:Generator_ColumnPropNameInRow="price_export" msprop:Generator_ColumnPropNameInTable="price_exportColumn" msprop:Generator_UserColumnName="price_export" type="xs:decimal" minOccurs="0" />
+              <xs:element name="money" msprop:Generator_ColumnVarNameInTable="columnmoney" msprop:Generator_ColumnPropNameInRow="money" msprop:Generator_ColumnPropNameInTable="moneyColumn" msprop:Generator_UserColumnName="money" type="xs:decimal" minOccurs="0" />
+              <xs:element name="used_type" msprop:Generator_ColumnVarNameInTable="columnused_type" msprop:Generator_ColumnPropNameInRow="used_type" msprop:Generator_ColumnPropNameInTable="used_typeColumn" msprop:Generator_UserColumnName="used_type" type="xs:string" minOccurs="0" />
+              <xs:element name="group_id" msprop:Generator_ColumnVarNameInTable="columngroup_id" msprop:Generator_ColumnPropNameInRow="group_id" msprop:Generator_ColumnPropNameInTable="group_idColumn" msprop:Generator_UserColumnName="group_id" type="xs:string" minOccurs="0" />
+              <xs:element name="group_name" msprop:Generator_ColumnVarNameInTable="columngroup_name" msprop:Generator_ColumnPropNameInRow="group_name" msprop:Generator_ColumnPropNameInTable="group_nameColumn" msprop:Generator_UserColumnName="group_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
