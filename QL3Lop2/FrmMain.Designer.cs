@@ -81,10 +81,10 @@
             this.dte_tungay.Name = "dte_tungay";
             this.dte_tungay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dte_tungay.Properties.DisplayFormat.FormatString = "dd-MM-yyyy HH:mm:ss tt";
+            this.dte_tungay.Properties.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.dte_tungay.Properties.EditFormat.FormatString = "dd-MM-yyyy HH:mm:ss tt";
             this.dte_tungay.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
-            this.dte_tungay.Properties.Mask.EditMask = "dd-MM-yyyy HH:mm:ss tt";
+            this.dte_tungay.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm:ss";
             this.dte_tungay.Properties.Mask.ShowPlaceHolders = false;
             this.dte_tungay.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dte_tungay.Size = new System.Drawing.Size(155, 20);
@@ -127,10 +127,10 @@
             this.dte_denngay.Name = "dte_denngay";
             this.dte_denngay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dte_denngay.Properties.DisplayFormat.FormatString = "dd-MM-yyyy HH:mm:ss tt";
+            this.dte_denngay.Properties.DisplayFormat.FormatString = "dd/MM/yyyy HH:mm:ss";
             this.dte_denngay.Properties.EditFormat.FormatString = "yyyy-MM-dd HH:mm:ss tt";
             this.dte_denngay.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
-            this.dte_denngay.Properties.Mask.EditMask = "dd-MM-yyyy HH:mm:ss tt";
+            this.dte_denngay.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm:ss";
             this.dte_denngay.Properties.Mask.ShowPlaceHolders = false;
             this.dte_denngay.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dte_denngay.Size = new System.Drawing.Size(158, 20);
