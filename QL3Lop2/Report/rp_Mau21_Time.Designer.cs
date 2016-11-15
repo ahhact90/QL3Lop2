@@ -99,6 +99,7 @@
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Mau211)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -232,6 +233,7 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel13,
             this.xrLabel8,
             this.xrLabel7,
             this.xrlTo,
@@ -631,7 +633,7 @@
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(496.6108F, 50F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(42.67517F, 23F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(42.67505F, 23F);
             this.xrLabel5.StylePriority.UseFont = false;
             this.xrLabel5.Text = "Ngày";
             // 
@@ -648,10 +650,10 @@
             // xrLabel9
             // 
             this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(646.7748F, 50F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(626.9832F, 50F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(38.60873F, 23F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(33.40045F, 23F);
             this.xrLabel9.StylePriority.UseFont = false;
             this.xrLabel9.Text = "Năm";
             // 
@@ -663,7 +665,7 @@
             this.xrPageInfo3.Name = "xrPageInfo3";
             this.xrPageInfo3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrPageInfo3.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrPageInfo3.SizeF = new System.Drawing.SizeF(26.86093F, 23F);
+            this.xrPageInfo3.SizeF = new System.Drawing.SizeF(26.8609F, 23F);
             this.xrPageInfo3.StylePriority.UseFont = false;
             // 
             // xrPageInfo4
@@ -674,14 +676,14 @@
             this.xrPageInfo4.Name = "xrPageInfo4";
             this.xrPageInfo4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrPageInfo4.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrPageInfo4.SizeF = new System.Drawing.SizeF(38.54169F, 23F);
+            this.xrPageInfo4.SizeF = new System.Drawing.SizeF(18.75006F, 23F);
             this.xrPageInfo4.StylePriority.UseFont = false;
             // 
             // xrPageInfo5
             // 
             this.xrPageInfo5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrPageInfo5.Format = "{0:yyyy}";
-            this.xrPageInfo5.LocationFloat = new DevExpress.Utils.PointFloat(685.3835F, 50F);
+            this.xrPageInfo5.LocationFloat = new DevExpress.Utils.PointFloat(660.3836F, 50F);
             this.xrPageInfo5.Name = "xrPageInfo5";
             this.xrPageInfo5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrPageInfo5.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
@@ -717,6 +719,16 @@
             this.xrLabel12.SizeF = new System.Drawing.SizeF(130.2083F, 23F);
             this.xrLabel12.StylePriority.UseFont = false;
             this.xrLabel12.Text = "Người Lập Bảng";
+            // 
+            // xrLabel13
+            // 
+            this.xrLabel13.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(258.3333F, 5.208333F);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(64.58331F, 21.875F);
+            this.xrLabel13.StylePriority.UseForeColor = false;
+            this.xrLabel13.Text = "BQP";
             // 
             // rp_Mau21_Time
             // 
@@ -817,5 +829,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel13;
     }
 }
