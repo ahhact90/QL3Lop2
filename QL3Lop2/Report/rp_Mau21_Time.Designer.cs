@@ -662,6 +662,7 @@
             this.xrPageInfo3.LocationFloat = new DevExpress.Utils.PointFloat(539.2859F, 50F);
             this.xrPageInfo3.Name = "xrPageInfo3";
             this.xrPageInfo3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrPageInfo3.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
             this.xrPageInfo3.SizeF = new System.Drawing.SizeF(26.86093F, 23F);
             this.xrPageInfo3.StylePriority.UseFont = false;
             // 
@@ -672,6 +673,7 @@
             this.xrPageInfo4.LocationFloat = new DevExpress.Utils.PointFloat(608.2331F, 50F);
             this.xrPageInfo4.Name = "xrPageInfo4";
             this.xrPageInfo4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrPageInfo4.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
             this.xrPageInfo4.SizeF = new System.Drawing.SizeF(38.54169F, 23F);
             this.xrPageInfo4.StylePriority.UseFont = false;
             // 
@@ -682,6 +684,7 @@
             this.xrPageInfo5.LocationFloat = new DevExpress.Utils.PointFloat(685.3835F, 50F);
             this.xrPageInfo5.Name = "xrPageInfo5";
             this.xrPageInfo5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrPageInfo5.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
             this.xrPageInfo5.SizeF = new System.Drawing.SizeF(54.16663F, 23F);
             this.xrPageInfo5.StylePriority.UseFont = false;
             // 
@@ -711,7 +714,7 @@
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(49.43752F, 83.33334F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(130.2083F, 23F);
             this.xrLabel12.StylePriority.UseFont = false;
             this.xrLabel12.Text = "Người Lập Bảng";
             // 
