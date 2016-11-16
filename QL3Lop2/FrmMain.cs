@@ -23,7 +23,10 @@ namespace QL3Lop2
 
         public FrmMain()
         {
-            InitializeComponent();
+            InitializeComponent();            
+            dte_tungay.Time = DateTime.Now;
+            dte_denngay.Time = DateTime.Today.AddDays(+1).Date;
+
         }
 
         private void btConnect_Click(object sender, EventArgs e)
