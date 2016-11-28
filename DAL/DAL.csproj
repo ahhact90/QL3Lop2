@@ -65,6 +65,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="danh sach tiep don benh an.sql" />
     <Content Include="Mono.Security.dll" />
     <Content Include="Npgsql.dll" />
   </ItemGroup>

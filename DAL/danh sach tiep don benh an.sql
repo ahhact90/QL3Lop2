@@ -1,9 +1,9 @@
 ﻿-- Tiếp đón bệnh nhân
-select hm_receive_patient(';;;;;;0;Nguyễn;Thành;Công;1990-1-1;1990-1-1;26;1;1;17;9210318159999;9;;501;333;0;317;;;;O;-1;1;0;31180;;0;;0;;;0')
-select hm_receive_patient(';;;;;;0;Nguyễn;Phú Gia Đạt;Thành;1990-1-1;1990-1-1;26;1;1;17;9210318159999;9;;501;333;0;317;;;;O;-1;1;0;31180;;0;;0;;;0')
+select hm_receive_patient(';;;;;;0;Nguyễn;Thành;Công;1990-1-1;1990-1-1;26;1;1;17;9210318159999;9;;501;333;0;317;;;;O;-1;1;0;31180;;0;;0;;;0');
+select hm_receive_patient(';;;;;;0;Nguyễn;Phú Gia Đạt;Thành;1990-1-1;1990-1-1;26;1;1;17;9210318159999;9;;501;333;0;317;;;;O;-1;1;0;31180;;0;;0;;;0');
 
 -- Danh sách bệnh nhân
-SELECT * FROM hm_exam_list_view
+SELECT * FROM hm_exam_list_view;
 
 -- Kham Benh click vao chi tiet tung benh nhan
 SELECT *, his_general_full_address(homenumber, address, precinct_name) AS full_address, UPPER(full_name) AS full_name_upper, 0 AS is_card, 
@@ -12,13 +12,13 @@ CASE WHEN medical_objects = 1 THEN CASE WHEN insurance_discount <> 0 THEN 'BH:' 
 CASE WHEN medical_objects = 3 THEN 'Chính Sách' ELSE 'Thu Phí ' || (100 - object_remission) || '%' END END || 
 CASE WHEN object_remission <> 0 THEN CASE WHEN insurance_discount = 0 THEN 'Miễn phí:' || object_remission || '%' ELSE '+' || 'Miễn :' || object_remission || '%' END ELSE '' END AS medical_object, 
 CASE WHEN suggestion_policy = 9 THEN finish_plan_time::date + treatment_day ELSE CASE WHEN treatment_id <> 0 THEN finish_plan_time ELSE close_time END END AS date_signal 
-FROM his_get_medical_info('16157147|0|0')
+FROM his_get_medical_info('16157147|0|0');
 
 --- Lay thong tin nhap thuoc
 
  SELECT code FROM hms_drugselection 
  WHERE zone = 'stock' AND note IN ('NT','BL') AND othername = '1' 
- AND code IN (140,141,142,143,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,598,599) LIMIT 1
+ AND code IN (140,141,142,143,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,598,599) LIMIT 1;
 
 --- Hiển thị chi tiết thông tin bệnh nhân view thuoc
  select a.id, drugname, content, unit, deliveredquantity as quantity, price, note, expireddate, stockimexid, usingdrugid, stockid , 
@@ -26,7 +26,7 @@ FROM his_get_medical_info('16157147|0|0')
  doctorid, doctorname, a.status, dosage, drug_accept, stockimexid, 0 AS chs 
  from hm_patientdrugview a 
  JOIN hm_employee b ON a.doctorid = b.id  
- where medicalrecordid = 16157145 order by a.id
+ where medicalrecordid = 16157145 order by a.id;
 
 --- them thong tin nhap thuoc do thuoc
  SELECT * FROM his_test_drug_in('67212;16157145')
@@ -109,4 +109,4 @@ SELECT id, name || '-' || content AS drugname, content, unit FROM pharma_drug_vi
 SELECT id, supplierid, name, totalvalue, supplydate, invoice, deliverer, rateinterest, percentvat, storekeeperid, receiver, mainstockid, name, status FROM pharma_list_bill WHERE status = 'O'::text AND mainstockid = 150 AND invoicetype = 0
 SELECT pharma_newMainImEx('2016-11-27;3012;gia;12345687;5;0;12345678;317;150;0')
 ELECT * FROM hm_mainimexdetailview WHERE mainimexid = 16004174
-SELECT pharma_newdrug_immainstock('16004174;9073;12600;;2018-11-27;34;1;1872;3012;12600;1000;317;45;0;458;0')
+SELECT pharma_newdrug_immainstock('16004174;9073;12600;;2018-11-27;34;1;1872;3012;12600;1000;317;45;0;458;0');
