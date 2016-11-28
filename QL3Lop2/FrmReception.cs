@@ -16,11 +16,16 @@ namespace QL3Lop2
         {
             InitializeComponent();
             dte_now.Time = DateTime.Now;
+            string[] sexs = { "Nam", "Nữ" };
+            foreach (string sex in sexs)
+            {
+                comboBoxSex.Properties.Items.Add(sex.ToString());
+            }
         }
 
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void dte_tungay_EditValueChanged(object sender, EventArgs e)
