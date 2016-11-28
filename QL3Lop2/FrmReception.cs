@@ -32,5 +32,16 @@ namespace QL3Lop2
         {
 
         }
+        public void Tachten(string s)
+        {
+            //string test="Phạm Văn Khánh"; 
+            string[] arrayStr=s.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries); //=>> chỗ này nó sẽ split ra 1 mảng 3 phần tử 
+            string firstName=arrayStr[0]; //=> Lấy họ 
+            string lastName = arrayStr[arrayStr.Length - 1]; //=> Lấy tên 
+            StringBuilder midleName=new StringBuilder(); //Lấy tên đệm 
+            for (int i = 1; i < arrayStr.Length - 1; i++) { midleName.Append(arrayStr[i] + " "); }
+
+
+        }       
     }
 }
