@@ -15,9 +15,15 @@ namespace QL3Lop2
         public FrmReception()
         {
             InitializeComponent();
+            dte_now.Time = DateTime.Now;
         }
 
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dte_tungay_EditValueChanged(object sender, EventArgs e)
         {
 
         }
