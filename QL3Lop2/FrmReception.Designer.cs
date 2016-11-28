@@ -265,6 +265,7 @@
             // 
             // textEdit10
             // 
+            this.textEdit10.Enabled = false;
             this.textEdit10.Location = new System.Drawing.Point(642, 33);
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Size = new System.Drawing.Size(99, 20);
