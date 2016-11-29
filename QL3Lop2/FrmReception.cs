@@ -95,6 +95,7 @@ namespace QL3Lop2
             if (e.KeyCode == Keys.Enter)
             {
                 dteNamsinh.Focus();
+                txtBenhNhan.Text = txtBenhNhan.Text.ToUpper().Trim();
             }
         }
 
