@@ -74,12 +74,9 @@ namespace QL3Lop2
             if (e.Control)
             {
 
-                if (e.KeyCode.Equals(Keys.S))//= Ctrl + S
+                if (e.KeyCode.Equals(Keys.F2))//= Ctrl + S
                 {
-                    string chulot = TachChuLot(txtBenhNhan.Text.ToString());
-                    txtNghe.Text = chulot;
-                    
-                    MessageBox.Show("Đã gửi tách chữ lót thành công");
+                    button1_Click(sender, e);
                 }
                 //if (e.KeyCode.Equals(Keys.F2))//= phím F2
                 //{
