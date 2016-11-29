@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBenhNhan = new DevExpress.XtraEditors.TextEdit();
             this.lblHoTen = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -37,7 +37,7 @@
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxSex = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtNghe = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
@@ -54,12 +54,13 @@
             this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.dte_now = new DevExpress.XtraEditors.TimeEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBenhNhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxSex.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNghe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
@@ -70,12 +71,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dte_now.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // textEdit1
+            // txtBenhNhan
             // 
-            this.textEdit1.Location = new System.Drawing.Point(156, 82);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(226, 20);
-            this.textEdit1.TabIndex = 0;
+            this.txtBenhNhan.Location = new System.Drawing.Point(156, 82);
+            this.txtBenhNhan.Name = "txtBenhNhan";
+            this.txtBenhNhan.Size = new System.Drawing.Size(226, 20);
+            this.txtBenhNhan.TabIndex = 0;
             // 
             // lblHoTen
             // 
@@ -151,12 +152,12 @@
             this.comboBoxSex.TabIndex = 6;
             this.comboBoxSex.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
             // 
-            // textEdit3
+            // txtNghe
             // 
-            this.textEdit3.Location = new System.Drawing.Point(520, 129);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(174, 20);
-            this.textEdit3.TabIndex = 0;
+            this.txtNghe.Location = new System.Drawing.Point(520, 129);
+            this.txtNghe.Name = "txtNghe";
+            this.txtNghe.Size = new System.Drawing.Size(174, 20);
+            this.txtNghe.TabIndex = 0;
             // 
             // labelControl5
             // 
@@ -298,11 +299,22 @@
             this.dte_now.TabIndex = 7;
             this.dte_now.EditValueChanged += new System.EventHandler(this.dte_tungay_EditValueChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(443, 260);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmReception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 376);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dte_now);
             this.Controls.Add(this.comboBoxSex);
             this.Controls.Add(this.dateEdit1);
@@ -320,7 +332,7 @@
             this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.lblHoTen);
             this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.textEdit3);
+            this.Controls.Add(this.txtNghe);
             this.Controls.Add(this.textEdit5);
             this.Controls.Add(this.textEdit4);
             this.Controls.Add(this.textEdit7);
@@ -328,15 +340,16 @@
             this.Controls.Add(this.textEdit9);
             this.Controls.Add(this.textEdit8);
             this.Controls.Add(this.textEdit6);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtBenhNhan);
             this.Name = "FrmReception";
             this.Text = "FrmReception";
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmReception_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.txtBenhNhan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxSex.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNghe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
@@ -352,7 +365,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtBenhNhan;
         private DevExpress.XtraEditors.LabelControl lblHoTen;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
@@ -361,7 +374,7 @@
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxSex;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtNghe;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit textEdit4;
         private DevExpress.XtraEditors.TextEdit textEdit5;
@@ -378,5 +391,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit10;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.TimeEdit dte_now;
+        private System.Windows.Forms.Button button1;
     }
 }
