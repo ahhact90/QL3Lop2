@@ -75,7 +75,7 @@ namespace QL3Lop2
                     //button1_Click(sender, e);
                     string chulot = TachChuLot(txtBenhNhan.Text.ToString());
                     txtBenhNhan.Text.Trim();
-                    txtNgheNghiep.Text = chulot;
+                    txtNgheNghiep.Text = chulot.Trim();
                     MessageBox.Show("Đã gửi tách chữ lót thành công");
                 }
                 
