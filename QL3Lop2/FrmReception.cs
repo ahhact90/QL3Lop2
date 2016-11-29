@@ -74,6 +74,7 @@ namespace QL3Lop2
                 {
                     //button1_Click(sender, e);
                     string chulot = TachChuLot(txtBenhNhan.Text.ToString());
+                    txtBenhNhan.Text.Trim();
                     txtNgheNghiep.Text = chulot;
                     MessageBox.Show("Đã gửi tách chữ lót thành công");
                 }
@@ -129,7 +130,8 @@ namespace QL3Lop2
             {
                 comboSex.Properties.Items.Add(sex.ToString());
             }
-                   
+            txtBenhNhan.Select();
+            txtBenhNhan.Focus();
             this.KeyPreview = true;
         }
     }
