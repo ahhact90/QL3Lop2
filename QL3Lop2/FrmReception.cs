@@ -19,8 +19,9 @@ namespace QL3Lop2
             string[] sexs = { "Nam", "Nữ" };
             foreach (string sex in sexs)
             {
-                comboBoxSex.Properties.Items.Add(sex.ToString());
+                comboSex.Properties.Items.Add(sex.ToString());
             }
+            txtBenhNhan.Focus();
         }
 
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,31 +75,56 @@ namespace QL3Lop2
             if (e.Control)
             {
 
-                if (e.KeyCode.Equals(Keys.F2))//= Ctrl + S
+                if (e.KeyCode.Equals(Keys.S))//= Ctrl + S
                 {
-                    button1_Click(sender, e);
+                    //button1_Click(sender, e);
+                    string chulot = TachChuLot(txtBenhNhan.Text.ToString());
+                    txtNgheNghiep.Text = chulot;
+
+                    MessageBox.Show("Đã gửi tách chữ lót thành công");
                 }
-                //if (e.KeyCode.Equals(Keys.F2))//= phím F2
-                //{
-                //    btnSua_Click(sender, e);
-                //}
-                //if (e.KeyCode.Equals(Keys.Delete))//= phím Delete
-                //{
-                //    btnXoa_Click(sender, e);
-                //}
-                //if (e.KeyCode.Equals(Keys.Escape))//= phím Esc
-                //{
-                //    btnThoat_Click(sender, e);
-                //}
+                
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string chulot = TachChuLot(txtBenhNhan.Text.ToString());
-            txtNghe.Text = chulot;
+            txtNgheNghiep.Text = chulot;
 
             MessageBox.Show("Đã gửi tách chữ lót thành công");
+        }
+
+        private void txtBenhNhan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dteNamsinh.Focus();
+            }
+        }
+
+        private void dteNamsinh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                comboSex.Focus();
+            }
+        }
+
+        private void comboSex_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDanToc.Focus();
+            }
+        }
+
+        private void txtDanToc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtNgheNghiep.Focus();
+            }
         }
     }
 }
