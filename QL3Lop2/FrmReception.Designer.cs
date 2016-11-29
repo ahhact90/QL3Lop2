@@ -54,7 +54,6 @@
             this.txtSoPhieu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.dte_now = new DevExpress.XtraEditors.TimeEdit();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtBenhNhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteNamsinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteNamsinh.Properties)).BeginInit();
@@ -303,22 +302,11 @@
             this.dte_now.TabIndex = 7;
             this.dte_now.EditValueChanged += new System.EventHandler(this.dte_tungay_EditValueChanged);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(443, 260);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FrmReception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 376);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dte_now);
             this.Controls.Add(this.comboSex);
             this.Controls.Add(this.dteNamsinh);
@@ -347,6 +335,7 @@
             this.Controls.Add(this.txtBenhNhan);
             this.Name = "FrmReception";
             this.Text = "FrmReception";
+            this.Load += new System.EventHandler(this.FrmReception_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmReception_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtBenhNhan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteNamsinh.Properties.CalendarTimeProperties)).EndInit();
@@ -395,6 +384,5 @@
         private DevExpress.XtraEditors.TextEdit txtSoPhieu;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.TimeEdit dte_now;
-        private System.Windows.Forms.Button button1;
     }
 }

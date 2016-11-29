@@ -15,13 +15,7 @@ namespace QL3Lop2
         public FrmReception()
         {
             InitializeComponent();
-            dte_now.Time = DateTime.Now;
-            string[] sexs = { "Nam", "Nữ" };
-            foreach (string sex in sexs)
-            {
-                comboSex.Properties.Items.Add(sex.ToString());
-            }
-            txtBenhNhan.Focus();
+            
         }
 
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
@@ -125,6 +119,19 @@ namespace QL3Lop2
             {
                 txtNgheNghiep.Focus();
             }
+        }
+
+        private void FrmReception_Load(object sender, EventArgs e)
+        {
+            dte_now.Time = DateTime.Now;
+            string[] sexs = { "Nam", "Nữ" };
+            foreach (string sex in sexs)
+            {
+                comboSex.Properties.Items.Add(sex.ToString());
+            }
+            //txtBenhNhan.Focus();
+            txtBenhNhan.Focus();
+            this.KeyPreview = true;
         }
     }
 }
