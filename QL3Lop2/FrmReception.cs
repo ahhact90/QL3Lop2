@@ -123,6 +123,7 @@ namespace QL3Lop2
             }
         }
 
+
         private void FrmReception_Load(object sender, EventArgs e)
         {
             dte_now.Time = DateTime.Now;
@@ -134,6 +135,38 @@ namespace QL3Lop2
             txtBenhNhan.Select();
             txtBenhNhan.Focus();
             this.KeyPreview = true;
+        }
+
+        private void txtNgheNghiep_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtSoNha.Focus();
+            }
+        }
+
+        private void txtSoNha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDiachi.Focus();
+            }
+        }
+
+        private void txtDiachi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtKieuKham.Focus();
+            }
+        }
+
+        private void txtKieuKham_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPhongKham.Focus();
+            }
         }
     }
 }

@@ -161,6 +161,7 @@
             this.txtNgheNghiep.Name = "txtNgheNghiep";
             this.txtNgheNghiep.Size = new System.Drawing.Size(174, 20);
             this.txtNgheNghiep.TabIndex = 0;
+            this.txtNgheNghiep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNgheNghiep_KeyDown);
             // 
             // labelControl5
             // 
@@ -177,6 +178,7 @@
             this.txtSoNha.Name = "txtSoNha";
             this.txtSoNha.Size = new System.Drawing.Size(376, 20);
             this.txtSoNha.TabIndex = 0;
+            this.txtSoNha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSoNha_KeyDown);
             // 
             // txtDiachi
             // 
@@ -184,6 +186,7 @@
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(538, 20);
             this.txtDiachi.TabIndex = 0;
+            this.txtDiachi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDiachi_KeyDown);
             // 
             // labelControl6
             // 
@@ -218,6 +221,7 @@
             this.txtKieuKham.Name = "txtKieuKham";
             this.txtKieuKham.Size = new System.Drawing.Size(226, 20);
             this.txtKieuKham.TabIndex = 0;
+            this.txtKieuKham.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtKieuKham_KeyDown);
             // 
             // txtPhongKham
             // 
