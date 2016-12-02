@@ -127,6 +127,9 @@ namespace QL3Lop2
         private void FrmReception_Load(object sender, EventArgs e)
         {
             dte_now.Time = DateTime.Now;
+            //AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            txtNgheNghiep.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtNgheNghiep.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
             string[] sexs = { "Nam", "Nữ" };
             foreach (string sex in sexs)
             {
