@@ -48,20 +48,20 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public DataSet Select_non()
-        {
-            throw new NotImplementedException();
-        }
+        //public DataSet Select_non()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public DataSet Select_non2(string n)
-        {
-            throw new NotImplementedException();
-        }
+        //public DataSet Select_non2(string n)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public DataSet Select_non3(DateTime to, DateTime from)
-        {
-            throw new NotImplementedException();
-        }
+        //public DataSet Select_non3(DateTime to, DateTime from)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public bool Update(object obj)
         {
