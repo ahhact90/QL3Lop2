@@ -153,8 +153,15 @@ namespace QL3Lop2
         {
             if (e.KeyCode == Keys.Enter)
             {
-                
+                //Application.Run(new FrmDialog());
+                FrmDialog frm = new FrmDialog();
+                //frm.MdiParent = this;
+                frm.ShowDialog(this);
                 txtSoNha.Focus();
+            }
+            else
+            {
+                //Application.Run(new FrmDialog());
             }
         }
 
@@ -195,21 +202,21 @@ namespace QL3Lop2
 
         private void txtNgheNghiep_Click(object sender, EventArgs e)
         {
-            txtNgheNghiep.MaskBox.AutoCompleteCustomSource.Clear();
-            dt = Reception.SearchTextbox();
+            //txtNgheNghiep.MaskBox.AutoCompleteCustomSource.Clear();
+            //dt = Reception.SearchTextbox();
          
-            foreach (DataRow r in dt.Rows)
-            {
-                //getting all rows in the specific field|Column
-                var rw = r.Field<string>("name");       
+            //foreach (DataRow r in dt.Rows)
+            //{
+            //    //getting all rows in the specific field|Column
+            //    var rw = r.Field<string>("name");       
 
-                //Set the properties of a textbox to make it auto suggest and append.
-                txtNgheNghiep.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                txtNgheNghiep.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                //adding all rows into the textbox
-                txtNgheNghiep.MaskBox.AutoCompleteCustomSource.Add(rw);
+            //    //Set the properties of a textbox to make it auto suggest and append.
+            //    txtNgheNghiep.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //    txtNgheNghiep.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //    //adding all rows into the textbox
+            //    txtNgheNghiep.MaskBox.AutoCompleteCustomSource.Add(rw);
 
-            } 
+            //} 
         }
     }
 }

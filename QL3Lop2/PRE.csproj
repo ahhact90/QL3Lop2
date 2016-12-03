@@ -122,6 +122,9 @@
     <Compile Include="Report\rp_Mau21.Designer.cs">
       <DependentUpon>rp_Mau21.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmDialog.resx">
+      <DependentUpon>FrmDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>

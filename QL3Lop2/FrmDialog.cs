@@ -12,9 +12,22 @@ namespace QL3Lop2
 {
     public partial class FrmDialog : Form
     {
+        #region Variable
+        DAL.ReceptionChiTietDAL ReceptionChiTiet = new DAL.ReceptionChiTietDAL();
+        DataTable dt = new DataTable();
+        DataSet ds = new DataSet();       
+
+        #endregion
         public FrmDialog()
         {
             InitializeComponent();
         }
+
+        private void FrmDialog_Load(object sender, EventArgs e)
+        {
+            dt = ReceptionChiTiet.SearchTextbox();
+            gridControlNgheNghiep.DataSource = dt;
+        }
+         
     }
 }
