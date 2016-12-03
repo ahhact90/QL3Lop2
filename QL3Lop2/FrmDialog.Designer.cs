@@ -38,13 +38,17 @@
             // 
             // gridControlNgheNghiep
             // 
-            this.gridControlNgheNghiep.Location = new System.Drawing.Point(1, 1);
+            this.gridControlNgheNghiep.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridControlNgheNghiep.Location = new System.Drawing.Point(-5, -2);
             this.gridControlNgheNghiep.MainView = this.gridView1;
             this.gridControlNgheNghiep.Name = "gridControlNgheNghiep";
-            this.gridControlNgheNghiep.Size = new System.Drawing.Size(195, 266);
+            this.gridControlNgheNghiep.Size = new System.Drawing.Size(315, 262);
             this.gridControlNgheNghiep.TabIndex = 0;
             this.gridControlNgheNghiep.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControlNgheNghiep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);
             // 
             // gridView1
             // 
@@ -53,6 +57,7 @@
             this.gridColumn1});
             this.gridView1.GridControl = this.gridControlNgheNghiep;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // Id
             // 
@@ -76,10 +81,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(194, 266);
+            this.CausesValidation = false;
+            this.ClientSize = new System.Drawing.Size(385, 272);
             this.Controls.Add(this.gridControlNgheNghiep);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(520, 129);
+            this.MaximizeBox = false;
             this.Name = "FrmDialog";
             this.Text = "FrmDialog";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlNgheNghiep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

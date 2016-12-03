@@ -156,13 +156,15 @@ namespace QL3Lop2
                 //Application.Run(new FrmDialog());
                 FrmDialog frm = new FrmDialog();
                 //frm.MdiParent = this;
+                //  this.Hide();
+
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                //frm.Left = 525;
+                //frm.Top = 330;
                 frm.ShowDialog(this);
                 txtSoNha.Focus();
             }
-            else
-            {
-                //Application.Run(new FrmDialog());
-            }
+                        
         }
 
         private void txtSoNha_KeyDown(object sender, KeyEventArgs e)

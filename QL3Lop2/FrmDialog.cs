@@ -27,7 +27,14 @@ namespace QL3Lop2
         {
             dt = ReceptionChiTiet.SearchTextbox();
             gridControlNgheNghiep.DataSource = dt;
+            
         }
-         
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }
