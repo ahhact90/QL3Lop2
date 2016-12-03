@@ -42,7 +42,7 @@ namespace QL3Lop2
              ds = _M21.Select_non();
              if (ds == null)
              {
-                 MessageBox.Show("Du lieu rong", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                 MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                  Close();
              }
              try
@@ -74,7 +74,7 @@ namespace QL3Lop2
             {
                 if (ds == null)
                 {
-                    MessageBox.Show("Du lieu rong", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Close();
                 }
 
@@ -107,14 +107,14 @@ namespace QL3Lop2
             {
                 if (ds == null)
                 {
-                    MessageBox.Show("Du lieu rong", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Close();
                 }
 
             }
             catch (Exception)
             {
-                MessageBox.Show("Loi", "Thong Bao", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);                
             }
             //string dateNgayBD = Convert.ToString(dte_tungay.Time);
             string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");

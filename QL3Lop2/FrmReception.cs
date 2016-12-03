@@ -7,15 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QL3Lop2
 {
     public partial class FrmReception : Form
     {
+
+        #region Variable
+        DAL.ReceptionDAL Reception = new DAL.ReceptionDAL();
+        DataTable dt = new DataTable();
+        DataSet ds = new DataSet();
+        SqlDataAdapter da = new SqlDataAdapter();
+
+        #endregion
+
         public FrmReception()
         {
             InitializeComponent();
             txtBenhNhan.Focus();
+            
             
         }
 
@@ -127,9 +138,7 @@ namespace QL3Lop2
         private void FrmReception_Load(object sender, EventArgs e)
         {
             dte_now.Time = DateTime.Now;
-            //AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
-            txtNgheNghiep.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txtNgheNghiep.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            
             string[] sexs = { "Nam", "Nữ" };
             foreach (string sex in sexs)
             {
@@ -144,6 +153,7 @@ namespace QL3Lop2
         {
             if (e.KeyCode == Keys.Enter)
             {
+                
                 txtSoNha.Focus();
             }
         }
@@ -170,6 +180,36 @@ namespace QL3Lop2
             {
                 txtPhongKham.Focus();
             }
+        }
+
+        private void txtNgheNghiep_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtNgheNghiep_EditValueChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void txtNgheNghiep_Click(object sender, EventArgs e)
+        {
+            txtNgheNghiep.MaskBox.AutoCompleteCustomSource.Clear();
+            dt = Reception.SearchTextbox();
+         
+            foreach (DataRow r in dt.Rows)
+            {
+                //getting all rows in the specific field|Column
+                var rw = r.Field<string>("name");       
+
+                //Set the properties of a textbox to make it auto suggest and append.
+                txtNgheNghiep.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txtNgheNghiep.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                //adding all rows into the textbox
+                txtNgheNghiep.MaskBox.AutoCompleteCustomSource.Add(rw);
+
+            } 
         }
     }
 }

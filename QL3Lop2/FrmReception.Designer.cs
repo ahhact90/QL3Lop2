@@ -161,6 +161,8 @@
             this.txtNgheNghiep.Name = "txtNgheNghiep";
             this.txtNgheNghiep.Size = new System.Drawing.Size(174, 20);
             this.txtNgheNghiep.TabIndex = 0;
+            this.txtNgheNghiep.TextChanged += new System.EventHandler(this.txtNgheNghiep_TextChanged);
+            this.txtNgheNghiep.Click += new System.EventHandler(this.txtNgheNghiep_Click);
             this.txtNgheNghiep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNgheNghiep_KeyDown);
             // 
             // labelControl5
