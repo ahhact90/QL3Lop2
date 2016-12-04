@@ -1,6 +1,6 @@
 ﻿namespace QL3Lop2
 {
-    partial class FrmDialog
+    partial class FrmNgheNghiep
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.gridControlNgheNghiep = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.name = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlNgheNghiep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Id,
-            this.gridColumn1});
+            this.name});
             this.gridView1.GridControl = this.gridControlNgheNghiep;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -72,16 +72,16 @@
             this.Id.VisibleIndex = 0;
             this.Id.Width = 32;
             // 
-            // gridColumn1
+            // name
             // 
-            this.gridColumn1.Caption = "Nghề Nghiệp";
-            this.gridColumn1.FieldName = "name";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 88;
+            this.name.Caption = "Nghề Nghiệp";
+            this.name.FieldName = "name";
+            this.name.Name = "name";
+            this.name.Visible = true;
+            this.name.VisibleIndex = 1;
+            this.name.Width = 88;
             // 
-            // FrmDialog
+            // FrmNgheNghiep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,7 +91,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(520, 129);
             this.MaximizeBox = false;
-            this.Name = "FrmDialog";
+            this.Name = "FrmNgheNghiep";
             this.Text = "FrmDialog";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmDialog_Load);
@@ -106,6 +106,6 @@
         private DevExpress.XtraGrid.GridControl gridControlNgheNghiep;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn Id;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn name;
     }
 }

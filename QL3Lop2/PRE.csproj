@@ -85,11 +85,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmDialog.cs">
+    <Compile Include="FrmNgheNghiep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDialog.Designer.cs">
-      <DependentUpon>FrmDialog.cs</DependentUpon>
+    <Compile Include="FrmNgheNghiep.Designer.cs">
+      <DependentUpon>FrmNgheNghiep.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -122,8 +122,8 @@
     <Compile Include="Report\rp_Mau21.Designer.cs">
       <DependentUpon>rp_Mau21.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmDialog.resx">
-      <DependentUpon>FrmDialog.cs</DependentUpon>
+    <EmbeddedResource Include="FrmNgheNghiep.resx">
+      <DependentUpon>FrmNgheNghiep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

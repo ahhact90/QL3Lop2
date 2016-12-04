@@ -11,7 +11,7 @@ using DevExpress.XtraGrid;
 
 namespace QL3Lop2
 {
-    public partial class FrmDialog : Form
+    public partial class FrmNgheNghiep : Form
     {
         public static string a;
         public string Nm;
@@ -26,7 +26,7 @@ namespace QL3Lop2
         DataSet ds = new DataSet();       
 
         #endregion
-        public FrmDialog()
+        public FrmNgheNghiep()
         {
             InitializeComponent();
         }

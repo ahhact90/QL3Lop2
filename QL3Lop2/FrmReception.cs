@@ -175,7 +175,7 @@ namespace QL3Lop2
                
                 txtSoNha.Focus();
                  * */
-                FrmDialog frm = new FrmDialog();
+                FrmNgheNghiep frm = new FrmNgheNghiep();
                 frm.ShowDialog();
                 txtNgheNghiep.Text = frm.Passvalue;
                 txtSoNha.Focus();
