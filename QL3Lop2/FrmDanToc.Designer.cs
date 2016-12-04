@@ -49,6 +49,15 @@
             // 
             // grdViewDanToc
             // 
+            this.grdViewDanToc.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grdViewDanToc.Appearance.EvenRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grdViewDanToc.Appearance.EvenRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.grdViewDanToc.Appearance.EvenRow.Options.UseBackColor = true;
+            this.grdViewDanToc.Appearance.EvenRow.Options.UseBorderColor = true;
+            this.grdViewDanToc.Appearance.EvenRow.Options.UseFont = true;
+            this.grdViewDanToc.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.grdViewDanToc.Appearance.OddRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.grdViewDanToc.Appearance.OddRow.Options.UseBackColor = true;
             this.grdViewDanToc.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Id,
             this.name});
@@ -56,6 +65,8 @@
             this.grdViewDanToc.Name = "grdViewDanToc";
             this.grdViewDanToc.OptionsBehavior.Editable = false;
             this.grdViewDanToc.OptionsBehavior.ReadOnly = true;
+            this.grdViewDanToc.OptionsView.EnableAppearanceEvenRow = true;
+            this.grdViewDanToc.OptionsView.EnableAppearanceOddRow = true;
             this.grdViewDanToc.OptionsView.ShowGroupPanel = false;
             this.grdViewDanToc.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.grdViewDanToc_RowClick);
             this.grdViewDanToc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdViewDanToc_KeyDown);
