@@ -340,6 +340,7 @@
             this.Controls.Add(this.txtKieuKham);
             this.Controls.Add(this.txtBenhNhan);
             this.Name = "FrmReception";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReception";
             this.Load += new System.EventHandler(this.FrmReception_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmReception_KeyDown);

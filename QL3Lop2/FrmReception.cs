@@ -214,6 +214,8 @@ namespace QL3Lop2
                 _Diachi = txtDiachi.Text.ToString();
                 FrmDiaChi frm = new FrmDiaChi();
                 frm.Diachichitiet = txtDiachi.Text;
+                frm.SetDesktopLocation(Cursor.Position.X, Cursor.Position.Y);
+
                 frm.ShowDialog();
                 txtDiachi.Text = frm.Passvalue;
                 txtKieuKham.Focus();
