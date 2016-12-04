@@ -92,6 +92,7 @@
             this.Location = new System.Drawing.Point(520, 129);
             this.MaximizeBox = false;
             this.Name = "FrmNgheNghiep";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDialog";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmDialog_Load);

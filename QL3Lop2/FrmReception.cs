@@ -20,8 +20,21 @@ namespace QL3Lop2
             {
                 return backvalue;
             }
-            set { backvalue = value; }
+            set { backvalue = value; }        
         }
+        private string diachi;
+        public string _Diachi
+        {
+            get
+            {
+                return diachi;
+            }
+            set
+            {
+                diachi = value;
+            }
+        }
+
         #region Variable
         DAL.ReceptionDAL Reception = new DAL.ReceptionDAL();
         DataTable dt = new DataTable();
@@ -198,7 +211,13 @@ namespace QL3Lop2
         {
             if (e.KeyCode == Keys.Enter)
             {
+                _Diachi = txtDiachi.Text.ToString();
+                FrmDiaChi frm = new FrmDiaChi();
+                frm.Diachichitiet = txtDiachi.Text;
+                frm.ShowDialog();
+                txtDiachi.Text = frm.Passvalue;
                 txtKieuKham.Focus();
+               
             }
         }
 
