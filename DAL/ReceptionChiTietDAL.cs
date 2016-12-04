@@ -24,7 +24,7 @@ namespace DAL
         }
         public DataTable DanToc()
         {
-            var sql = "select name,line from hms_selection  where sector = 'ethnic'";
+            var sql = "select name,line from hms_selection  where sector = 'ethnic' order by line";
             sql = string.Format(sql);
             return ExecuteQuery(sql);
         }

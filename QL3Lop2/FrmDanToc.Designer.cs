@@ -41,7 +41,7 @@
             this.gridControlDanToc.Location = new System.Drawing.Point(1, 1);
             this.gridControlDanToc.MainView = this.grdViewDanToc;
             this.gridControlDanToc.Name = "gridControlDanToc";
-            this.gridControlDanToc.Size = new System.Drawing.Size(341, 220);
+            this.gridControlDanToc.Size = new System.Drawing.Size(248, 220);
             this.gridControlDanToc.TabIndex = 0;
             this.gridControlDanToc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdViewDanToc});
@@ -54,6 +54,8 @@
             this.name});
             this.grdViewDanToc.GridControl = this.gridControlDanToc;
             this.grdViewDanToc.Name = "grdViewDanToc";
+            this.grdViewDanToc.OptionsBehavior.Editable = false;
+            this.grdViewDanToc.OptionsBehavior.ReadOnly = true;
             this.grdViewDanToc.OptionsView.ShowGroupPanel = false;
             this.grdViewDanToc.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.grdViewDanToc_RowClick);
             this.grdViewDanToc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdViewDanToc_KeyDown);
@@ -63,6 +65,8 @@
             this.Id.Caption = "ID";
             this.Id.FieldName = "line";
             this.Id.Name = "Id";
+            this.Id.OptionsColumn.FixedWidth = true;
+            this.Id.OptionsColumn.ReadOnly = true;
             this.Id.Visible = true;
             this.Id.VisibleIndex = 0;
             this.Id.Width = 50;
