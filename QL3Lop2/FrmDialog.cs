@@ -33,7 +33,7 @@ namespace QL3Lop2
 
         private void FrmDialog_Load(object sender, EventArgs e)
         {
-            dt = ReceptionChiTiet.SearchTextbox();
+            dt = ReceptionChiTiet.NgheNghiep();
             gridControlNgheNghiep.DataSource = dt;
             
         }
