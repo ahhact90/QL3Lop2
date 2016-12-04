@@ -138,6 +138,9 @@ namespace QL3Lop2
         {
             if (e.KeyCode == Keys.Enter)
             {
+                FrmDanToc frm = new FrmDanToc();
+                frm.ShowDialog();
+                txtDanToc.Text = frm.Passvalue;
                 txtNgheNghiep.Focus();
             }
         }
