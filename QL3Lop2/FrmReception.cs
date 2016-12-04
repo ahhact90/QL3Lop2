@@ -13,7 +13,15 @@ namespace QL3Lop2
 {
     public partial class FrmReception : Form
     {
-
+        private string backvalue;
+        public string BackedValu
+        {
+            get
+            {
+                return backvalue;
+            }
+            set { backvalue = value; }
+        }
         #region Variable
         DAL.ReceptionDAL Reception = new DAL.ReceptionDAL();
         DataTable dt = new DataTable();
@@ -137,6 +145,7 @@ namespace QL3Lop2
 
         private void FrmReception_Load(object sender, EventArgs e)
         {
+            //txtNgheNghiep.Text = FrmDialog.a;
             dte_now.Time = DateTime.Now;
             
             string[] sexs = { "Nam", "Nữ" };
@@ -153,15 +162,22 @@ namespace QL3Lop2
         {
             if (e.KeyCode == Keys.Enter)
             {
+                /*
                 //Application.Run(new FrmDialog());
                 FrmDialog frm = new FrmDialog();
                 //frm.MdiParent = this;
                 //  this.Hide();
-
-                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.StartPosition = FormStartPosition.CenterScreen; 
                 //frm.Left = 525;
                 //frm.Top = 330;
                 frm.ShowDialog(this);
+                txtNgheNghiep.Text = FrmDialog.a;
+               
+                txtSoNha.Focus();
+                 * */
+                FrmDialog frm = new FrmDialog();
+                frm.ShowDialog();
+                txtNgheNghiep.Text = frm.Passvalue;
                 txtSoNha.Focus();
             }
                         
