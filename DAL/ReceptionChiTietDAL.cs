@@ -39,7 +39,7 @@ namespace DAL
         /// <returns></returns>
         public DataTable DiaChi(string name)
         {
-            var sql = "select precintid,name from hms_residentview where abbreviation like N'%{0}%' ";
+            var sql = "select precintid,name from hms_residentview where lower(abbreviation) like lower('%{0}%')";
             sql = string.Format(sql,name);
             return ExecuteQuery(sql);
         }
