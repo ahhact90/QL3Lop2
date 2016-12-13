@@ -1,0 +1,500 @@
+2016-12-13 21:29:10 ICT LOG:  database system was shut down at 2016-12-13 21:28:43 ICT
+2016-12-13 21:29:10 ICT FATAL:  the database system is starting up
+2016-12-13 21:29:10 ICT LOG:  MultiXact member wraparound protections are now enabled
+2016-12-13 21:29:10 ICT LOG:  database system is ready to accept connections
+2016-12-13 21:29:10 ICT LOG:  autovacuum launcher started
+2016-12-13 21:48:50 ICT LOG:  statement: SELECT typname, oid FROM pg_type WHERE typname IN ('oidvector', '_oidvector', 'unknown', '_unknown', 'refcursor', '_refcursor', 'char', '_char', 'bpchar', '_bpchar', 'varchar', '_varchar', 'text', '_text', 'name', '_name', 'bytea', '_bytea', 'bit', '_bit', 'bool', '_bool', 'int2', '_int2', 'int4', '_int4', 'int8', '_int8', 'oid', '_oid', 'float4', '_float4', 'float8', '_float8', 'numeric', '_numeric', 'inet', '_inet', 'money', '_money', 'point', '_point', 'lseg', '_lseg', 'path', '_path', 'box', '_box', 'circle', '_circle', 'polygon', '_polygon', 'uuid', '_uuid', 'xml', '_xml', 'interval', '_interval', 'date', '_date', 'time', '_time', 'timetz', '_timetz', 'timestamp', '_timestamp', 'timestamptz', '_timestamptz')
+2016-12-13 21:48:50 ICT LOG:  statement: SELECT name FROM hms_selection WHERE zone = 'fee'::text AND sector = 'config'::text AND line = 1
+2016-12-13 21:48:50 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:50 ICT LOG:  statement: select 1
+2016-12-13 21:48:50 ICT LOG:  statement: SELECT line, name FROM hms_selection WHERE zone = 'default'::text AND sector = 'config'::text
+2016-12-13 21:48:50 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:50 ICT LOG:  statement: select 1
+2016-12-13 21:48:50 ICT LOG:  statement: SELECT name FROM hms_selection WHERE zone = 'report'::text AND sector = 'config5'::text AND line = 1
+2016-12-13 21:48:50 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:50 ICT LOG:  statement: select 1
+2016-12-13 21:48:50 ICT LOG:  statement: SELECT rolevalue, roletype FROM hm_userrole WHERE userid = 0 ORDER BY roletype
+2016-12-13 21:48:50 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:53 ICT LOG:  statement: select 1
+2016-12-13 21:48:53 ICT LOG:  statement: SELECT name FROM hms_selection WHERE zone = 'system'::text AND sector = 'config'::text AND line = 1
+2016-12-13 21:48:53 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:54 ICT LOG:  statement: select 1
+2016-12-13 21:48:54 ICT LOG:  statement: SELECT line, name, line || '.' || name AS sname, substr(note,1,1)::integer AS n1, substr(note,3,1)::integer AS n3, substr(note,5,1)::integer AS n5, substr(note,7,1)::integer AS n7, substr(note,9,1)::integer AS n9, reportid, 0 AS choose FROM hms_selection WHERE zone = 'general' AND sector = 'division' AND hide = 0 ORDER BY line
+2016-12-13 21:48:54 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:54 ICT LOG:  statement: select 1
+2016-12-13 21:48:54 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'hospital'::text AND hide = 0 ORDER BY line
+2016-12-13 21:48:54 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:54 ICT LOG:  statement: select 1
+2016-12-13 21:48:54 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'ethnic'::text AND hide = 0 ORDER BY line
+2016-12-13 21:48:54 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:54 ICT LOG:  statement: select 1
+2016-12-13 21:48:54 ICT LOG:  statement: SELECT id AS line, name, code || '.' || lower(name) || CASE WHEN lower(note) IS NULL THEN '' ELSE '-' || lower(note) END AS sname, code, note, feepolicy, SUBSTR(policy,1,1) AS n1, SUBSTR(policy,3,1) AS n3, SUBSTR(policy,5,1) AS n5, SUBSTR(policy,7,1) AS n7, SUBSTR(policy,9,1) AS n9, SUBSTR(policy,11,1) AS n11 FROM hms_examroom WHERE hide = 0 ORDER BY ID
+2016-12-13 21:48:54 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:54 ICT LOG:  statement: select 1
+2016-12-13 21:48:54 ICT LOG:  statement: SELECT id AS line, servicename AS name, id || '.' || lower(servicename) || CASE WHEN lower(shorttext) IS NULL THEN '' ELSE '-' || lower(shorttext) END AS sname, category, note FROM hms_service WHERE servicetype = 'E' AND hide = 0 ORDER BY ID
+2016-12-13 21:48:54 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:54 ICT LOG:  statement: select 1
+2016-12-13 21:48:54 ICT LOG:  statement: SELECT icdcode, vnname AS name, lower(icdcode) || ':' || lower(vnname) AS sname, outdiag, groupid FROM hms_icd10 WHERE hide = 0
+2016-12-13 21:48:56 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:57 ICT LOG:  statement: select 1
+2016-12-13 21:48:57 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'occupation'::text AND hide = 0 ORDER BY line
+2016-12-13 21:48:57 ICT LOG:  statement: unlisten *
+2016-12-13 21:48:57 ICT LOG:  statement: select 1
+2016-12-13 21:48:57 ICT LOG:  statement: SELECT id AS line, name, id || '.' || lower(name) || CASE WHEN lower(note) IS NULL THEN '' ELSE '-' || lower(note) END || lower(abbreviation) AS sname, districtid FROM hm_precintview ORDER BY ID
+2016-12-13 21:49:00 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:00 ICT LOG:  statement: select 1
+2016-12-13 21:49:00 ICT LOG:  statement: select id, servicename, unit, price, insprice, servicetype, id || ':' || lower(servicename) || CASE WHEN shorttext IS NOT NULL THEN '(' || shorttext ||')' ELSE '' END AS sname FROM hms_service WHERE hide = 0
+2016-12-13 21:49:00 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:00 ICT LOG:  statement: select 1
+2016-12-13 21:49:00 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'hms'::text AND sector = 'conclusion'::text AND hide = 0 ORDER BY line
+2016-12-13 21:49:00 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:00 ICT LOG:  statement: select 1
+2016-12-13 21:49:00 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'diagnosis'::text AND hide = 0 ORDER BY line
+2016-12-13 21:49:00 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:00 ICT LOG:  statement: select 1
+2016-12-13 21:49:00 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'hms'::text AND sector = 'ex_suggest'::text AND hide = 0 ORDER BY line
+2016-12-13 21:49:00 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:00 ICT LOG:  statement: select 1
+2016-12-13 21:49:00 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'hms'::text AND sector = 'tr_suggest'::text AND hide = 0 ORDER BY line
+2016-12-13 21:49:00 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:00 ICT LOG:  statement: select 1
+2016-12-13 21:49:00 ICT LOG:  statement: SELECT a.id AS line, hm_getname(fname, mname, lname) AS name, a.id || '.' || lower(hm_getname(fname, mname, lname)) AS sname, title, b.note, c.divisionid, turnover, d.name AS divisionname FROM hm_employee a JOIN (SELECT * FROM hms_selection WHERE sector = 'title') b ON a.title = b.line JOIN hm_employee_task c ON a.id = c.employeeid JOIN (SELECT line, name FROM hms_selection WHERE sector = 'division') d ON c.divisionid = d.line WHERE a.hide = 0 and b.note::integer in (1,2) AND a.status = 'O'
+2016-12-13 21:49:01 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:01 ICT LOG:  statement: select 1
+2016-12-13 21:49:01 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'anaes'::text AND hide = 0 ORDER BY line
+2016-12-13 21:49:01 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:01 ICT LOG:  statement: select 1
+2016-12-13 21:49:01 ICT LOG:  statement: SELECT * FROM hm_paraclinical_view
+2016-12-13 21:49:01 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:01 ICT LOG:  statement: select 1
+2016-12-13 21:49:01 ICT LOG:  statement: SELECT a.id AS line, a.name, a.id || '.' || a.name AS sname, price, b.name AS roomname, b.divisionid, insprice FROM hms_bed a JOIN hms_patientroom b ON a.patientroomid = b.id WHERE hide = 0
+2016-12-13 21:49:01 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:01 ICT LOG:  statement: select 1
+2016-12-13 21:49:01 ICT LOG:  statement: SELECT code AS line, name, selectiontype, note || name AS sname, 0 AS chk FROM hms_drugselection WHERE zone = 'usage'::text AND hide = 0 ORDER BY code
+2016-12-13 21:49:01 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:01 ICT LOG:  statement: select 1
+2016-12-13 21:49:01 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'empsurg'::text AND hide = 0 AND report1 = 0 ORDER BY line
+2016-12-13 21:49:01 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:01 ICT LOG:  statement: select 1
+2016-12-13 21:49:01 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'military'::text AND hide = 0 ORDER BY line
+2016-12-13 21:49:01 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:11 ICT LOG:  statement: select 1
+2016-12-13 21:49:11 ICT LOG:  statement: select a.id, hm_getname(c.fname, c.mname, c.lname) as name, pass, rolevalue, a.divisionid, a.employeeid, hm_getstockcontrol(a.id) AS control, a.changenow, a.signal, examroom from hm_user a join hm_userrole b on a.id = b.userid join hm_employee c on a.employeeid = c.id where username = 'gia.it' and roletype = 1
+2016-12-13 21:49:11 ICT LOG:  statement: unlisten *
+2016-12-13 21:49:11 ICT LOG:  statement: select 1
+2016-12-13 21:49:11 ICT LOG:  statement: SELECT rolevalue, roletype FROM hm_userrole WHERE userid = 317 ORDER BY roletype
+2016-12-13 21:49:11 ICT LOG:  statement: unlisten *
+2016-12-13 21:54:19 ICT LOG:  statement: select 1
+2016-12-13 21:54:19 ICT LOG:  statement: SELECT * FROM hm_total_exam_view
+2016-12-13 21:54:20 ICT LOG:  statement: unlisten *
+2016-12-13 21:55:37 ICT LOG:  statement: select 1
+2016-12-13 21:55:37 ICT LOG:  statement: SELECT * FROM hm_hospital WHERE line = 56789 LIMIT 1
+2016-12-13 21:55:37 ICT LOG:  statement: unlisten *
+2016-12-13 21:55:41 ICT LOG:  statement: select 1
+2016-12-13 21:55:41 ICT LOG:  statement: SELECT * FROM hm_hospital WHERE line = 92002 LIMIT 1
+2016-12-13 21:55:41 ICT LOG:  statement: unlisten *
+2016-12-13 21:55:42 ICT LOG:  statement: select 1
+2016-12-13 21:55:42 ICT LOG:  statement: SELECT * FROM hm_hospital WHERE line = 92002 LIMIT 1
+2016-12-13 21:55:42 ICT LOG:  statement: unlisten *
+2016-12-13 21:56:11 ICT LOG:  statement: select 1
+2016-12-13 21:56:11 ICT LOG:  statement: select hm_receive_patient('GD412345678912392002;2016-1-1;2017-12-31;;;;92002;Nguyễn;Gia;Khánh;1992-12-1;1992-12-1;24;1;1;36;9210318159999;9;;501;332;0;317;73/96;Nguyễn Văn Linh;;O;-1;1;0;31180;Nguyễn Tùng Lâm;0;;0;10000158;;0')
+2016-12-13 21:56:12 ICT LOG:  statement: unlisten *
+2016-12-13 21:56:12 ICT LOG:  statement: select 1
+2016-12-13 21:56:12 ICT LOG:  statement: SELECT * FROM hm_total_exam_view
+2016-12-13 21:56:12 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:28 ICT LOG:  statement: select 1
+2016-12-13 21:57:28 ICT LOG:  statement: SELECT code, name, selectiontype, selectionindepenid, other, note, 0 AS ischeck FROM hms_drugselection WHERE zone = 'stock'::text AND INSTR('S'::text,selectiontype) AND INSTR('140,141,142,143,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,598,599'::text, code::text) AND hide = 0 ORDER BY code
+2016-12-13 21:57:28 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:28 ICT LOG:  statement: select 1
+2016-12-13 21:57:28 ICT LOG:  statement: SELECT code AS line, name, selectiontype, note || name AS sname, 0 AS chk FROM hms_drugselection WHERE zone = 'usage'::text AND hide = 0 ORDER BY code
+2016-12-13 21:57:28 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:28 ICT LOG:  statement: select 1
+2016-12-13 21:57:28 ICT LOG:  statement: SELECT id AS line, name, code || '.' || lower(name) || CASE WHEN lower(note) IS NULL THEN '' ELSE '-' || lower(note) END AS sname, code, note, feepolicy, divisionid, SUBSTR(policy,1,1) AS n1, SUBSTR(policy,3,1) AS n3, SUBSTR(policy,5,1) AS n5, SUBSTR(policy,7,1) AS n7, SUBSTR(policy,9,1) AS n9, SUBSTR(policy,11,1) AS n11 FROM hms_examroom WHERE hide = 0 ORDER BY ID
+2016-12-13 21:57:28 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:28 ICT LOG:  statement: select 1
+2016-12-13 21:57:28 ICT LOG:  statement: SELECT b.id, hm_getname(fname, mname, lname) AS fullname FROM hm_user a JOIN hm_employee b ON a.employeeid = b.id
+2016-12-13 21:57:28 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:28 ICT LOG:  statement: select 1
+2016-12-13 21:57:28 ICT LOG:  statement: select id, servicename, unit, price, insprice FROM hms_service WHERE servicetype = 'O' AND hide = 0
+2016-12-13 21:57:28 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:28 ICT LOG:  statement: select 1
+2016-12-13 21:57:28 ICT LOG:  statement: select id, servicename, unit, price, insprice FROM hms_service WHERE servicetype = 'I' AND hide = 0
+2016-12-13 21:57:28 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:28 ICT LOG:  statement: select 1
+2016-12-13 21:57:28 ICT LOG:  statement: SELECT a.id AS medicalrecordid, hm_getname(fname, mname, null) fullname, lname AS name, a.status, CASE WHEN gender = 1 THEN 'Nam' ELSE 'Nữ' END AS sex, birthyear, c.code AS cardcode, CASE WHEN length(subjectofpatient::text) <> 9 THEN 0 ELSE substr(subjectofpatient::text,7,3)::integer END AS discount, age, b.id,  a.examroomid, d.id AS receptionid, d.status AS receptionstatus, ticketnumber, queuenumber, 0 AS chs FROM hms_medicalrecord a JOIN hms_patient b ON a.patientid = b.id LEFT JOIN hms_card c ON a.cardid = c.id JOIN hms_reception d ON a.id = d.medicalrecordid  WHERE d.examroomid = 502  AND creationdate::date = current_date
+2016-12-13 21:57:29 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:29 ICT LOG:  statement: select 1
+2016-12-13 21:57:29 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'diagnosis'::text AND hide = 0 ORDER BY line
+2016-12-13 21:57:29 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:29 ICT LOG:  statement: select 1
+2016-12-13 21:57:29 ICT LOG:  statement: SELECT line, name, line || '.' || name AS sname, substr(note,1,1)::integer AS n1, substr(note,3,1)::integer AS n3, substr(note,5,1)::integer AS n5, substr(note,7,1)::integer AS n7, substr(note,9,1)::integer AS n9, reportid, 0 AS choose FROM hms_selection WHERE zone = 'general' AND sector = 'division' AND hide = 0 ORDER BY line
+2016-12-13 21:57:29 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:29 ICT LOG:  statement: select 1
+2016-12-13 21:57:29 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'diagnosis'::text AND hide = 0 ORDER BY line
+2016-12-13 21:57:29 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:29 ICT LOG:  statement: select 1
+2016-12-13 21:57:29 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'hms'::text AND sector = 'conclusion'::text AND hide = 0 ORDER BY line
+2016-12-13 21:57:29 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:29 ICT LOG:  statement: select 1
+2016-12-13 21:57:29 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'hms'::text AND sector = 'ex_suggest'::text AND hide = 0 ORDER BY line
+2016-12-13 21:57:29 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:29 ICT LOG:  statement: select 1
+2016-12-13 21:57:29 ICT LOG:  statement: SELECT line, name, line || '.' || lower(name) || '.' || note AS sname, note, reportid, report, 0 AS choose FROM hms_selection WHERE zone = 'general'::text AND sector = 'hospital'::text AND hide = 0 ORDER BY line
+2016-12-13 21:57:30 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:30 ICT LOG:  statement: select 1
+2016-12-13 21:57:30 ICT LOG:  statement: SELECT icdcode, vnname AS name, lower(icdcode) || ':' || lower(vnname) AS sname, outdiag, groupid FROM hms_icd10 WHERE hide = 0
+2016-12-13 21:57:30 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:31 ICT LOG:  statement: select 1
+2016-12-13 21:57:31 ICT LOG:  statement: SELECT a.id AS medicalrecordid, hm_getname(fname, mname, null) fullname, lname AS name, a.status, CASE WHEN gender = 1 THEN 'Nam' ELSE 'Nữ' END AS sex, birthyear, c.code AS cardcode, CASE WHEN length(subjectofpatient::text) <> 9 THEN 0 ELSE substr(subjectofpatient::text,7,3)::integer END AS discount, age, b.id,  a.examroomid, d.id AS receptionid, d.status AS receptionstatus, ticketnumber, queuenumber, 0 AS chs FROM hms_medicalrecord a JOIN hms_patient b ON a.patientid = b.id LEFT JOIN hms_card c ON a.cardid = c.id JOIN hms_reception d ON a.id = d.medicalrecordid  WHERE d.examroomid = 502  AND creationdate::date = current_date
+2016-12-13 21:57:31 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:34 ICT LOG:  statement: select 1
+2016-12-13 21:57:34 ICT LOG:  statement: SELECT a.id AS medicalrecordid, hm_getname(fname, mname, null) fullname, lname AS name, a.status, CASE WHEN gender = 1 THEN 'Nam' ELSE 'Nữ' END AS sex, birthyear, c.code AS cardcode, CASE WHEN length(subjectofpatient::text) <> 9 THEN 0 ELSE substr(subjectofpatient::text,7,3)::integer END AS discount, age, b.id,  a.examroomid, d.id AS receptionid, d.status AS receptionstatus, ticketnumber, queuenumber, 0 AS chs FROM hms_medicalrecord a JOIN hms_patient b ON a.patientid = b.id LEFT JOIN hms_card c ON a.cardid = c.id JOIN hms_reception d ON a.id = d.medicalrecordid  WHERE d.examroomid = 501  AND creationdate::date = current_date
+2016-12-13 21:57:34 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:36 ICT LOG:  statement: select 1
+2016-12-13 21:57:36 ICT LOG:  statement: SELECT *, his_general_full_address(homenumber, address, precinct_name) AS full_address, UPPER(full_name) AS full_name_upper, 0 AS is_card, CASE WHEN archives_number_home IS NOT NULL OR archives_number_home <> '' THEN 1 ELSE 0 END is_home_treatment_file, CASE WHEN medical_objects = 1 THEN CASE WHEN insurance_discount <> 0 THEN 'BH:' || insurance_discount || '%' ELSE '' END ELSE CASE WHEN medical_objects = 3 THEN 'Chính Sách' ELSE 'Thu Phí ' || (100 - object_remission) || '%' END END || CASE WHEN object_remission <> 0 THEN CASE WHEN insurance_discount = 0 THEN 'Miễn phí:' || object_remission || '%' ELSE '+' || 'Miễn :' || object_remission || '%' END ELSE '' END AS medical_object, CASE WHEN suggestion_policy = 9 THEN finish_plan_time::date + treatment_day ELSE CASE WHEN treatment_id <> 0 THEN finish_plan_time ELSE close_time END END AS date_signal FROM his_get_medical_info('16157152|0|0')
+2016-12-13 21:57:36 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:36 ICT LOG:  statement: select 1
+2016-12-13 21:57:36 ICT LOG:  statement: SELECT code FROM hms_drugselection WHERE zone = 'stock' AND note IN ('NT','BL') AND othername = '1' AND code IN (140,141,142,143,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,598,599) LIMIT 1
+2016-12-13 21:57:36 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:36 ICT LOG:  statement: select 1
+2016-12-13 21:57:36 ICT LOG:  statement: select a.id, drugname, content, unit, deliveredquantity as quantity, price, note, expireddate, stockimexid, usingdrugid, stockid , deliveredquantity * price AS money, instruction, dailydosage, instalment, usage, usagename, doctorid, doctorname, a.status, dosage, drug_accept, stockimexid, 0 AS chs from hm_patientdrugview a JOIN hm_employee b ON a.doctorid = b.id  where medicalrecordid = 16157152 order by a.id
+2016-12-13 21:57:36 ICT LOG:  statement: unlisten *
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT version();
+2016-12-13 21:57:44 ICT LOG:  statement: SET DateStyle=ISO;
+	SET client_min_messages=notice;
+	SET bytea_output=escape;
+	SELECT oid, pg_encoding_to_char(encoding) AS encoding, datlastsysoid
+	  FROM pg_database WHERE datname='postgres'
+2016-12-13 21:57:44 ICT LOG:  statement: set client_encoding to 'UNICODE'
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT usecreatedb, usesuper, CASE WHEN usesuper THEN pg_postmaster_start_time() ELSE NULL END as upsince, CASE WHEN usesuper THEN pg_conf_load_time() ELSE NULL END as confloadedsince, CASE WHEN usesuper THEN pg_is_in_recovery() ELSE NULL END as inrecovery, CASE WHEN usesuper THEN pg_last_xlog_receive_location() ELSE NULL END as receiveloc, CASE WHEN usesuper THEN pg_last_xlog_replay_location() ELSE NULL END as replayloc, CASE WHEN usesuper THEN pg_last_xact_replay_timestamp() ELSE NULL END as replay_timestamp, CASE WHEN usesuper AND pg_is_in_recovery() THEN pg_is_xlog_replay_paused() ELSE NULL END as isreplaypaused
+	  FROM pg_user WHERE usename=current_user
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT rolcreaterole, rolcreatedb FROM pg_roles WHERE rolname = current_user;
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT db.oid, datname, db.dattablespace AS spcoid, spcname, datallowconn, datacl, pg_encoding_to_char(encoding) AS serverencoding, pg_get_userbyid(datdba) AS datowner,has_database_privilege(db.oid, 'CREATE') as cancreate, 
+	current_setting('default_tablespace') AS default_tablespace, 
+	descr.description
+	, db.datconnlimit as connectionlimit, db.datcollate as collate, db.datctype as ctype,
+	(SELECT array_agg(label) FROM pg_shseclabel sl1 WHERE sl1.objoid=db.oid) AS labels,
+	(SELECT array_agg(provider) FROM pg_shseclabel sl2 WHERE sl2.objoid=db.oid) AS providers  FROM pg_database db
+	  LEFT OUTER JOIN pg_tablespace ta ON db.dattablespace=ta.OID
+	  LEFT OUTER JOIN pg_shdescription descr ON (db.oid=descr.objoid AND descr.classoid='pg_database'::regclass)
+	 ORDER BY datname
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT ts.oid, spcname, pg_catalog.pg_tablespace_location(ts.oid) AS spclocation, spcoptions, pg_get_userbyid(spcowner) as spcuser, spcacl, pg_catalog.shobj_description(oid, 'pg_tablespace') AS description, (SELECT array_agg(label) FROM pg_shseclabel sl1 WHERE sl1.objoid=ts.oid) AS labels, (SELECT array_agg(provider) FROM pg_shseclabel sl2 WHERE sl2.objoid=ts.oid) AS providers FROM pg_tablespace ts
+	 ORDER BY spcname
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT cl.oid FROM pg_class cl JOIN pg_namespace ns ON ns.oid=relnamespace
+	 WHERE relname='pga_job' AND nspname='pgagent'
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT has_table_privilege('pg_authid', 'SELECT')
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT tab.oid, tab.*, pg_catalog.shobj_description(tab.oid, 'pg_authid') AS description,
+	(SELECT array_agg(label) FROM pg_shseclabel sl1 WHERE sl1.objoid=tab.oid) AS labels,
+	(SELECT array_agg(provider) FROM pg_shseclabel sl2 WHERE sl2.objoid=tab.oid) AS providers FROM pg_authid tab WHERE NOT rolcanlogin ORDER BY rolname
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT has_table_privilege('pg_authid', 'SELECT')
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT tab.oid, tab.*, pg_catalog.shobj_description(tab.oid, 'pg_authid') AS description,
+	(SELECT array_agg(label) FROM pg_shseclabel sl1 WHERE sl1.objoid=tab.oid) AS labels,
+	(SELECT array_agg(provider) FROM pg_shseclabel sl2 WHERE sl2.objoid=tab.oid) AS providers FROM pg_authid tab WHERE rolcanlogin ORDER BY rolname
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT setting FROM pg_settings WHERE name IN ('autovacuum', 'track_counts')
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT version();
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT proname, pronargs, proargtypes[0] AS arg0, proargtypes[1] AS arg1, proargtypes[2] AS arg2
+	  FROM pg_proc
+	  JOIN pg_namespace n ON n.oid=pronamespace
+	 WHERE proname IN ('pg_tablespace_size', 'pg_file_read', 'pg_logfile_rotate', 'pg_postmaster_starttime', 'pg_terminate_backend', 'pg_reload_conf', 'pgstattuple', 'pgstatindex')
+	   AND nspname IN ('pg_catalog', 'public')
+2016-12-13 21:57:44 ICT LOG:  statement: SELECT count(*) FROM pg_attribute WHERE attrelid = 'pg_catalog.pg_proc'::regclass AND attname = 'proargdefaults'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT version();
+2016-12-13 21:57:46 ICT LOG:  statement: SET DateStyle=ISO;
+	SET client_min_messages=notice;
+	SET bytea_output=escape;
+	SELECT oid, pg_encoding_to_char(encoding) AS encoding, datlastsysoid
+	  FROM pg_database WHERE oid = 69963091
+2016-12-13 21:57:46 ICT LOG:  statement: set client_encoding to 'UNICODE'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT proname FROM pg_proc WHERE proname='pg_get_viewdef' AND proargtypes[1]=16
+2016-12-13 21:57:46 ICT LOG:  statement: SHOW search_path
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT nspname, session_user=nspname AS isuser FROM pg_namespace
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 0::OID AND defaclobjtype='r'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 0::OID AND defaclobjtype='S'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 0::OID AND defaclobjtype='f'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 0::OID AND defaclobjtype='T'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT 2 AS nsptyp,
+	       nsp.nspname, nsp.oid, pg_get_userbyid(nspowner) AS namespaceowner, nspacl, description,       FALSE as cancreate
+	  FROM pg_namespace nsp
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=nsp.oid AND des.classoid='pg_namespace'::regclass)
+	 WHERE ((nspname = 'pg_catalog' AND EXISTS (SELECT 1 FROM pg_class WHERE relname = 'pg_class' AND relnamespace = nsp.oid LIMIT 1)) OR
+	(nspname = 'pgagent' AND EXISTS (SELECT 1 FROM pg_class WHERE relname = 'pga_job' AND relnamespace = nsp.oid LIMIT 1)) OR
+	(nspname = 'information_schema' AND EXISTS (SELECT 1 FROM pg_class WHERE relname = 'tables' AND relnamespace = nsp.oid LIMIT 1)) OR
+	(nspname LIKE '_%' AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='slonyversion' AND pronamespace = nsp.oid LIMIT 1))
+	)  AND nspname NOT LIKE E'pg\\_temp\\_%'AND nspname NOT LIKE E'pg\\_toast_temp\\_%' ORDER BY 1, nspname
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 11585::oid AND defaclobjtype='r'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 11585::oid AND defaclobjtype='S'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 11585::oid AND defaclobjtype='f'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 11585::oid AND defaclobjtype='T'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 11::oid AND defaclobjtype='r'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 11::oid AND defaclobjtype='S'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 11::oid AND defaclobjtype='f'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 11::oid AND defaclobjtype='T'
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT e.oid, e.xmin, e.evtname AS name, REPLACE(e.evtevent, '_', ' ') AS eventname, pg_catalog.pg_get_userbyid(e.evtowner) AS eventowner,  CASE e.evtenabled WHEN 'O' THEN 'enabled' WHEN 'R' THEN 'replica' WHEN 'A' THEN 'always' WHEN 'D' THEN 'disabled' END AS enabled,  e.evtfoid AS eventfuncoid, e.evtfoid::regproc AS eventfunname, array_to_string(array(select quote_literal(x) from unnest(evttags) as t(x)), ', ') AS when,  pg_catalog.obj_description(e.oid, 'pg_event_trigger') AS comment,  p.prosrc AS source, p.pronamespace AS schemaoid, l.lanname AS language FROM pg_event_trigger e
+	 LEFT OUTER JOIN pg_proc p ON p.oid=e.evtfoid
+	 LEFT OUTER JOIN pg_language l ON l.oid=p.prolang
+	 WHERE 1=1  ORDER BY e.evtname 
+2016-12-13 21:57:46 ICT LOG:  statement: select x.oid, pg_get_userbyid(extowner) AS owner, x.extname, n.nspname, x.extrelocatable, x.extversion, e.comment  FROM pg_extension x
+	  JOIN pg_namespace n on x.extnamespace=n.oid
+	  join pg_available_extensions() e(name, default_version, comment) ON x.extname=e.name
+	
+	 ORDER BY x.extname
+2016-12-13 21:57:46 ICT LOG:  statement: SELECT CASE WHEN nspname LIKE E'pg\\_temp\\_%' THEN 1
+	            WHEN (nspname LIKE E'pg\\_%') THEN 0
+	            ELSE 3 END AS nsptyp,
+	       nsp.nspname, nsp.oid, pg_get_userbyid(nspowner) AS namespaceowner, nspacl, description,       has_schema_privilege(nsp.oid, 'CREATE') as cancreate,
+	(SELECT array_agg(label) FROM pg_seclabels sl1 WHERE sl1.objoid=nsp.oid) AS labels,
+	(SELECT array_agg(provider) FROM pg_seclabels sl2 WHERE sl2.objoid=nsp.oid) AS providers
+	  FROM pg_namespace nsp
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=nsp.oid AND des.classoid='pg_namespace'::regclass)
+	 WHERE NOT ((nspname = 'pg_catalog' AND EXISTS (SELECT 1 FROM pg_class WHERE relname = 'pg_class' AND relnamespace = nsp.oid LIMIT 1)) OR
+	(nspname = 'pgagent' AND EXISTS (SELECT 1 FROM pg_class WHERE relname = 'pga_job' AND relnamespace = nsp.oid LIMIT 1)) OR
+	(nspname = 'information_schema' AND EXISTS (SELECT 1 FROM pg_class WHERE relname = 'tables' AND relnamespace = nsp.oid LIMIT 1)) OR
+	(nspname LIKE '_%' AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='slonyversion' AND pronamespace = nsp.oid LIMIT 1))
+	)  AND nspname NOT LIKE E'pg\\_temp\\_%'AND nspname NOT LIKE E'pg\\_toast_temp\\_%' ORDER BY 1, nspname
+2016-12-13 21:57:47 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 2200::oid AND defaclobjtype='r'
+2016-12-13 21:57:47 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 2200::oid AND defaclobjtype='S'
+2016-12-13 21:57:47 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 2200::oid AND defaclobjtype='f'
+2016-12-13 21:57:47 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 2200::oid AND defaclobjtype='T'
+2016-12-13 21:57:47 ICT LOG:  statement: SELECT nsp.oid, substr(nspname, 2) as clustername, nspname, pg_get_userbyid(nspowner) AS namespaceowner, description
+	  FROM pg_namespace nsp
+	  LEFT OUTER JOIN pg_description des ON des.objoid=nsp.oid
+	  JOIN pg_proc pro ON pronamespace=nsp.oid AND proname = 'slonyversion'
+	 ORDER BY nspname
+2016-12-13 21:57:47 ICT LOG:  statement: SELECT COUNT(*) FROM
+	   (SELECT tgargs from pg_trigger tr
+	      LEFT JOIN pg_depend dep ON dep.objid=tr.oid AND deptype = 'i'
+	      LEFT JOIN pg_constraint co ON refobjid = co.oid AND contype = 'f'
+	     WHERE 
+	tgisinternal
+	     AND co.oid IS NULL
+	     GROUP BY tgargs
+	    HAVING count(1) = 3) AS foo
+2016-12-13 21:57:47 ICT LOG:  statement: WITH configs AS (SELECT rolname, unnest(setconfig) AS config FROM pg_db_role_setting s LEFT JOIN pg_roles r ON r.oid=s.setrole WHERE s.setdatabase=69963091)
+	SELECT rolname, split_part(config, '=', 1) AS variable,        replace(config, split_part(config, '=', 1) || '=', '') AS value
+	FROM configs
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT c.oid, c.collname, c.collcollate, c.collctype, 
+	       pg_get_userbyid(c.collowner) as cowner, description
+	  FROM pg_collation c
+	  JOIN pg_namespace n ON n.oid=c.collnamespace
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=c.oid AND des.classoid='pg_collation'::regclass)
+	 WHERE c.collnamespace = 2200::oid
+	 ORDER BY c.collname
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT d.oid, d.typname as domname, d.typbasetype, format_type(b.oid,NULL) as basetype, pg_get_userbyid(d.typowner) as domainowner, 
+	c.oid AS colloid, c.collname, cn.nspname as collnspname, 
+	       d.typlen, d.typtypmod, d.typnotnull, d.typdefault, d.typndims, d.typdelim, bn.nspname as basensp,
+	       description, (SELECT COUNT(1) FROM pg_type t2 WHERE t2.typname=d.typname) > 1 AS domisdup,
+	       (SELECT COUNT(1) FROM pg_type t3 WHERE t3.typname=b.typname) > 1 AS baseisdup,
+	(SELECT array_agg(label) FROM pg_seclabels sl1 WHERE sl1.objoid=d.oid) AS labels,
+	(SELECT array_agg(provider) FROM pg_seclabels sl2 WHERE sl2.objoid=d.oid) AS providers
+	   FROM pg_type d
+	  JOIN pg_type b ON b.oid = d.typbasetype
+	  JOIN pg_namespace bn ON bn.oid=b.typnamespace
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=d.oid AND des.classoid='pg_type'::regclass)
+	  LEFT OUTER JOIN pg_collation c ON d.typcollation=c.oid
+	  LEFT OUTER JOIN pg_namespace cn ON c.collnamespace=cn.oid
+	 WHERE d.typtype = 'd' AND d.typnamespace = 2200::oid
+	 ORDER BY d.typname
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT cfg.oid, cfg.cfgname, pg_get_userbyid(cfg.cfgowner) as cfgowner, cfg.cfgparser, parser.prsname as parsername, description
+	  FROM pg_ts_config cfg
+	  LEFT OUTER JOIN pg_ts_parser parser ON parser.oid=cfg.cfgparser
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=cfg.oid AND des.classoid='pg_ts_config'::regclass)
+	 WHERE cfg.cfgnamespace = 2200::oid
+	 ORDER BY cfg.cfgname
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT dict.oid, dict.dictname, pg_get_userbyid(dict.dictowner) as dictowner, t.tmplname, dict.dictinitoption, description
+	  FROM pg_ts_dict dict
+	  LEFT OUTER JOIN pg_ts_template t ON t.oid=dict.dicttemplate
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=dict.oid AND des.classoid='pg_ts_dict'::regclass)
+	 WHERE dict.dictnamespace = 2200::oid
+	 ORDER BY dict.dictname
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT prs.oid, prs.prsname, prs.prsstart, prs.prstoken, prs.prsend, prs.prslextype, prs.prsheadline, description
+	  FROM pg_ts_parser prs
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=prs.oid AND des.classoid='pg_ts_parser'::regclass)
+	 WHERE prs.prsnamespace = 2200::oid
+	 ORDER BY prs.prsname
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT tmpl.oid, tmpl.tmplname, tmpl.tmplinit, tmpl.tmpllexize, description
+	  FROM pg_ts_template tmpl
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=tmpl.oid AND des.classoid='pg_ts_template'::regclass)
+	 WHERE tmpl.tmplnamespace = 2200::oid
+	 ORDER BY tmpl.tmplname
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT proname, pronargs, proargtypes[0] AS arg0, proargtypes[1] AS arg1, proargtypes[2] AS arg2
+	  FROM pg_proc
+	  JOIN pg_namespace n ON n.oid=pronamespace
+	 WHERE proname IN ('pg_tablespace_size', 'pg_file_read', 'pg_logfile_rotate', 'pg_postmaster_starttime', 'pg_terminate_backend', 'pg_reload_conf', 'pgstattuple', 'pgstatindex')
+	   AND nspname IN ('pg_catalog', 'public')
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT count(*) FROM pg_attribute WHERE attrelid = 'pg_catalog.pg_proc'::regclass AND attname = 'proargdefaults'
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT pr.oid, pr.xmin, pr.*, format_type(TYP.oid, NULL) AS typname, typns.nspname AS typnsp, lanname, proargnames, pg_get_expr(proargdefaults, 'pg_catalog.pg_class'::regclass) AS proargdefaultvals, pronargdefaults, proconfig,        pg_get_userbyid(proowner) as funcowner, description,
+	(SELECT array_agg(label) FROM pg_seclabels sl1 WHERE sl1.objoid=pr.oid) AS labels,
+	(SELECT array_agg(provider) FROM pg_seclabels sl2 WHERE sl2.objoid=pr.oid) AS providers
+	  FROM pg_proc pr
+	  JOIN pg_type typ ON typ.oid=prorettype
+	  JOIN pg_namespace typns ON typns.oid=typ.typnamespace
+	  JOIN pg_language lng ON lng.oid=prolang
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=pr.oid AND des.classoid='pg_proc'::regclass)
+	 WHERE proisagg = FALSE AND pronamespace = 2200::oid
+	   AND typname NOT IN ('trigger', 'event_trigger') 
+	 ORDER BY proname
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT oid, format_type(oid, NULL) AS typname FROM pg_type
+2016-12-13 21:57:50 ICT LOG:  statement: SELECT cl.oid, relname, pg_get_userbyid(relowner) AS seqowner, relacl, description,
+	(SELECT array_agg(label) FROM pg_seclabels sl1 WHERE sl1.objoid=cl.oid) AS labels,
+	(SELECT array_agg(provider) FROM pg_seclabels sl2 WHERE sl2.objoid=cl.oid) AS providers
+	  FROM pg_class cl
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=cl.oid AND des.classoid='pg_class'::regclass)
+	 WHERE relkind = 'S' AND relnamespace  = 2200::oid
+	 ORDER BY relname
+2016-12-13 21:57:51 ICT LOG:  statement: SELECT rel.oid, rel.relname, rel.reltablespace AS spcoid, spc.spcname, pg_get_userbyid(rel.relowner) AS relowner, rel.relacl, rel.relhasoids, rel.relhassubclass, rel.reltuples, des.description, con.conname, con.conkey,
+	       EXISTS(select 1 FROM pg_trigger
+	                       JOIN pg_proc pt ON pt.oid=tgfoid AND pt.proname='logtrigger'
+	                       JOIN pg_proc pc ON pc.pronamespace=pt.pronamespace AND pc.proname='slonyversion'
+	                     WHERE tgrelid=rel.oid) AS isrepl,
+	       (select count(*) FROM pg_trigger
+	                     WHERE tgrelid=rel.oid AND tgisinternal = FALSE) AS triggercount
+	, rel.relpersistence 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'fillfactor=([0-9]*)') AS fillfactor 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_enabled=([a-z|0-9]*)') AS autovacuum_enabled 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_vacuum_threshold=([0-9]*)') AS autovacuum_vacuum_threshold 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_vacuum_scale_factor=([0-9]*[.][0-9]*)') AS autovacuum_vacuum_scale_factor 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_analyze_threshold=([0-9]*)') AS autovacuum_analyze_threshold 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_analyze_scale_factor=([0-9]*[.][0-9]*)') AS autovacuum_analyze_scale_factor 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_vacuum_cost_delay=([0-9]*)') AS autovacuum_vacuum_cost_delay 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_vacuum_cost_limit=([0-9]*)') AS autovacuum_vacuum_cost_limit 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_freeze_min_age=([0-9]*)') AS autovacuum_freeze_min_age 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_freeze_max_age=([0-9]*)') AS autovacuum_freeze_max_age 
+	, substring(array_to_string(rel.reloptions, ',') FROM 'autovacuum_freeze_table_age=([0-9]*)') AS autovacuum_freeze_table_age 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_enabled=([a-z|0-9]*)') AS toast_autovacuum_enabled 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_vacuum_threshold=([0-9]*)') AS toast_autovacuum_vacuum_threshold 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_vacuum_scale_factor=([0-9]*[.][0-9]*)') AS toast_autovacuum_vacuum_scale_factor 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_analyze_threshold=([0-9]*)') AS toast_autovacuum_analyze_threshold 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_analyze_scale_factor=([0-9]*[.][0-9]*)') AS toast_autovacuum_analyze_scale_factor 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_vacuum_cost_delay=([0-9]*)') AS toast_autovacuum_vacuum_cost_delay 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_vacuum_cost_limit=([0-9]*)') AS toast_autovacuum_vacuum_cost_limit 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_freeze_min_age=([0-9]*)') AS toast_autovacuum_freeze_min_age 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_freeze_max_age=([0-9]*)') AS toast_autovacuum_freeze_max_age 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_freeze_table_age=([0-9]*)') AS toast_autovacuum_freeze_table_age 
+	, rel.reloptions AS reloptions, tst.reloptions AS toast_reloptions 
+	, (CASE WHEN rel.reltoastrelid = 0 THEN false ELSE true END) AS hastoasttable
+	, rel.reloftype, typ.typname
+	,
+	(SELECT array_agg(label) FROM pg_seclabels sl1 WHERE sl1.objoid=rel.oid AND sl1.objsubid=0) AS labels,
+	(SELECT array_agg(provider) FROM pg_seclabels sl2 WHERE sl2.objoid=rel.oid AND sl2.objsubid=0) AS providers  FROM pg_class rel
+	  LEFT OUTER JOIN pg_tablespace spc on spc.oid=rel.reltablespace
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=rel.oid AND des.objsubid=0 AND des.classoid='pg_class'::regclass)
+	  LEFT OUTER JOIN pg_constraint con ON con.conrelid=rel.oid AND con.contype='p'
+	  LEFT OUTER JOIN pg_class tst ON tst.oid = rel.reltoastrelid
+	LEFT JOIN pg_type typ ON rel.reloftype=typ.oid
+	 WHERE rel.relkind IN ('r','s','t') AND rel.relnamespace = 2200::oid
+	 ORDER BY rel.relname
+2016-12-13 21:57:51 ICT LOG:  statement: SELECT pr.oid, pr.xmin, pr.*, format_type(TYP.oid, NULL) AS typname, typns.nspname AS typnsp, lanname, proargnames, pg_get_expr(proargdefaults, 'pg_catalog.pg_class'::regclass) AS proargdefaultvals, pronargdefaults, proconfig,        pg_get_userbyid(proowner) as funcowner, description,
+	(SELECT array_agg(label) FROM pg_seclabels sl1 WHERE sl1.objoid=pr.oid) AS labels,
+	(SELECT array_agg(provider) FROM pg_seclabels sl2 WHERE sl2.objoid=pr.oid) AS providers
+	  FROM pg_proc pr
+	  JOIN pg_type typ ON typ.oid=prorettype
+	  JOIN pg_namespace typns ON typns.oid=typ.typnamespace
+	  JOIN pg_language lng ON lng.oid=prolang
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=pr.oid AND des.classoid='pg_proc'::regclass)
+	 WHERE proisagg = FALSE AND pronamespace = 2200::oid
+	AND (typname IN ('trigger', 'event_trigger') 
+	AND lanname NOT IN ('edbspl', 'sql', 'internal')) ORDER BY proname
+2016-12-13 21:57:51 ICT LOG:  statement: SELECT oid, format_type(oid, NULL) AS typname FROM pg_type
+2016-12-13 21:57:51 ICT LOG:  statement: SELECT c.oid, c.xmin, c.relname,c.reltablespace AS spcoid, c.relkind, c.relispopulated AS ispopulated,spc.spcname, pg_get_userbyid(c.relowner) AS viewowner, c.relacl, description, pg_get_viewdef(c.oid, true) AS definition,
+	(SELECT array_agg(label) FROM pg_seclabels sl1 WHERE sl1.objoid=c.oid AND sl1.objsubid=0) AS labels,
+	(SELECT array_agg(provider) FROM pg_seclabels sl2 WHERE sl2.objoid=c.oid AND sl2.objsubid=0) AS providers,
+	substring(array_to_string(c.reloptions, ',') FROM 'security_barrier=([a-z|0-9]*)') AS security_barrier, substring(array_to_string(c.reloptions, ',') FROM 'fillfactor=([0-9]*)') AS fillfactor 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_enabled=([a-z|0-9]*)') AS autovacuum_enabled 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_vacuum_threshold=([0-9]*)') AS autovacuum_vacuum_threshold 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_vacuum_scale_factor=([0-9]*[.][0-9]*)') AS autovacuum_vacuum_scale_factor 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_analyze_threshold=([0-9]*)') AS autovacuum_analyze_threshold 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_analyze_scale_factor=([0-9]*[.][0-9]*)') AS autovacuum_analyze_scale_factor 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_vacuum_cost_delay=([0-9]*)') AS autovacuum_vacuum_cost_delay 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_vacuum_cost_limit=([0-9]*)') AS autovacuum_vacuum_cost_limit 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_freeze_min_age=([0-9]*)') AS autovacuum_freeze_min_age 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_freeze_max_age=([0-9]*)') AS autovacuum_freeze_max_age 
+	, substring(array_to_string(c.reloptions, ',') FROM 'autovacuum_freeze_table_age=([0-9]*)') AS autovacuum_freeze_table_age 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_enabled=([a-z|0-9]*)') AS toast_autovacuum_enabled 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_vacuum_threshold=([0-9]*)') AS toast_autovacuum_vacuum_threshold 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_vacuum_scale_factor=([0-9]*[.][0-9]*)') AS toast_autovacuum_vacuum_scale_factor 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_analyze_threshold=([0-9]*)') AS toast_autovacuum_analyze_threshold 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_analyze_scale_factor=([0-9]*[.][0-9]*)') AS toast_autovacuum_analyze_scale_factor 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_vacuum_cost_delay=([0-9]*)') AS toast_autovacuum_vacuum_cost_delay 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_vacuum_cost_limit=([0-9]*)') AS toast_autovacuum_vacuum_cost_limit 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_freeze_min_age=([0-9]*)') AS toast_autovacuum_freeze_min_age 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_freeze_max_age=([0-9]*)') AS toast_autovacuum_freeze_max_age 
+	, substring(array_to_string(tst.reloptions, ',') FROM 'autovacuum_freeze_table_age=([0-9]*)') AS toast_autovacuum_freeze_table_age 
+	, c.reloptions AS reloptions, tst.reloptions AS toast_reloptions 
+	, (CASE WHEN c.reltoastrelid = 0 THEN false ELSE true END) AS hastoasttable
+	,
+	substring(array_to_string(c.reloptions, ',') FROM 'check_option=([a-z]*)') AS check_option
+	  FROM pg_class c
+	  LEFT OUTER JOIN pg_tablespace spc on spc.oid=c.reltablespace
+	  LEFT OUTER JOIN pg_description des ON (des.objoid=c.oid and des.objsubid=0 AND des.classoid='pg_class'::regclass)
+	  LEFT OUTER JOIN pg_class tst ON tst.oid = c.reltoastrelid
+	 WHERE ((c.relhasrules AND (EXISTS (
+	           SELECT r.rulename FROM pg_rewrite r
+	            WHERE ((r.ev_class = c.oid)
+	              AND (bpchar(r.ev_type) = '1'::bpchar)) ))) OR (c.relkind = 'v'::char))
+	   AND c.relnamespace = 2200::oid
+	 ORDER BY relname
+2016-12-13 21:57:51 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 2200::oid AND defaclobjtype='r'
+2016-12-13 21:57:51 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 2200::oid AND defaclobjtype='S'
+2016-12-13 21:57:51 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 2200::oid AND defaclobjtype='f'
+2016-12-13 21:57:51 ICT LOG:  statement: SELECT defaclacl FROM pg_catalog.pg_default_acl dacl WHERE dacl.defaclnamespace = 2200::oid AND defaclobjtype='T'
+2016-12-13 21:57:54 ICT LOG:  statement: SELECT version();
+2016-12-13 21:57:54 ICT LOG:  statement: SET DateStyle=ISO;
+	SET client_min_messages=notice;
+	SET bytea_output=escape;
+	SELECT oid, pg_encoding_to_char(encoding) AS encoding, datlastsysoid
+	  FROM pg_database WHERE oid = 69963091
+2016-12-13 21:57:54 ICT LOG:  statement: set client_encoding to 'UNICODE'
+2016-12-13 21:58:00 ICT LOG:  statement: select his_sync()
+2016-12-13 21:58:08 ICT LOG:  statement: select 1
+2016-12-13 21:58:08 ICT LOG:  statement: SELECT *, his_general_full_address(homenumber, address, precinct_name) AS full_address, UPPER(full_name) AS full_name_upper, 0 AS is_card, CASE WHEN archives_number_home IS NOT NULL OR archives_number_home <> '' THEN 1 ELSE 0 END is_home_treatment_file, CASE WHEN medical_objects = 1 THEN CASE WHEN insurance_discount <> 0 THEN 'BH:' || insurance_discount || '%' ELSE '' END ELSE CASE WHEN medical_objects = 3 THEN 'Chính Sách' ELSE 'Thu Phí ' || (100 - object_remission) || '%' END END || CASE WHEN object_remission <> 0 THEN CASE WHEN insurance_discount = 0 THEN 'Miễn phí:' || object_remission || '%' ELSE '+' || 'Miễn :' || object_remission || '%' END ELSE '' END AS medical_object, CASE WHEN suggestion_policy = 9 THEN finish_plan_time::date + treatment_day ELSE CASE WHEN treatment_id <> 0 THEN finish_plan_time ELSE close_time END END AS date_signal FROM his_get_medical_info('16157152|0|0')
+2016-12-13 21:58:08 ICT LOG:  statement: unlisten *
+2016-12-13 21:58:08 ICT LOG:  statement: select 1
+2016-12-13 21:58:08 ICT LOG:  statement: SELECT code FROM hms_drugselection WHERE zone = 'stock' AND note IN ('NT','BL') AND othername = '1' AND code IN (140,141,142,143,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,598,599) LIMIT 1
+2016-12-13 21:58:08 ICT LOG:  statement: unlisten *
+2016-12-13 21:58:08 ICT LOG:  statement: select 1
+2016-12-13 21:58:08 ICT LOG:  statement: select a.id, drugname, content, unit, deliveredquantity as quantity, price, note, expireddate, stockimexid, usingdrugid, stockid , deliveredquantity * price AS money, instruction, dailydosage, instalment, usage, usagename, doctorid, doctorname, a.status, dosage, drug_accept, stockimexid, 0 AS chs from hm_patientdrugview a JOIN hm_employee b ON a.doctorid = b.id  where medicalrecordid = 16157152 order by a.id
+2016-12-13 21:58:08 ICT LOG:  statement: unlisten *
+2016-12-13 21:58:10 ICT LOG:  statement: SELECT format_type(oid,-1) as typname FROM pg_type WHERE oid = 25
+2016-12-13 21:58:10 ICT LOG:  statement: SELECT CASE WHEN typbasetype=0 THEN oid else typbasetype END AS basetype
+	  FROM pg_type WHERE oid=25
+2016-12-13 21:58:38 ICT LOG:  statement: select 1
+2016-12-13 21:58:38 ICT LOG:  statement: SELECT *, his_general_full_address(homenumber, address, precinct_name) AS full_address, UPPER(full_name) AS full_name_upper, 0 AS is_card, CASE WHEN archives_number_home IS NOT NULL OR archives_number_home <> '' THEN 1 ELSE 0 END is_home_treatment_file, CASE WHEN medical_objects = 1 THEN CASE WHEN insurance_discount <> 0 THEN 'BH:' || insurance_discount || '%' ELSE '' END ELSE CASE WHEN medical_objects = 3 THEN 'Chính Sách' ELSE 'Thu Phí ' || (100 - object_remission) || '%' END END || CASE WHEN object_remission <> 0 THEN CASE WHEN insurance_discount = 0 THEN 'Miễn phí:' || object_remission || '%' ELSE '+' || 'Miễn :' || object_remission || '%' END ELSE '' END AS medical_object, CASE WHEN suggestion_policy = 9 THEN finish_plan_time::date + treatment_day ELSE CASE WHEN treatment_id <> 0 THEN finish_plan_time ELSE close_time END END AS date_signal FROM his_get_medical_info('16157152|0|0')
+2016-12-13 21:58:38 ICT LOG:  statement: unlisten *
+2016-12-13 21:58:38 ICT LOG:  statement: select 1
+2016-12-13 21:58:38 ICT LOG:  statement: select a.id, drugname, content, unit, deliveredquantity as quantity, price, note, expireddate, stockimexid, usingdrugid, stockid , deliveredquantity * price AS money, instruction, dailydosage, instalment, usage, usagename, doctorid, doctorname, a.status, dosage, drug_accept, stockimexid, 0 AS chs from hm_patientdrugview a JOIN hm_employee b ON a.doctorid = b.id  where medicalrecordid = 16157152 order by a.id
+2016-12-13 21:58:38 ICT LOG:  statement: unlisten *
+2016-12-13 21:58:45 ICT LOG:  statement: select 1
+2016-12-13 21:58:45 ICT LOG:  statement: SELECT *, his_general_full_address(homenumber, address, precinct_name) AS full_address, UPPER(full_name) AS full_name_upper, 0 AS is_card, CASE WHEN archives_number_home IS NOT NULL OR archives_number_home <> '' THEN 1 ELSE 0 END is_home_treatment_file, CASE WHEN medical_objects = 1 THEN CASE WHEN insurance_discount <> 0 THEN 'BH:' || insurance_discount || '%' ELSE '' END ELSE CASE WHEN medical_objects = 3 THEN 'Chính Sách' ELSE 'Thu Phí ' || (100 - object_remission) || '%' END END || CASE WHEN object_remission <> 0 THEN CASE WHEN insurance_discount = 0 THEN 'Miễn phí:' || object_remission || '%' ELSE '+' || 'Miễn :' || object_remission || '%' END ELSE '' END AS medical_object, CASE WHEN suggestion_policy = 9 THEN finish_plan_time::date + treatment_day ELSE CASE WHEN treatment_id <> 0 THEN finish_plan_time ELSE close_time END END AS date_signal FROM his_get_medical_info('16157152|0|0')
+2016-12-13 21:58:45 ICT LOG:  statement: unlisten *
+2016-12-13 21:58:45 ICT LOG:  statement: select 1
+2016-12-13 21:58:45 ICT LOG:  statement: select a.id, drugname, content, unit, deliveredquantity as quantity, price, note, expireddate, stockimexid, usingdrugid, stockid , deliveredquantity * price AS money, instruction, dailydosage, instalment, usage, usagename, doctorid, doctorname, a.status, dosage, drug_accept, stockimexid, 0 AS chs from hm_patientdrugview a JOIN hm_employee b ON a.doctorid = b.id  where medicalrecordid = 16157152 order by a.id
+2016-12-13 21:58:45 ICT LOG:  statement: unlisten *
+2016-12-13 22:02:19 ICT LOG:  statement: SELECT version();
+2016-12-13 22:02:19 ICT LOG:  statement: SET DateStyle=ISO;
+	SET client_min_messages=notice;
+	SET bytea_output=escape;
+	SELECT oid, pg_encoding_to_char(encoding) AS encoding, datlastsysoid
+	  FROM pg_database WHERE oid = 69963091
+2016-12-13 22:02:19 ICT LOG:  statement: set client_encoding to 'UNICODE'
+2016-12-13 22:02:31 ICT LOG:  statement: select 1
+2016-12-13 22:02:31 ICT LOG:  statement: SELECT a.id AS medicalrecordid, hm_getname(fname, mname, null) fullname, lname AS name, a.status, CASE WHEN gender = 1 THEN 'Nam' ELSE 'Nữ' END AS sex, birthyear, c.code AS cardcode, CASE WHEN length(subjectofpatient::text) <> 9 THEN 0 ELSE substr(subjectofpatient::text,7,3)::integer END AS discount, age, b.id,  a.examroomid, d.id AS receptionid, d.status AS receptionstatus, ticketnumber, queuenumber, 0 AS chs FROM hms_medicalrecord a JOIN hms_patient b ON a.patientid = b.id LEFT JOIN hms_card c ON a.cardid = c.id JOIN hms_reception d ON a.id = d.medicalrecordid  WHERE d.examroomid = 501  AND creationdate::date = current_date
+2016-12-13 22:02:32 ICT LOG:  statement: unlisten *
+2016-12-13 22:02:32 ICT LOG:  statement: select 1
+2016-12-13 22:02:32 ICT LOG:  statement: select a.id, drugname, content, unit, deliveredquantity as quantity, price, note, expireddate, stockimexid, usingdrugid, stockid , deliveredquantity * price AS money, instruction, dailydosage, instalment, usage, usagename, doctorid, doctorname, a.status, dosage, drug_accept, stockimexid, 0 AS chs from hm_patientdrugview a JOIN hm_employee b ON a.doctorid = b.id  where medicalrecordid = 16157152 order by a.id
+2016-12-13 22:02:32 ICT LOG:  statement: unlisten *
+2016-12-13 22:04:16 ICT LOG:  statement: SHOW shared_preload_libraries
+2016-12-13 22:04:19 ICT LOG:  statement: SELECT version();
+2016-12-13 22:04:19 ICT LOG:  statement: SET DateStyle=ISO;
+	SET client_min_messages=notice;
+	SET bytea_output=escape;
+	SELECT oid, pg_encoding_to_char(encoding) AS encoding, datlastsysoid
+	  FROM pg_database WHERE oid = 69963091
+2016-12-13 22:04:19 ICT LOG:  statement: set client_encoding to 'UNICODE'
+2016-12-13 22:07:31 ICT LOG:  statement: select 1
+2016-12-13 22:07:31 ICT LOG:  statement: SELECT a.id AS medicalrecordid, hm_getname(fname, mname, null) fullname, lname AS name, a.status, CASE WHEN gender = 1 THEN 'Nam' ELSE 'Nữ' END AS sex, birthyear, c.code AS cardcode, CASE WHEN length(subjectofpatient::text) <> 9 THEN 0 ELSE substr(subjectofpatient::text,7,3)::integer END AS discount, age, b.id,  a.examroomid, d.id AS receptionid, d.status AS receptionstatus, ticketnumber, queuenumber, 0 AS chs FROM hms_medicalrecord a JOIN hms_patient b ON a.patientid = b.id LEFT JOIN hms_card c ON a.cardid = c.id JOIN hms_reception d ON a.id = d.medicalrecordid  WHERE d.examroomid = 501  AND creationdate::date = current_date
+2016-12-13 22:07:32 ICT LOG:  statement: unlisten *
+2016-12-13 22:07:32 ICT LOG:  statement: select 1
+2016-12-13 22:07:32 ICT LOG:  statement: select a.id, drugname, content, unit, deliveredquantity as quantity, price, note, expireddate, stockimexid, usingdrugid, stockid , deliveredquantity * price AS money, instruction, dailydosage, instalment, usage, usagename, doctorid, doctorname, a.status, dosage, drug_accept, stockimexid, 0 AS chs from hm_patientdrugview a JOIN hm_employee b ON a.doctorid = b.id  where medicalrecordid = 16157152 order by a.id
+2016-12-13 22:07:32 ICT LOG:  statement: unlisten *
+2016-12-13 22:20:24 ICT LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	

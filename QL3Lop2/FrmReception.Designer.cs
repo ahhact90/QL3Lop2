@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtBenhNhan = new DevExpress.XtraEditors.TextEdit();
             this.lblHoTen = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -54,6 +55,7 @@
             this.txtSoPhieu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.dte_now = new DevExpress.XtraEditors.TimeEdit();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtBenhNhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteNamsinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteNamsinh.Properties)).BeginInit();
@@ -308,6 +310,10 @@
             this.dte_now.TabIndex = 7;
             this.dte_now.EditValueChanged += new System.EventHandler(this.dte_tungay_EditValueChanged);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmReception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,5 +397,6 @@
         private DevExpress.XtraEditors.TextEdit txtSoPhieu;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.TimeEdit dte_now;
+        private System.Windows.Forms.Timer timer1;
     }
 }

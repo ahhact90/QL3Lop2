@@ -47,6 +47,7 @@ namespace QL3Lop2
         {
             InitializeComponent();
             txtBenhNhan.Focus();
+            timer1.Start();
             
             
         }
@@ -259,6 +260,13 @@ namespace QL3Lop2
             //    txtNgheNghiep.MaskBox.AutoCompleteCustomSource.Add(rw);
 
             //} 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dTime = DateTime.Now;
+            this.dte_now.Text = dTime.ToString();
+
         }
     }
 }
