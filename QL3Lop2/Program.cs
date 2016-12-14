@@ -16,8 +16,8 @@ namespace QL3Lop2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmDialog());
-            Application.Run(new FrmReception());
+            Application.Run(new FrmMain());
+            //Application.Run(new FrmReception());
         }
     }
 }
