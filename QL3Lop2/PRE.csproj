@@ -149,6 +149,12 @@
     <Compile Include="Report\rp_Mau21.Designer.cs">
       <DependentUpon>rp_Mau21.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCNgheNghiep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCNgheNghiep.Designer.cs">
+      <DependentUpon>UCNgheNghiep.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmDanToc.resx">
       <DependentUpon>FrmDanToc.cs</DependentUpon>
     </EmbeddedResource>
