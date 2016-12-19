@@ -19,6 +19,7 @@ namespace QL3Lop2
         DAL.Mau21DAL _M21 = new DAL.Mau21DAL();
         DataTable dt = new DataTable();
         DataSet ds = new DataSet();
+        DAL.Mau20QNDAL _M20 = new DAL.Mau20QNDAL();
         #endregion
 
         public FrmMain()
@@ -131,6 +132,32 @@ namespace QL3Lop2
         private void dte_tungay_EditValueChanged(object sender, EventArgs e)
         {
             //dte_tungay = DateTime.No
+        }
+
+        private void btnMau20_Click(object sender, EventArgs e)
+        {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            ds = _M20.Select_Time(FromDate, ToDate1);
+            try
+            {
+                if (ds == null)
+                {
+                    MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Close();
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");           
+            string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            Report.rp_Mau20QN f20 = new Report.rp_Mau20QN(dateNgayBD1, dateNgaKT1);           
+            f20.DataSource = ds;
+            f20.DataMember = ds.Tables[0].TableName;
+            f20.ShowPreview();
         }
     }
 }
