@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
-    <Compile Include="Mau20QN.cs" />
+    <Compile Include="Mau20QNDAL.cs" />
     <Compile Include="ReceptionChiTietDAL.cs" />
     <Compile Include="Mau21DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

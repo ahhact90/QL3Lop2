@@ -8,7 +8,7 @@ using UTL;
 
 namespace DAL
 {
-    public class Mau20QN : BaseDAL, UTL.IBaseDAL
+    public class Mau20QNDAL : BaseDAL, UTL.IBaseDAL
     {
         #region Implement
 
