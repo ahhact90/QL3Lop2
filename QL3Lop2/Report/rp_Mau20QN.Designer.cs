@@ -111,6 +111,7 @@
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -275,6 +276,7 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel13,
             this.xrLabel7,
             this.xrlFrom,
             this.xrLabel8,
@@ -282,7 +284,7 @@
             this.xrLabel3,
             this.xrLabel1,
             this.xrLabel2});
-            this.ReportHeader.HeightF = 140.2917F;
+            this.ReportHeader.HeightF = 141.6667F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // xrLabel7
@@ -822,6 +824,14 @@
             this.xrPageInfo2.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
             this.xrPageInfo2.SizeF = new System.Drawing.SizeF(144.7917F, 23F);
             // 
+            // xrLabel13
+            // 
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(530.6196F, 120.8333F);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(80.20831F, 20.83334F);
+            this.xrLabel13.Text = "BHYT_QN";
+            // 
             // rp_Mau20QN
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -928,5 +938,6 @@
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel13;
     }
 }
