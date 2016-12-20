@@ -267,7 +267,7 @@
             // 
             // BottomMargin
             // 
-            this.BottomMargin.HeightF = 121.4167F;
+            this.BottomMargin.HeightF = 1.458295F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -835,7 +835,7 @@
             this.GroupHeader2});
             this.DataMember = "DataTable";
             this.DataSource = this.dS_Mau201;
-            this.Margins = new System.Drawing.Printing.Margins(10, 10, 10, 121);
+            this.Margins = new System.Drawing.Printing.Margins(10, 10, 10, 1);
             this.PageHeight = 827;
             this.PageWidth = 1169;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4Rotated;
