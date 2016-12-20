@@ -8,9 +8,11 @@ namespace QL3Lop2.Report
 {
     public partial class rp_Mau19QN : DevExpress.XtraReports.UI.XtraReport
     {
-        public rp_Mau19QN()
+        public rp_Mau19QN(string dateNgayBD, string dateNgaKT)
         {
             InitializeComponent();
+            xrlFrom.Text = dateNgayBD;
+            xrlTo.Text = dateNgaKT;   
         }
 
     }
