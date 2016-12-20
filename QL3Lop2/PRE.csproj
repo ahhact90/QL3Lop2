@@ -134,6 +134,12 @@
     <Compile Include="Report\DS_Mau21.cs">
       <DependentUpon>DS_Mau21.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Report\rp_Mau19QN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rp_Mau19QN.Designer.cs">
+      <DependentUpon>rp_Mau19QN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\rp_Mau20QN.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -189,6 +195,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\rp_Mau19QN.resx">
+      <DependentUpon>rp_Mau19QN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\rp_Mau20QN.resx">
       <DependentUpon>rp_Mau20QN.cs</DependentUpon>
     </EmbeddedResource>
