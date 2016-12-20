@@ -124,7 +124,6 @@
     </Compile>
     <Compile Include="Report\DS_Mau21.cs">
       <DependentUpon>DS_Mau21.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\rp_Mau20QN.cs">
       <SubType>Component</SubType>
