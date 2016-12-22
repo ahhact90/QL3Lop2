@@ -29,6 +29,7 @@ namespace QL3Lop2
         public FrmNgheNghiep()
         {
             InitializeComponent();
+            
         }
 
         private void FrmDialog_Load(object sender, EventArgs e)

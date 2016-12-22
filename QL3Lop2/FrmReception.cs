@@ -193,6 +193,10 @@ namespace QL3Lop2
                 txtSoNha.Focus();
                  * */
                 FrmNgheNghiep frm = new FrmNgheNghiep();
+                int width = this.Size.Width;
+                int height = this.Size.Height;
+                double height1 = height * 0.3;
+                frm.Top = Convert.ToInt16(height1);
                 frm.ShowDialog();
                 txtNgheNghiep.Text = frm.Passvalue;
                 txtSoNha.Focus();
@@ -215,8 +219,11 @@ namespace QL3Lop2
                 _Diachi = txtDiachi.Text.ToString();
                 FrmDiaChi frm = new FrmDiaChi();
                 frm.Diachichitiet = txtDiachi.Text;
-                frm.SetDesktopLocation(Cursor.Position.X, Cursor.Position.Y);
-
+                //frm.SetDesktopLocation(Cursor.Position.X, Cursor.Position.Y);
+                int width = this.Size.Width;
+                int height = this.Size.Height;
+                double height1 = height * 0.3;
+                frm.Top = Convert.ToInt16(height1);
                 frm.ShowDialog();
                 txtDiachi.Text = frm.Passvalue;
                 txtKieuKham.Focus();
