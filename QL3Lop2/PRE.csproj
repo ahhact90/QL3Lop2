@@ -119,7 +119,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report\DS_Mau19.cs">
       <DependentUpon>DS_Mau19.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\DS_Mau19.Designer.cs">
       <AutoGen>True</AutoGen>
