@@ -73,12 +73,20 @@ namespace DAL
         /// <param name="to"></param>
         /// <param name="from"></param>
         /// <returns></returns>
-         public DataSet Select_Time(DateTime to, DateTime from)
+        public DataSet Select_Time(DateTime to, DateTime from)
         {            
             var sql = "select * from his_insurance_service_detail_get('{0}|{1}|19|3')";
-            sql = string.Format(sql, to.ToString("yyyy-MM-dd hh:mm:ss"), from.ToString("yyyy-MM-dd hh:mm:ss"));
+            sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
             return ExecuteDataset(sql);
         }
+
+         public DataTable Select_Time1()
+         {
+             var sql = "select * from his_insurance_service_detail_get('2016-12-01 00:00:00|2016-12-31 23:59:59|19|3')";
+             sql = string.Format(sql);
+             return ExecuteQuery(sql);
+         }
+
         #endregion
 
     }

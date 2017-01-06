@@ -112,6 +112,7 @@
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.GroupHeader2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.dataTableTableAdapter1 = new QL3Lop2.Report.DS_Mau21TableAdapters.DataTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -832,6 +833,10 @@
             this.GroupHeader2.HeightF = 38.54166F;
             this.GroupHeader2.Name = "GroupHeader2";
             // 
+            // dataTableTableAdapter1
+            // 
+            this.dataTableTableAdapter1.ClearBeforeFill = true;
+            // 
             // rp_Mau20QN
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -843,6 +848,7 @@
             this.PageHeader,
             this.PageFooter,
             this.GroupHeader2});
+            this.DataAdapter = this.dataTableTableAdapter1;
             this.DataMember = "DataTable";
             this.DataSource = this.dS_Mau201;
             this.Margins = new System.Drawing.Printing.Margins(10, 10, 10, 1);
@@ -939,5 +945,6 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         private DevExpress.XtraReports.UI.XRTable xrTable1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader2;
+        private DS_Mau21TableAdapters.DataTableTableAdapter dataTableTableAdapter1;
     }
 }

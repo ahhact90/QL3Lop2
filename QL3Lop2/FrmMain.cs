@@ -186,6 +186,13 @@ namespace QL3Lop2
             f19.DataMember = ds.Tables[0].TableName;
             f19.ShowPreview();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            dt = _M19.Select_Time1();
+            dtGridView.DataSource = dt;
+        }
     }
 }
 
