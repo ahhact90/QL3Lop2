@@ -61,7 +61,7 @@ namespace DAL
             //sql = string.Format(sql);
             //return ExecuteDataset(sql);
 
-            var sql = "select * from his_insurance_service_detail_get_bqp_khac('{0}|{1}|21|3')";
+            var sql = "select * from his_insurance_service_detail_get_qn('{0}|{1}|21|3')";
             sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
             return ExecuteDataset(sql);
         }
