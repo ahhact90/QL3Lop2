@@ -58,8 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
+    <Compile Include="Mau19BQPKhacDAL.cs" />
     <Compile Include="Mau19QNDAL.cs" />
+    <Compile Include="Mau20BQPKhacDAL.cs" />
     <Compile Include="Mau20QNDAL.cs" />
+    <Compile Include="Mau21BQPKhacDAL.cs" />
     <Compile Include="ReceptionChiTietDAL.cs" />
     <Compile Include="Mau21DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
