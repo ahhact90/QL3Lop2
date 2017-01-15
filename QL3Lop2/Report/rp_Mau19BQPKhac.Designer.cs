@@ -289,16 +289,16 @@
             this.xrLabel13.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel13.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel13.ForeColor = System.Drawing.Color.DarkGray;
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(147.5F, 126.521F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(78.75001F, 107.9792F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(80.20834F, 27.83321F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(163.5417F, 27.8332F);
             this.xrLabel13.StylePriority.UseBackColor = false;
             this.xrLabel13.StylePriority.UseBorderDashStyle = false;
             this.xrLabel13.StylePriority.UseForeColor = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
-            this.xrLabel13.Text = "BHYT_Khac\r\n";
+            this.xrLabel13.Text = "BHYT_BQP_Khac\r\n";
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel1
