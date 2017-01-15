@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class Mau21BQPKhacDAL : BaseDAL, UTL.IBaseDAL
+    public class Mau21BQPKhacDAL : BaseDAL, UTL.IBaseDAL
     {
         #region Implement
 

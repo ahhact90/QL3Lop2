@@ -21,6 +21,8 @@ namespace QL3Lop2
         DataSet ds = new DataSet();
         DAL.Mau20QNDAL _M20 = new DAL.Mau20QNDAL();
         DAL.Mau19QNDAL _M19 = new DAL.Mau19QNDAL();
+        DAL.Mau19BQPKhacDAL _M19Khac = new DAL.Mau19BQPKhacDAL();
+        
         #endregion
 
         public FrmMain()
@@ -192,6 +194,42 @@ namespace QL3Lop2
             
             dt = _M19.Select_Time1();
             dtGridView.DataSource = dt;
+        }
+
+        private void btnMau21Khac_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMau20Khac_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMau19Khac_Click(object sender, EventArgs e)
+        {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            ds = _M19Khac.Select_Time(FromDate, ToDate1);
+            try
+            {
+                if (ds == null)
+                {
+                    MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Close();
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            Report.rp_Mau19BQPKhac f19 = new Report.rp_Mau19BQPKhac(dateNgayBD1, dateNgaKT1);
+            f19.DataSource = ds;
+            f19.DataMember = ds.Tables[0].TableName;
+            f19.ShowPreview();
         }
     }
 }

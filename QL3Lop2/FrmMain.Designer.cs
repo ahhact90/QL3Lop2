@@ -34,9 +34,9 @@
             this.dte_tungay = new DevExpress.XtraEditors.TimeEdit();
             this.btIn2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btTimes = new System.Windows.Forms.Button();
+            this.btnMau21QN = new System.Windows.Forms.Button();
             this.dte_denngay = new DevExpress.XtraEditors.TimeEdit();
-            this.btnMau20 = new System.Windows.Forms.Button();
+            this.btnMau20QN = new System.Windows.Forms.Button();
             this.btnMau19QN = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
             this.btnMau21Khac = new System.Windows.Forms.Button();
@@ -82,7 +82,7 @@
             // 
             // dte_tungay
             // 
-            this.dte_tungay.EditValue = new System.DateTime(2016, 11, 13, 22, 16, 26, 0);
+            this.dte_tungay.EditValue = new System.DateTime(2016, 11, 13, 0, 0, 0, 0);
             this.dte_tungay.Location = new System.Drawing.Point(59, 442);
             this.dte_tungay.Name = "dte_tungay";
             this.dte_tungay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -115,16 +115,16 @@
             this.textBox1.Size = new System.Drawing.Size(147, 20);
             this.textBox1.TabIndex = 5;
             // 
-            // btTimes
+            // btnMau21QN
             // 
-            this.btTimes.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTimes.Location = new System.Drawing.Point(516, 431);
-            this.btTimes.Name = "btTimes";
-            this.btTimes.Size = new System.Drawing.Size(137, 51);
-            this.btTimes.TabIndex = 6;
-            this.btTimes.Text = "Mẫu 21 QN Theo Thời Gian";
-            this.btTimes.UseVisualStyleBackColor = true;
-            this.btTimes.Click += new System.EventHandler(this.btTimes_Click);
+            this.btnMau21QN.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMau21QN.Location = new System.Drawing.Point(516, 431);
+            this.btnMau21QN.Name = "btnMau21QN";
+            this.btnMau21QN.Size = new System.Drawing.Size(137, 51);
+            this.btnMau21QN.TabIndex = 6;
+            this.btnMau21QN.Text = "Mẫu 21 QN Theo Thời Gian";
+            this.btnMau21QN.UseVisualStyleBackColor = true;
+            this.btnMau21QN.Click += new System.EventHandler(this.btTimes_Click);
             // 
             // dte_denngay
             // 
@@ -142,15 +142,15 @@
             this.dte_denngay.Size = new System.Drawing.Size(158, 20);
             this.dte_denngay.TabIndex = 2;
             // 
-            // btnMau20
+            // btnMau20QN
             // 
-            this.btnMau20.Location = new System.Drawing.Point(667, 431);
-            this.btnMau20.Name = "btnMau20";
-            this.btnMau20.Size = new System.Drawing.Size(107, 51);
-            this.btnMau20.TabIndex = 8;
-            this.btnMau20.Text = "Mẫu 20 QN Theo Thời Gian";
-            this.btnMau20.UseVisualStyleBackColor = true;
-            this.btnMau20.Click += new System.EventHandler(this.btnMau20_Click);
+            this.btnMau20QN.Location = new System.Drawing.Point(667, 431);
+            this.btnMau20QN.Name = "btnMau20QN";
+            this.btnMau20QN.Size = new System.Drawing.Size(107, 51);
+            this.btnMau20QN.TabIndex = 8;
+            this.btnMau20QN.Text = "Mẫu 20 QN Theo Thời Gian";
+            this.btnMau20QN.UseVisualStyleBackColor = true;
+            this.btnMau20QN.Click += new System.EventHandler(this.btnMau20_Click);
             // 
             // btnMau19QN
             // 
@@ -180,6 +180,7 @@
             this.btnMau21Khac.TabIndex = 11;
             this.btnMau21Khac.Text = "Mẫu 21 BQP Khác";
             this.btnMau21Khac.UseVisualStyleBackColor = true;
+            this.btnMau21Khac.Click += new System.EventHandler(this.btnMau21Khac_Click);
             // 
             // btnMau20Khac
             // 
@@ -189,6 +190,7 @@
             this.btnMau20Khac.TabIndex = 12;
             this.btnMau20Khac.Text = "Mẫu 20 BQP Khác";
             this.btnMau20Khac.UseVisualStyleBackColor = true;
+            this.btnMau20Khac.Click += new System.EventHandler(this.btnMau20Khac_Click);
             // 
             // btnMau19Khac
             // 
@@ -198,6 +200,7 @@
             this.btnMau19Khac.TabIndex = 13;
             this.btnMau19Khac.Text = "Mẫu 19 BQP Khác";
             this.btnMau19Khac.UseVisualStyleBackColor = true;
+            this.btnMau19Khac.Click += new System.EventHandler(this.btnMau19Khac_Click);
             // 
             // label1
             // 
@@ -241,8 +244,8 @@
             this.Controls.Add(this.btnMau21Khac);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnMau19QN);
-            this.Controls.Add(this.btnMau20);
-            this.Controls.Add(this.btTimes);
+            this.Controls.Add(this.btnMau20QN);
+            this.Controls.Add(this.btnMau21QN);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btIn2);
             this.Controls.Add(this.dte_denngay);
@@ -268,9 +271,9 @@
         private DevExpress.XtraEditors.TimeEdit dte_tungay;
         private System.Windows.Forms.Button btIn2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btTimes;
+        private System.Windows.Forms.Button btnMau21QN;
         private DevExpress.XtraEditors.TimeEdit dte_denngay;
-        private System.Windows.Forms.Button btnMau20;
+        private System.Windows.Forms.Button btnMau20QN;
         private System.Windows.Forms.Button btnMau19QN;
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.Button btnMau21Khac;
