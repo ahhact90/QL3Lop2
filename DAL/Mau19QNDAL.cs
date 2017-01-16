@@ -82,7 +82,8 @@ namespace DAL
 
          public DataTable Select_Time1()
          {
-             var sql = "select * from his_insurance_service_detail_get('2016-12-01 00:00:00|2016-12-31 23:59:59|19|3')";
+             //var sql = "select * from his_insurance_service_detail_get('2016-12-01 00:00:00|2016-12-31 23:59:59|19|3')";
+            var sql = "select * from  his_bhxh_3360_97_get_bqp_qn('2016-12-01 00:00:00|2016-12-31 23:59:59|1')";
              sql = string.Format(sql);
              return ExecuteQuery(sql);
          }
