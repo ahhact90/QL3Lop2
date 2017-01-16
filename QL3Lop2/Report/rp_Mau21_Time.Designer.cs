@@ -252,7 +252,7 @@
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel13.SizeF = new System.Drawing.SizeF(64.58331F, 21.875F);
             this.xrLabel13.StylePriority.UseForeColor = false;
-            this.xrLabel13.Text = "BQP";
+            this.xrLabel13.Text = "BQP_QN";
             // 
             // xrLabel8
             // 
