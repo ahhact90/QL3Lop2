@@ -98,11 +98,11 @@
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.xrTable5 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell28 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Mau211)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -198,7 +198,7 @@
             // xrTableCell9
             // 
             this.xrTableCell9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable.price_export")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable.price_export", "{0:#,#}")});
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.Text = "xrTableCell9";
             this.xrTableCell9.Weight = 0.35464464495258952D;
@@ -726,15 +726,6 @@
             this.PageFooter.HeightF = 35.08332F;
             this.PageFooter.Name = "PageFooter";
             // 
-            // xrPageInfo2
-            // 
-            this.xrPageInfo2.Format = "{0:dd/MM/yyyy h:m:s tt}";
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 9.999974F);
-            this.xrPageInfo2.Name = "xrPageInfo2";
-            this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPageInfo2.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(145.5104F, 23F);
-            // 
             // xrTable5
             // 
             this.xrTable5.LocationFloat = new DevExpress.Utils.PointFloat(169.0521F, 10.08333F);
@@ -757,6 +748,15 @@
             this.xrTableCell28.Name = "xrTableCell28";
             this.xrTableCell28.Text = "xrTableCell28";
             this.xrTableCell28.Weight = 1D;
+            // 
+            // xrPageInfo2
+            // 
+            this.xrPageInfo2.Format = "{0:dd/MM/yyyy h:m:s tt}";
+            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 9.999974F);
+            this.xrPageInfo2.Name = "xrPageInfo2";
+            this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrPageInfo2.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(145.5104F, 23F);
             // 
             // rp_Mau21_Time
             // 

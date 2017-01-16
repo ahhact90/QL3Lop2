@@ -151,6 +151,12 @@
     <Compile Include="Report\rp_Mau20QN.Designer.cs">
       <DependentUpon>rp_Mau20QN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\rp_Mau21BQPKhac.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rp_Mau21BQPKhac.Designer.cs">
+      <DependentUpon>rp_Mau21BQPKhac.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\rp_Mau21_Time.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rp_Mau20QN.resx">
       <DependentUpon>rp_Mau20QN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rp_Mau21BQPKhac.resx">
+      <DependentUpon>rp_Mau21BQPKhac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rp_Mau21_Time.resx">
       <DependentUpon>rp_Mau21_Time.cs</DependentUpon>

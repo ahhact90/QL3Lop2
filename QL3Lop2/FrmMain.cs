@@ -23,6 +23,7 @@ namespace QL3Lop2
         DAL.Mau19QNDAL _M19 = new DAL.Mau19QNDAL();
         DAL.Mau19BQPKhacDAL _M19Khac = new DAL.Mau19BQPKhacDAL();
         DAL.Mau20BQPKhacDAL _M20Khac = new DAL.Mau20BQPKhacDAL();
+        DAL.Mau21BQPKhacDAL _M21Khac = new DAL.Mau21BQPKhacDAL();
         
         #endregion
 
@@ -41,9 +42,7 @@ namespace QL3Lop2
         }
 
         private void btIn_Click(object sender, EventArgs e)
-        {
-            //DataTable dulieu1 = _M21.Select_non();
-            //dtGridView.DataSource = dulieu1;
+        {            
              ds = _M21.Select_non();
              if (ds == null)
              {
@@ -68,10 +67,7 @@ namespace QL3Lop2
         }
 
         private void btIn2_Click(object sender, EventArgs e)
-        {
-            //DateTime FromDate = Convert.ToDateTime(dte_tungay.Text);
-            //DateTime ToDate = Convert.ToDateTime(dte_denngay.Text);
-           //textBox1.text = FromDate;
+        {           
             string N = textBox1.Text;
             ds = _M21.Select_non2(N);
            
@@ -98,13 +94,16 @@ namespace QL3Lop2
             f21.DataMember = ds.Tables[0].TableName;
             f21.ShowPreview();
         }
-
+        /// <summary>
+        /// Báo cáo mẫu 21 BHYT BQP QN
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btTimes_Click(object sender, EventArgs e)
         {
             
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
-            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
-           // DateTime toDate = DateTime.ParseExact(dte_denngay, "dd-MM-yyyy HH:mm:ss", System.Globalization.CultureInfo.CurrentUICulture);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);          
             ds = _M21.Select_non3(FromDate,ToDate1);
 
 
@@ -121,13 +120,9 @@ namespace QL3Lop2
             {
                 MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);                
             }
-            //string dateNgayBD = Convert.ToString(dte_tungay.Time);
-            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
-            //string dateNgaKT = Convert.ToString(dte_denngay.Time);
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");            
             string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
-            Report.rp_Mau21_Time f21 = new Report.rp_Mau21_Time(dateNgayBD1, dateNgaKT1);
-            //f21.Parameters["To"].Value = ToDate1;
-            //f21.Parameters["From"].Value = FromDate;
+            Report.rp_Mau21_Time f21 = new Report.rp_Mau21_Time(dateNgayBD1, dateNgaKT1);            
             f21.DataSource = ds;
             f21.DataMember = ds.Tables[0].TableName;
             f21.ShowPreview();
@@ -137,7 +132,11 @@ namespace QL3Lop2
         {
             //dte_tungay = DateTime.No
         }
-
+        /// <summary>
+        /// Báo cáo mẫu 20 BHYT BQP QN
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMau20_Click(object sender, EventArgs e)
         {
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
@@ -163,7 +162,11 @@ namespace QL3Lop2
             f20.DataMember = ds.Tables[0].TableName;
             f20.ShowPreview();
         }
-
+        /// <summary>
+        /// Báo cáo mẫu 19 BHYT BQP QN 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMau19QN_Click(object sender, EventArgs e)
         {
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
@@ -196,12 +199,44 @@ namespace QL3Lop2
             dt = _M19.Select_Time1();
             dtGridView.DataSource = dt;
         }
-
+        /// <summary>
+        /// Báo cáo mẫu 21 BHYT BQP Khac
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMau21Khac_Click(object sender, EventArgs e)
         {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            ds = _M21Khac.Select_Time(FromDate, ToDate1);
+
+            try
+            {
+                if (ds == null)
+                {
+                    MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Close();
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");           
+            string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            Report.rp_Mau21BQPKhac f21 = new Report.rp_Mau21BQPKhac(dateNgayBD1, dateNgaKT1);           
+            f21.DataSource = ds;
+            f21.DataMember = ds.Tables[0].TableName;
+            f21.ShowPreview();
 
         }
-
+        /// <summary>
+        /// Báo cáo mẫu 20 BHYT BQP Khac 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMau20Khac_Click(object sender, EventArgs e)
         {
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
@@ -228,7 +263,11 @@ namespace QL3Lop2
             f20.ShowPreview();
 
         }
-
+        /// <summary>
+        /// Báo cáo mẫu 19 BHYT BQP Khac
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMau19Khac_Click(object sender, EventArgs e)
         {
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);

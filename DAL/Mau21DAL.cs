@@ -42,7 +42,7 @@ namespace DAL
         public DataTable Select()
         {
             //Select(DateTime fromdate, DateTime todate)
-            var sql = "select * from his_insurance_service_detail_get('2016-07-01 0:0:0|2016-07-31 23:59:59|21|3')";
+            var sql = "select * from his_insurance_service_detail_get('2016-12-01 0:0:0|2016-12-31 23:59:59|21|3')";
             sql = string.Format(sql);
             return ExecuteQuery(sql);
             // throw new NotImplementedException();
@@ -55,13 +55,15 @@ namespace DAL
             return ExecuteDataset(sql);
             // throw new NotImplementedException();
         }
+        /// <summary>
+        /// Bao cao Mau 21 BQP QN 
+        /// </summary>
+        /// <param name="to"></param>
+        /// <param name="from"></param>
+        /// <returns></returns>
         public DataSet Select_non3(DateTime to,DateTime from)
         {
-            //var sql = "select * from his_insurance_service_detail_get('2016-04-01 0:0:0|2016-04-30 23:59:59|21|1')";
-            //sql = string.Format(sql);
-            //return ExecuteDataset(sql);
-
-            var sql = "select * from his_insurance_service_detail_get_qn('{0}|{1}|21|3')";
+           var sql = "select * from his_insurance_service_detail_get_qn('{0}|{1}|21|3')";
             sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
             return ExecuteDataset(sql);
         }
