@@ -108,9 +108,9 @@ namespace DAL
         /// <returns></returns>
         public DataTable Select_QN_NTru(DateTime to, DateTime from)
         {
-            string format = "select * from his_bhxh_3360_97_get_bqp_qn('{0}|{1}|2')";
-            format = string.Format(format, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
-            return ExecuteQuery(format);
+            var sql = "select * from his_bhxh_3360_97_get_bqp_qn('{0}|{1}|2')";
+            sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
+            return ExecuteQuery(sql);
         }
        
         #endregion
