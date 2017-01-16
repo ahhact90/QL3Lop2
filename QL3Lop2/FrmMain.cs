@@ -24,6 +24,8 @@ namespace QL3Lop2
         DAL.Mau19BQPKhacDAL _M19Khac = new DAL.Mau19BQPKhacDAL();
         DAL.Mau20BQPKhacDAL _M20Khac = new DAL.Mau20BQPKhacDAL();
         DAL.Mau21BQPKhacDAL _M21Khac = new DAL.Mau21BQPKhacDAL();
+        DAL.CV3360BQP_QN _cv3360_qn = new DAL.CV3360BQP_QN();
+        DAL.CV3360BQP_Khac _cv3360_khac = new DAL.CV3360BQP_Khac();
         
         #endregion
 
@@ -192,7 +194,11 @@ namespace QL3Lop2
             f19.DataMember = ds.Tables[0].TableName;
             f19.ShowPreview();
         }
-
+        /// <summary>
+        /// Test tren DataGridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -201,7 +207,6 @@ namespace QL3Lop2
         }
         /// <summary>
         /// Báo cáo mẫu 21 BHYT BQP Khac
-        /// 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -293,6 +298,16 @@ namespace QL3Lop2
             f19.DataMember = ds.Tables[0].TableName;
             f19.ShowPreview();
         }
+
+        private void cv3360Bqp_QN_NgTru_Click(object sender, EventArgs e)
+        {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            dt = _cv3360_qn.Select_QN_NgTru(FromDate, ToDate1);
+            dtGridView.DataSource = dt;
+        }
+
+       
     }
 }
 

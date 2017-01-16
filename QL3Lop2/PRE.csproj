@@ -117,6 +117,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\DS_3360.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_3360.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\DS_Mau19.cs">
       <DependentUpon>DS_Mau19.xsd</DependentUpon>
     </Compile>
@@ -132,6 +137,12 @@
     </Compile>
     <Compile Include="Report\DS_Mau21.cs">
       <DependentUpon>DS_Mau21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rp_3360_BQP_QN_NgoaiTru.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rp_3360_BQP_QN_NgoaiTru.Designer.cs">
+      <DependentUpon>rp_3360_BQP_QN_NgoaiTru.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\rp_Mau19QN.cs">
       <SubType>Component</SubType>
@@ -212,6 +223,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\rp_3360_BQP_QN_NgoaiTru.resx">
+      <DependentUpon>rp_3360_BQP_QN_NgoaiTru.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\rp_Mau19BQPKhac.resx">
       <DependentUpon>rp_Mau19BQPKhac.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +257,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Report\DS_3360.xsc">
+      <DependentUpon>DS_3360.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DS_3360.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_3360.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DS_3360.xss">
+      <DependentUpon>DS_3360.xsd</DependentUpon>
+    </None>
     <None Include="Report\DS_Mau19.xsc">
       <DependentUpon>DS_Mau19.xsd</DependentUpon>
     </None>

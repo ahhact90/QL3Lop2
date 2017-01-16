@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDAL.cs" />
+    <Compile Include="CV3360BQP_Khac.cs" />
+    <Compile Include="CV3360BQP_QN.cs" />
     <Compile Include="Mau19BQPKhacDAL.cs" />
     <Compile Include="Mau19QNDAL.cs" />
     <Compile Include="Mau20BQPKhacDAL.cs" />

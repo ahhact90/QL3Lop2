@@ -45,6 +45,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.cv3360Bqp_QN_NgTru = new System.Windows.Forms.Button();
+            this.cv3360Bqp_Khac_NgTru = new System.Windows.Forms.Button();
+            this.cv3360Bqp_QN_NTru = new System.Windows.Forms.Button();
+            this.cv3360Bqp_Khac_NTru = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_tungay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_denngay.Properties)).BeginInit();
@@ -83,7 +87,7 @@
             // dte_tungay
             // 
             this.dte_tungay.EditValue = new System.DateTime(2016, 11, 13, 0, 0, 0, 0);
-            this.dte_tungay.Location = new System.Drawing.Point(59, 442);
+            this.dte_tungay.Location = new System.Drawing.Point(41, 433);
             this.dte_tungay.Name = "dte_tungay";
             this.dte_tungay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -118,7 +122,7 @@
             // btnMau21QN
             // 
             this.btnMau21QN.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMau21QN.Location = new System.Drawing.Point(516, 431);
+            this.btnMau21QN.Location = new System.Drawing.Point(421, 416);
             this.btnMau21QN.Name = "btnMau21QN";
             this.btnMau21QN.Size = new System.Drawing.Size(137, 51);
             this.btnMau21QN.TabIndex = 6;
@@ -129,7 +133,7 @@
             // dte_denngay
             // 
             this.dte_denngay.EditValue = new System.DateTime(2016, 11, 13, 0, 0, 0, 0);
-            this.dte_denngay.Location = new System.Drawing.Point(267, 442);
+            this.dte_denngay.Location = new System.Drawing.Point(249, 433);
             this.dte_denngay.Name = "dte_denngay";
             this.dte_denngay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -144,7 +148,7 @@
             // 
             // btnMau20QN
             // 
-            this.btnMau20QN.Location = new System.Drawing.Point(667, 431);
+            this.btnMau20QN.Location = new System.Drawing.Point(572, 416);
             this.btnMau20QN.Name = "btnMau20QN";
             this.btnMau20QN.Size = new System.Drawing.Size(107, 51);
             this.btnMau20QN.TabIndex = 8;
@@ -154,7 +158,7 @@
             // 
             // btnMau19QN
             // 
-            this.btnMau19QN.Location = new System.Drawing.Point(781, 431);
+            this.btnMau19QN.Location = new System.Drawing.Point(686, 416);
             this.btnMau19QN.Name = "btnMau19QN";
             this.btnMau19QN.Size = new System.Drawing.Size(125, 53);
             this.btnMau19QN.TabIndex = 9;
@@ -174,9 +178,9 @@
             // 
             // btnMau21Khac
             // 
-            this.btnMau21Khac.Location = new System.Drawing.Point(521, 517);
+            this.btnMau21Khac.Location = new System.Drawing.Point(421, 479);
             this.btnMau21Khac.Name = "btnMau21Khac";
-            this.btnMau21Khac.Size = new System.Drawing.Size(131, 46);
+            this.btnMau21Khac.Size = new System.Drawing.Size(137, 46);
             this.btnMau21Khac.TabIndex = 11;
             this.btnMau21Khac.Text = "Mẫu 21 BQP Khác";
             this.btnMau21Khac.UseVisualStyleBackColor = true;
@@ -184,7 +188,7 @@
             // 
             // btnMau20Khac
             // 
-            this.btnMau20Khac.Location = new System.Drawing.Point(668, 517);
+            this.btnMau20Khac.Location = new System.Drawing.Point(572, 479);
             this.btnMau20Khac.Name = "btnMau20Khac";
             this.btnMau20Khac.Size = new System.Drawing.Size(104, 47);
             this.btnMau20Khac.TabIndex = 12;
@@ -194,7 +198,7 @@
             // 
             // btnMau19Khac
             // 
-            this.btnMau19Khac.Location = new System.Drawing.Point(781, 517);
+            this.btnMau19Khac.Location = new System.Drawing.Point(686, 479);
             this.btnMau19Khac.Name = "btnMau19Khac";
             this.btnMau19Khac.Size = new System.Drawing.Size(124, 46);
             this.btnMau19Khac.TabIndex = 13;
@@ -206,7 +210,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 446);
+            this.label1.Location = new System.Drawing.Point(8, 437);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 16);
             this.label1.TabIndex = 14;
@@ -216,7 +220,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(227, 446);
+            this.label2.Location = new System.Drawing.Point(209, 437);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 15;
@@ -231,11 +235,52 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Chọn Mẫu Báo Cáo:";
             // 
+            // cv3360Bqp_QN_NgTru
+            // 
+            this.cv3360Bqp_QN_NgTru.Location = new System.Drawing.Point(817, 416);
+            this.cv3360Bqp_QN_NgTru.Name = "cv3360Bqp_QN_NgTru";
+            this.cv3360Bqp_QN_NgTru.Size = new System.Drawing.Size(75, 53);
+            this.cv3360Bqp_QN_NgTru.TabIndex = 17;
+            this.cv3360Bqp_QN_NgTru.Text = "3360 BQP QN Ngoại Trú";
+            this.cv3360Bqp_QN_NgTru.UseVisualStyleBackColor = true;
+            this.cv3360Bqp_QN_NgTru.Click += new System.EventHandler(this.cv3360Bqp_QN_NgTru_Click);
+            // 
+            // cv3360Bqp_Khac_NgTru
+            // 
+            this.cv3360Bqp_Khac_NgTru.Location = new System.Drawing.Point(817, 479);
+            this.cv3360Bqp_Khac_NgTru.Name = "cv3360Bqp_Khac_NgTru";
+            this.cv3360Bqp_Khac_NgTru.Size = new System.Drawing.Size(80, 47);
+            this.cv3360Bqp_Khac_NgTru.TabIndex = 18;
+            this.cv3360Bqp_Khac_NgTru.Text = "3360 BQP Khác Ngoại Trú";
+            this.cv3360Bqp_Khac_NgTru.UseVisualStyleBackColor = true;
+            // 
+            // cv3360Bqp_QN_NTru
+            // 
+            this.cv3360Bqp_QN_NTru.Location = new System.Drawing.Point(900, 416);
+            this.cv3360Bqp_QN_NTru.Name = "cv3360Bqp_QN_NTru";
+            this.cv3360Bqp_QN_NTru.Size = new System.Drawing.Size(85, 53);
+            this.cv3360Bqp_QN_NTru.TabIndex = 19;
+            this.cv3360Bqp_QN_NTru.Text = "3360 BQP Khác Nội Trú";
+            this.cv3360Bqp_QN_NTru.UseVisualStyleBackColor = true;
+            // 
+            // cv3360Bqp_Khac_NTru
+            // 
+            this.cv3360Bqp_Khac_NTru.Location = new System.Drawing.Point(903, 479);
+            this.cv3360Bqp_Khac_NTru.Name = "cv3360Bqp_Khac_NTru";
+            this.cv3360Bqp_Khac_NTru.Size = new System.Drawing.Size(82, 46);
+            this.cv3360Bqp_Khac_NTru.TabIndex = 20;
+            this.cv3360Bqp_Khac_NTru.Text = "3360 BQP Khác Nội Trú";
+            this.cv3360Bqp_Khac_NTru.UseVisualStyleBackColor = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 637);
+            this.Controls.Add(this.cv3360Bqp_Khac_NTru);
+            this.Controls.Add(this.cv3360Bqp_QN_NTru);
+            this.Controls.Add(this.cv3360Bqp_Khac_NgTru);
+            this.Controls.Add(this.cv3360Bqp_QN_NgTru);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -282,6 +327,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button cv3360Bqp_QN_NgTru;
+        private System.Windows.Forms.Button cv3360Bqp_Khac_NgTru;
+        private System.Windows.Forms.Button cv3360Bqp_QN_NTru;
+        private System.Windows.Forms.Button cv3360Bqp_Khac_NTru;
     }
 }
 
