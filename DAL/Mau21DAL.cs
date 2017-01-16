@@ -48,12 +48,11 @@ namespace DAL
             // throw new NotImplementedException();
         }
         public DataSet Select_non()
-        {
-            //Select(DateTime fromdate, DateTime todate)
+        {            
             var sql = "select * from his_insurance_service_detail_get('2016-12-01 0:0:0|2016-12-31 23:59:59|19|3')";
             sql = string.Format(sql);
             return ExecuteDataset(sql);
-            // throw new NotImplementedException();
+           
         }
         /// <summary>
         /// Bao cao Mau 21 BQP QN 
@@ -68,10 +67,7 @@ namespace DAL
             return ExecuteDataset(sql);
         }
         public DataSet Select_non2(string so)
-        {
-            //var sql = "select * from his_insurance_service_detail_get(' '{0}'|'{1}'|21|1')";
-            //sql = string.Format(sql, From.ToString("dd-MM-yyyy hh:mm:ss"), tden.ToString("dd-MM-yyyy hh:mm:ss"));
-            //return ExecuteDataset(sql);
+        {           
             var sql = "select * from his_insurance_service_detail_get('2016-07-01 0:0:0|2016-09-30 23:59:59|{0}|3')";
             sql = string.Format(sql,so);
             return ExecuteDataset(sql);
