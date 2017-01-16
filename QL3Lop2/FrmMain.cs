@@ -22,6 +22,7 @@ namespace QL3Lop2
         DAL.Mau20QNDAL _M20 = new DAL.Mau20QNDAL();
         DAL.Mau19QNDAL _M19 = new DAL.Mau19QNDAL();
         DAL.Mau19BQPKhacDAL _M19Khac = new DAL.Mau19BQPKhacDAL();
+        DAL.Mau20BQPKhacDAL _M20Khac = new DAL.Mau20BQPKhacDAL();
         
         #endregion
 
@@ -203,6 +204,28 @@ namespace QL3Lop2
 
         private void btnMau20Khac_Click(object sender, EventArgs e)
         {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            ds = _M20Khac.Select_Time(FromDate, ToDate1);
+            try
+            {
+                if (ds == null)
+                {
+                    MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Close();
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            Report.rp_Mau20BQPKhac f20 = new Report.rp_Mau20BQPKhac(dateNgayBD1, dateNgaKT1);
+            f20.DataSource = ds;
+            f20.DataMember = ds.Tables[0].TableName;
+            f20.ShowPreview();
 
         }
 
