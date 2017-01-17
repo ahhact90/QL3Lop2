@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraReports.Design.GroupSort;
 using DevExpress.XtraReports.UI;
 using DevExpress.DataAccess.Sql;
+//using Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
 
 namespace QL3Lop2
 {
@@ -306,7 +308,76 @@ namespace QL3Lop2
             dt = _cv3360_qn.Select_QN_NgTru(FromDate, ToDate1);
             dtGridView.DataSource = dt;
         }
+        /// <summary>
+        /// Ham xuat ra file excel
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="duongDan"></param>
+        /// <param name="tenTap"></param>
+        private void export2Excel(DataGridView g, string duongDan, string tenTap)
+        {
+            app obj = new app();
+            obj.Application.Workbooks.Add(Type.Missing);
+            obj.Columns.ColumnWidth = 25;
+            for (int i = 1; i < g.Columns.Count + 1; i++)
+            {
+                obj.Cells[1, i] = g.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < g.Rows.Count; i++)
+            {
+                for (int j = 0; j < g.Columns.Count; j++)
+                {
+                    if (g.Rows[i].Cells[j].Value != null)
+                    {
+                        obj.Cells[i + 2, j + 1] = g.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+            }
+            
+            obj.ActiveWorkbook.SaveCopyAs(duongDan + tenTap + ".xlsx");
+            obj.ActiveWorkbook.Saved = true;
+        }
 
+        private void exportExcel_Click(object sender, EventArgs e)
+        {
+
+            FolderBrowserDialog fbd = new FolderBrowserDialog();           
+
+
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                string path = fbd.SelectedPath;
+                MessageBox.Show(path);
+            }
+            
+            export2Excel(dtGridView, @"path", "xuatfileExcel");
+
+            
+        }
+
+        private void cv3360Bqp_QN_NTru_Click(object sender, EventArgs e)
+        {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            dt = _cv3360_qn.Select_QN_NTru(FromDate, ToDate1);
+            dtGridView.DataSource = dt;
+        }
+
+        private void cv3360Bqp_Khac_NgTru_Click(object sender, EventArgs e)
+        {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            dt = _cv3360_khac.Select_QN_NgTru(FromDate, ToDate1);
+            dtGridView.DataSource = dt;
+        }
+
+        private void cv3360Bqp_Khac_NTru_Click(object sender, EventArgs e)
+        {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            dt = _cv3360_khac.Select_QN_NTru(FromDate, ToDate1);
+            dtGridView.DataSource = dt;
+        }
        
     }
 }

@@ -49,6 +49,7 @@
             this.cv3360Bqp_Khac_NgTru = new System.Windows.Forms.Button();
             this.cv3360Bqp_QN_NTru = new System.Windows.Forms.Button();
             this.cv3360Bqp_Khac_NTru = new System.Windows.Forms.Button();
+            this.exportExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_tungay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_denngay.Properties)).BeginInit();
@@ -168,7 +169,7 @@
             // 
             // btnTest
             // 
-            this.btnTest.Location = new System.Drawing.Point(59, 497);
+            this.btnTest.Location = new System.Drawing.Point(30, 459);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(90, 50);
             this.btnTest.TabIndex = 10;
@@ -253,6 +254,7 @@
             this.cv3360Bqp_Khac_NgTru.TabIndex = 18;
             this.cv3360Bqp_Khac_NgTru.Text = "3360 BQP Khác Ngoại Trú";
             this.cv3360Bqp_Khac_NgTru.UseVisualStyleBackColor = true;
+            this.cv3360Bqp_Khac_NgTru.Click += new System.EventHandler(this.cv3360Bqp_Khac_NgTru_Click);
             // 
             // cv3360Bqp_QN_NTru
             // 
@@ -262,6 +264,7 @@
             this.cv3360Bqp_QN_NTru.TabIndex = 19;
             this.cv3360Bqp_QN_NTru.Text = "3360 BQP Khác Nội Trú";
             this.cv3360Bqp_QN_NTru.UseVisualStyleBackColor = true;
+            this.cv3360Bqp_QN_NTru.Click += new System.EventHandler(this.cv3360Bqp_QN_NTru_Click);
             // 
             // cv3360Bqp_Khac_NTru
             // 
@@ -271,12 +274,24 @@
             this.cv3360Bqp_Khac_NTru.TabIndex = 20;
             this.cv3360Bqp_Khac_NTru.Text = "3360 BQP Khác Nội Trú";
             this.cv3360Bqp_Khac_NTru.UseVisualStyleBackColor = true;
+            this.cv3360Bqp_Khac_NTru.Click += new System.EventHandler(this.cv3360Bqp_Khac_NTru_Click);
+            // 
+            // exportExcel
+            // 
+            this.exportExcel.Location = new System.Drawing.Point(424, 541);
+            this.exportExcel.Name = "exportExcel";
+            this.exportExcel.Size = new System.Drawing.Size(128, 46);
+            this.exportExcel.TabIndex = 21;
+            this.exportExcel.Text = "Xuất File Excel";
+            this.exportExcel.UseVisualStyleBackColor = true;
+            this.exportExcel.Click += new System.EventHandler(this.exportExcel_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 637);
+            this.Controls.Add(this.exportExcel);
             this.Controls.Add(this.cv3360Bqp_Khac_NTru);
             this.Controls.Add(this.cv3360Bqp_QN_NTru);
             this.Controls.Add(this.cv3360Bqp_Khac_NgTru);
@@ -331,6 +346,7 @@
         private System.Windows.Forms.Button cv3360Bqp_Khac_NgTru;
         private System.Windows.Forms.Button cv3360Bqp_QN_NTru;
         private System.Windows.Forms.Button cv3360Bqp_Khac_NTru;
+        private System.Windows.Forms.Button exportExcel;
     }
 }
 
