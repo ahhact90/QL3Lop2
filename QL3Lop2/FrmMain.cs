@@ -314,7 +314,7 @@ namespace QL3Lop2
         /// <param name="g"></param>
         /// <param name="duongDan"></param>
         /// <param name="tenTap"></param>
-        private void export2Excel(DataGridView g, string duongDan, string tenTap)
+        private void export2Excel(DataGridView g, string duongDan)
         {
             app obj = new app();
             obj.Application.Workbooks.Add(Type.Missing);
@@ -334,25 +334,27 @@ namespace QL3Lop2
                 }
             }
             
-            obj.ActiveWorkbook.SaveCopyAs(duongDan + tenTap + ".xlsx");
+            obj.ActiveWorkbook.SaveCopyAs(duongDan);           
             obj.ActiveWorkbook.Saved = true;
         }
 
         private void exportExcel_Click(object sender, EventArgs e)
         {
 
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlxs" })
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    string path = sfd.FileName;
+                    string path = sfd.FileName.ToString();
+                    MessageBox.Show(path);
+                    export2Excel(dtGridView,path);
                 }
 
             }
 
             
             
-            export2Excel(dtGridView, @"path", "xuatfileExcel");
+           // export2Excel(dtGridView, @"path", "xuatfileExcel");
 
             
         }
