@@ -341,14 +341,16 @@ namespace QL3Lop2
         private void exportExcel_Click(object sender, EventArgs e)
         {
 
-            FolderBrowserDialog fbd = new FolderBrowserDialog();           
-
-
-            if (fbd.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlxs" })
             {
-                string path = fbd.SelectedPath;
-                MessageBox.Show(path);
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string path = sfd.FileName;
+                }
+
             }
+
+            
             
             export2Excel(dtGridView, @"path", "xuatfileExcel");
 
