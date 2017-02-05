@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using DevExpress.XtraReports.Design.GroupSort;
 using DevExpress.XtraReports.UI;
 using DevExpress.DataAccess.Sql;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.BandedGrid;
+using System.Threading;
+using CuscLibrary.Offices;
 //using Microsoft.Office.Interop.Excel;
 using app = Microsoft.Office.Interop.Excel.Application;
 
@@ -337,7 +341,11 @@ namespace QL3Lop2
             obj.ActiveWorkbook.SaveCopyAs(duongDan);           
             obj.ActiveWorkbook.Saved = true;
         }
-
+        /// <summary>
+        /// Xuat ra file excel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exportExcel_Click(object sender, EventArgs e)
         {
 
@@ -345,16 +353,70 @@ namespace QL3Lop2
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    string path = sfd.FileName.ToString();
-                    MessageBox.Show(path);
-                    export2Excel(dtGridView,path);
+                    Thread thread = new Thread(() =>
+                   {
+                       string path = sfd.FileName.ToString() + "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                       //MessageBox.Show(path);
+                       export2Excel(dtGridView, path);
+                   }
+                   );
+                   thread.Start();
                 }
 
             }
 
-            
-            
-           // export2Excel(dtGridView, @"path", "xuatfileExcel");
+            DevExpress.Utils.WaitDialogForm waitDialogForm = new DevExpress.Utils.WaitDialogForm("Đang xuất excel ...", "Vui lòng chờ giây lát !");
+            try
+            {
+                ExcelManager excelManager = new ExcelManager(true);
+
+                // Print band header
+                BandedGridView view = dtGridView;
+                view.ExpandAllGroups();
+                object[] data = new object[view.VisibleColumns.Count];
+                excelManager.BandedGridHeader2Excel(view, false, 1, 1, "headerRangeName");
+                excelManager.SetTitleRows();
+                excelManager.SelectRange()
+                           .SetFontFamily("Times New Roman");
+
+                waitDialogForm.SetCaption(String.Format("{0} - {1}%", "Đang xuất excel ...", 50));
+
+                excelManager.GridData2Excel(dtGridView, 2, 1, false, false, "", false, false);
+
+                excelManager.SelectRange(excelManager.WorkingRange.Row + excelManager.WorkingRange.Rows.Count, excelManager.WorkingRange.Column,
+                    excelManager.WorkingRange.Row + excelManager.WorkingRange.Rows.Count, excelManager.WorkingRange.Column + excelManager.WorkingRange.Columns.Count - 1);
+
+
+                // Save working range
+                excelManager.MoveRange(2, 0);
+                //int maxCol = 12;
+                //int xtraCol = 2;
+
+                int sr = excelManager.WorkingRange.Row + 1;
+                int sc = excelManager.WorkingRange.Column;
+                int er = excelManager.WorkingRange.Row + 1;
+                int ec = excelManager.WorkingRange.Column + excelManager.WorkingRange.Columns.Count - 1;
+
+                //excelManager.SelectRange(8, 1, 8, maxCol).SetRowHeight("", 45);           
+
+                excelManager.SelectRange(12, 2, er, ec).AutoFitColumn();
+                excelManager.SelectRange(12, 2, er, ec).SetNumberFormat("#,#0");
+
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Lỗi trong quá trình xuất Excel.\nVui lòng kiểm tra lại biểu mẫu hoặc tài liệu đang mở.", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //Marshal.ReleaseComObject(excelSheet);
+                //Marshal.ReleaseComObject(excelBook);
+                //Marshal.ReleaseComObject(books);
+                //Marshal.ReleaseComObject(excel);
+
+                waitDialogForm.Close();
+            }
+         
 
             
         }

@@ -262,7 +262,7 @@
             this.cv3360Bqp_QN_NTru.Name = "cv3360Bqp_QN_NTru";
             this.cv3360Bqp_QN_NTru.Size = new System.Drawing.Size(85, 53);
             this.cv3360Bqp_QN_NTru.TabIndex = 19;
-            this.cv3360Bqp_QN_NTru.Text = "3360 BQP Khác Nội Trú";
+            this.cv3360Bqp_QN_NTru.Text = "3360 BQP QN Nội Trú";
             this.cv3360Bqp_QN_NTru.UseVisualStyleBackColor = true;
             this.cv3360Bqp_QN_NTru.Click += new System.EventHandler(this.cv3360Bqp_QN_NTru_Click);
             // 
