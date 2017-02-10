@@ -13,13 +13,14 @@ using DevExpress.DataAccess.Sql;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.BandedGrid;
 using System.Threading;
-using CuscLibrary.Offices;
+//using CuscLibrary.Offices;
 //using Microsoft.Office.Interop.Excel;
 using app = Microsoft.Office.Interop.Excel.Application;
+using UTL;
 
 namespace QL3Lop2
 {
-    public partial class FrmMain : Form
+    public partial class FrmMain : Form //, UTL.ExcelManager
     {
         #region Variable
         DAL.Mau21DAL _M21 = new DAL.Mau21DAL();
@@ -32,12 +33,12 @@ namespace QL3Lop2
         DAL.Mau21BQPKhacDAL _M21Khac = new DAL.Mau21BQPKhacDAL();
         DAL.CV3360BQP_QN _cv3360_qn = new DAL.CV3360BQP_QN();
         DAL.CV3360BQP_Khac _cv3360_khac = new DAL.CV3360BQP_Khac();
-        
+
         #endregion
 
         public FrmMain()
         {
-            InitializeComponent();            
+            InitializeComponent();
             dte_tungay.Time = DateTime.Now;
             dte_denngay.Time = DateTime.Today.AddDays(+1).Date;
 
@@ -50,35 +51,35 @@ namespace QL3Lop2
         }
 
         private void btIn_Click(object sender, EventArgs e)
-        {            
-             ds = _M21.Select_non();
-             if (ds == null)
-             {
-                 MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                 Close();
-             }
-             try
-             {
+        {
+            ds = _M21.Select_non();
+            if (ds == null)
+            {
+                MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Close();
+            }
+            try
+            {
 
-             }
-             catch (Exception)
-             {
+            }
+            catch (Exception)
+            {
 
-                 throw;
-             }
+                throw;
+            }
             Report.rp_Mau21 f21 = new Report.rp_Mau21();
             f21.DataSource = ds;
             f21.DataMember = ds.Tables[0].TableName;
             f21.ShowPreview();
-          
-           
+
+
         }
 
         private void btIn2_Click(object sender, EventArgs e)
-        {           
+        {
             string N = textBox1.Text;
             ds = _M21.Select_non2(N);
-           
+
             try
             {
                 if (ds == null)
@@ -109,10 +110,10 @@ namespace QL3Lop2
         /// <param name="e"></param>
         private void btTimes_Click(object sender, EventArgs e)
         {
-            
+
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
-            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);          
-            ds = _M21.Select_non3(FromDate,ToDate1);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            ds = _M21.Select_non3(FromDate, ToDate1);
 
 
             try
@@ -126,11 +127,11 @@ namespace QL3Lop2
             }
             catch (Exception)
             {
-                MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");            
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
             string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
-            Report.rp_Mau21_Time f21 = new Report.rp_Mau21_Time(dateNgayBD1, dateNgaKT1);            
+            Report.rp_Mau21_Time f21 = new Report.rp_Mau21_Time(dateNgayBD1, dateNgaKT1);
             f21.DataSource = ds;
             f21.DataMember = ds.Tables[0].TableName;
             f21.ShowPreview();
@@ -162,10 +163,10 @@ namespace QL3Lop2
             catch (Exception)
             {
                 MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
-            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");           
+            }
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
             string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
-            Report.rp_Mau20QN f20 = new Report.rp_Mau20QN(dateNgayBD1, dateNgaKT1);           
+            Report.rp_Mau20QN f20 = new Report.rp_Mau20QN(dateNgayBD1, dateNgaKT1);
             f20.DataSource = ds;
             f20.DataMember = ds.Tables[0].TableName;
             f20.ShowPreview();
@@ -207,7 +208,7 @@ namespace QL3Lop2
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             dt = _M19.Select_Time1();
             dtGridView.DataSource = dt;
         }
@@ -235,9 +236,9 @@ namespace QL3Lop2
             {
                 MessageBox.Show("Lỗi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");           
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
             string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
-            Report.rp_Mau21BQPKhac f21 = new Report.rp_Mau21BQPKhac(dateNgayBD1, dateNgaKT1);           
+            Report.rp_Mau21BQPKhac f21 = new Report.rp_Mau21BQPKhac(dateNgayBD1, dateNgaKT1);
             f21.DataSource = ds;
             f21.DataMember = ds.Tables[0].TableName;
             f21.ShowPreview();
@@ -337,8 +338,8 @@ namespace QL3Lop2
                     }
                 }
             }
-            
-            obj.ActiveWorkbook.SaveCopyAs(duongDan);           
+
+            obj.ActiveWorkbook.SaveCopyAs(duongDan);
             obj.ActiveWorkbook.Saved = true;
         }
         /// <summary>
@@ -355,70 +356,70 @@ namespace QL3Lop2
                 {
                     Thread thread = new Thread(() =>
                    {
-                       string path = sfd.FileName.ToString() + "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                       string path = sfd.FileName.ToString(); /*+ "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";*/
                        //MessageBox.Show(path);
                        export2Excel(dtGridView, path);
                    }
                    );
-                   thread.Start();
+                    thread.Start();
                 }
 
             }
 
-            DevExpress.Utils.WaitDialogForm waitDialogForm = new DevExpress.Utils.WaitDialogForm("Đang xuất excel ...", "Vui lòng chờ giây lát !");
-            try
-            {
-                ExcelManager excelManager = new ExcelManager(true);
+           // DevExpress.Utils.WaitDialogForm waitDialogForm = new DevExpress.Utils.WaitDialogForm("Đang xuất excel ...", "Vui lòng chờ giây lát !");
+            //try
+            //{
+            //    ExcelManager excelManager = new ExcelManager(true);
 
-                // Print band header
-                BandedGridView view = dtGridView;
-                view.ExpandAllGroups();
-                object[] data = new object[view.VisibleColumns.Count];
-                excelManager.BandedGridHeader2Excel(view, false, 1, 1, "headerRangeName");
-                excelManager.SetTitleRows();
-                excelManager.SelectRange()
-                           .SetFontFamily("Times New Roman");
+            //    // Print band header
+            //    BandedGridView view = dtGridView;
+            //    view.ExpandAllGroups();
+            //    object[] data = new object[view.VisibleColumns.Count];
+            //    excelManager.BandedGridHeader2Excel(view, false, 1, 1, "headerRangeName");
+            //    excelManager.SetTitleRows();
+            //    excelManager.SelectRange()
+            //               .SetFontFamily("Times New Roman");
 
-                waitDialogForm.SetCaption(String.Format("{0} - {1}%", "Đang xuất excel ...", 50));
+            //    waitDialogForm.SetCaption(String.Format("{0} - {1}%", "Đang xuất excel ...", 50));
 
-                excelManager.GridData2Excel(dtGridView, 2, 1, false, false, "", false, false);
+            //    excelManager.GridData2Excel(dtGridView, 2, 1, false, false, "", false, false);
 
-                excelManager.SelectRange(excelManager.WorkingRange.Row + excelManager.WorkingRange.Rows.Count, excelManager.WorkingRange.Column,
-                    excelManager.WorkingRange.Row + excelManager.WorkingRange.Rows.Count, excelManager.WorkingRange.Column + excelManager.WorkingRange.Columns.Count - 1);
+            //    excelManager.SelectRange(excelManager.WorkingRange.Row + excelManager.WorkingRange.Rows.Count, excelManager.WorkingRange.Column,
+            //        excelManager.WorkingRange.Row + excelManager.WorkingRange.Rows.Count, excelManager.WorkingRange.Column + excelManager.WorkingRange.Columns.Count - 1);
 
 
-                // Save working range
-                excelManager.MoveRange(2, 0);
-                //int maxCol = 12;
-                //int xtraCol = 2;
+            //    // Save working range
+            //    excelManager.MoveRange(2, 0);
+            //    //int maxCol = 12;
+            //    //int xtraCol = 2;
 
-                int sr = excelManager.WorkingRange.Row + 1;
-                int sc = excelManager.WorkingRange.Column;
-                int er = excelManager.WorkingRange.Row + 1;
-                int ec = excelManager.WorkingRange.Column + excelManager.WorkingRange.Columns.Count - 1;
+            //    int sr = excelManager.WorkingRange.Row + 1;
+            //    int sc = excelManager.WorkingRange.Column;
+            //    int er = excelManager.WorkingRange.Row + 1;
+            //    int ec = excelManager.WorkingRange.Column + excelManager.WorkingRange.Columns.Count - 1;
 
-                //excelManager.SelectRange(8, 1, 8, maxCol).SetRowHeight("", 45);           
+            //    //excelManager.SelectRange(8, 1, 8, maxCol).SetRowHeight("", 45);           
 
-                excelManager.SelectRange(12, 2, er, ec).AutoFitColumn();
-                excelManager.SelectRange(12, 2, er, ec).SetNumberFormat("#,#0");
+            //    excelManager.SelectRange(12, 2, er, ec).AutoFitColumn();
+            //    excelManager.SelectRange(12, 2, er, ec).SetNumberFormat("#,#0");
 
-            }
-            catch (Exception)
-            {
-                XtraMessageBox.Show("Lỗi trong quá trình xuất Excel.\nVui lòng kiểm tra lại biểu mẫu hoặc tài liệu đang mở.", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                //Marshal.ReleaseComObject(excelSheet);
-                //Marshal.ReleaseComObject(excelBook);
-                //Marshal.ReleaseComObject(books);
-                //Marshal.ReleaseComObject(excel);
+            //}
+          //  catch (Exception)
+          //  {
+          //     XtraMessageBox.Show("Lỗi trong quá trình xuất Excel.\nVui lòng kiểm tra lại biểu mẫu hoặc tài liệu đang mở.", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          //}
+          //  finally
+          //  {
+          //      //Marshal.ReleaseComObject(excelSheet);
+          //     //Marshal.ReleaseComObject(excelBook);
+          //      //Marshal.ReleaseComObject(books);
+          //      //Marshal.ReleaseComObject(excel);
 
-                waitDialogForm.Close();
-            }
-         
+          //      waitDialogForm.Close();
+          //  }
 
-            
+
+
         }
 
         private void cv3360Bqp_QN_NTru_Click(object sender, EventArgs e)
@@ -444,8 +445,9 @@ namespace QL3Lop2
             dt = _cv3360_khac.Select_QN_NTru(FromDate, ToDate1);
             dtGridView.DataSource = dt;
         }
-       
+
     }
 }
+
 
 
