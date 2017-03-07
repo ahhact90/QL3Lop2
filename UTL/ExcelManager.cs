@@ -23,9 +23,10 @@ using DevExpress.XtraGrid.Views.BandedGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Text;
+//using UTL;
 //using System.Collections.Generic;
 
-namespace CuscLibrary.Offices
+namespace UTL
 {
     public class ExcelManager : IDisposable
     {
@@ -873,7 +874,7 @@ namespace CuscLibrary.Offices
         /// Formats the font in a cell, bold italic and underline take a bool as a value.
         /// Fontsize font color and font type are all nullable so you can write null if you dont want to specify
         /// </summary>
-        public void FormatRangeFont(string from, string to, bool bold, bool italic, bool underline, double? fontSize, Color? fontColor, string fontName)
+        public void FormatRangeFont(string from, string to, bool bold, bool italic, bool underline, double? fontSize, Color ? fontColor, string fontName)
         {
             _excelRange = _excelWorksheet.get_Range(from, to);
 

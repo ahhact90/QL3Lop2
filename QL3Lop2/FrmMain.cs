@@ -13,14 +13,13 @@ using DevExpress.DataAccess.Sql;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.BandedGrid;
 using System.Threading;
-//using CuscLibrary.Offices;
 //using Microsoft.Office.Interop.Excel;
 using app = Microsoft.Office.Interop.Excel.Application;
 using UTL;
 
 namespace QL3Lop2
 {
-    public partial class FrmMain : Form //, UTL.ExcelManager
+    public partial class FrmMain : Form
     {
         #region Variable
         DAL.Mau21DAL _M21 = new DAL.Mau21DAL();
@@ -350,23 +349,23 @@ namespace QL3Lop2
         private void exportExcel_Click(object sender, EventArgs e)
         {
 
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
-            {
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    Thread thread = new Thread(() =>
-                   {
-                       string path = sfd.FileName.ToString(); /*+ "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";*/
-                       //MessageBox.Show(path);
-                       export2Excel(dtGridView, path);
-                   }
-                   );
-                    thread.Start();
-                }
+            //using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+            //{
+            //    if (sfd.ShowDialog() == DialogResult.OK)
+            //    {
+            //        Thread thread = new Thread(() =>
+            //       {
+            //           string path = sfd.FileName.ToString(); /*+ "(" + DateTime.Now.ToString("yyyy-MM-dd") + ")";*/
+            //           //MessageBox.Show(path);
+            //           export2Excel(dtGridView, path);
+            //       }
+            //       );
+            //        thread.Start();
+            //    }
 
-            }
+            //}
 
-           // DevExpress.Utils.WaitDialogForm waitDialogForm = new DevExpress.Utils.WaitDialogForm("Đang xuất excel ...", "Vui lòng chờ giây lát !");
+            //DevExpress.Utils.WaitDialogForm waitDialogForm = new DevExpress.Utils.WaitDialogForm("Đang xuất excel ...", "Vui lòng chờ giây lát !");
             //try
             //{
             //    ExcelManager excelManager = new ExcelManager(true);
@@ -380,7 +379,7 @@ namespace QL3Lop2
             //    excelManager.SelectRange()
             //               .SetFontFamily("Times New Roman");
 
-            //    waitDialogForm.SetCaption(String.Format("{0} - {1}%", "Đang xuất excel ...", 50));
+            //    //waitDialogForm.SetCaption(String.Format("{0} - {1}%", "Đang xuất excel ...", 50));
 
             //    excelManager.GridData2Excel(dtGridView, 2, 1, false, false, "", false, false);
 
@@ -404,19 +403,19 @@ namespace QL3Lop2
             //    excelManager.SelectRange(12, 2, er, ec).SetNumberFormat("#,#0");
 
             //}
-          //  catch (Exception)
-          //  {
-          //     XtraMessageBox.Show("Lỗi trong quá trình xuất Excel.\nVui lòng kiểm tra lại biểu mẫu hoặc tài liệu đang mở.", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          //}
-          //  finally
-          //  {
-          //      //Marshal.ReleaseComObject(excelSheet);
-          //     //Marshal.ReleaseComObject(excelBook);
-          //      //Marshal.ReleaseComObject(books);
-          //      //Marshal.ReleaseComObject(excel);
+            //catch (Exception)
+            //{
+            //    XtraMessageBox.Show("Lỗi trong quá trình xuất Excel.\nVui lòng kiểm tra lại biểu mẫu hoặc tài liệu đang mở.", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //finally
+            //{
+            //    //Marshal.ReleaseComObject(excelSheet);
+            //    //Marshal.ReleaseComObject(excelBook);
+            //    //Marshal.ReleaseComObject(books);
+            //    //Marshal.ReleaseComObject(excel);
 
-          //      waitDialogForm.Close();
-          //  }
+            //    waitDialogForm.Close();
+            //}
 
 
 

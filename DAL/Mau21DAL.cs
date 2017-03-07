@@ -73,7 +73,6 @@ namespace DAL
             return ExecuteDataset(sql);
         }
 
-
         public bool Update(object obj)
         {
             throw new NotImplementedException();
