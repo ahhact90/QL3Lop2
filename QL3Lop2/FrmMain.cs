@@ -13,13 +13,13 @@ using DevExpress.DataAccess.Sql;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.BandedGrid;
 using System.Threading;
-//using Microsoft.Office.Interop.Excel;
-using app = Microsoft.Office.Interop.Excel.Application;
+using System.IO;
+//using app = Microsoft.Office.Interop.Excel.Application;
 using UTL;
 
 namespace QL3Lop2
 {
-    public partial class FrmMain : Form
+    public partial class FrmMain : DevExpress.XtraEditors.XtraForm
     {
         #region Variable
         DAL.Mau21DAL _M21 = new DAL.Mau21DAL();
@@ -37,8 +37,8 @@ namespace QL3Lop2
 
         public FrmMain()
         {
-            InitializeComponent();
-            dte_tungay.Time = DateTime.Now;
+            InitializeComponent();            
+            dte_tungay.Time = DateTime.Today;
             dte_denngay.Time = DateTime.Today.AddDays(+1).Date;
 
         }
@@ -46,7 +46,8 @@ namespace QL3Lop2
         private void btConnect_Click(object sender, EventArgs e)
         {
             dt = _M21.Select();
-            dtGridView.DataSource = dt;
+           
+            gridControl1.DataSource = dt;
         }
 
         private void btIn_Click(object sender, EventArgs e)
@@ -209,7 +210,8 @@ namespace QL3Lop2
         {
 
             dt = _M19.Select_Time1();
-            dtGridView.DataSource = dt;
+            
+            gridControl1.DataSource = dt;
         }
         /// <summary>
         /// Báo cáo mẫu 21 BHYT BQP Khac
@@ -310,37 +312,9 @@ namespace QL3Lop2
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
             DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
             dt = _cv3360_qn.Select_QN_NgTru(FromDate, ToDate1);
-            dtGridView.DataSource = dt;
-        }
-        /// <summary>
-        /// Ham xuat ra file excel
-        /// </summary>
-        /// <param name="g"></param>
-        /// <param name="duongDan"></param>
-        /// <param name="tenTap"></param>
-        private void export2Excel(DataGridView g, string duongDan)
-        {
-            app obj = new app();
-            obj.Application.Workbooks.Add(Type.Missing);
-            obj.Columns.ColumnWidth = 25;
-            for (int i = 1; i < g.Columns.Count + 1; i++)
-            {
-                obj.Cells[1, i] = g.Columns[i - 1].HeaderText;
-            }
-            for (int i = 0; i < g.Rows.Count; i++)
-            {
-                for (int j = 0; j < g.Columns.Count; j++)
-                {
-                    if (g.Rows[i].Cells[j].Value != null)
-                    {
-                        obj.Cells[i + 2, j + 1] = g.Rows[i].Cells[j].Value.ToString();
-                    }
-                }
-            }
-
-            obj.ActiveWorkbook.SaveCopyAs(duongDan);
-            obj.ActiveWorkbook.Saved = true;
-        }
+           
+            gridControl1.DataSource = dt;
+        }        
         /// <summary>
         /// Xuat ra file excel
         /// </summary>
@@ -365,57 +339,62 @@ namespace QL3Lop2
 
             //}
 
-            //DevExpress.Utils.WaitDialogForm waitDialogForm = new DevExpress.Utils.WaitDialogForm("Đang xuất excel ...", "Vui lòng chờ giây lát !");
-            //try
-            //{
-            //    ExcelManager excelManager = new ExcelManager(true);
+            //// Ham xuat Excel Bang Dev Nhanh
+            using (SaveFileDialog saveDialog = new SaveFileDialog())
+            {
+                saveDialog.Filter = "Excel (2003)(.xls)|*.xls|Excel (2010-2013-2016) (.xlsx)|*.xlsx |RichText File (.rtf)|*.rtf |Pdf File (.pdf)|*.pdf |Html File (.html)|*.html";
+                if (saveDialog.ShowDialog() != DialogResult.Cancel)
+                {
+                    string exportFilePath = saveDialog.FileName;
+                    string fileExtenstion = new FileInfo(exportFilePath).Extension;
+                    //MessageBox.Show(exportFilePath);
+                    
+                    switch (fileExtenstion)
+                    {
+                        case ".xls":
+                            gridView1.ExportToXls(exportFilePath);
+                            break;
+                        case ".xlsx":
+                            gridView1.ExportToXlsx(exportFilePath);
+                            break;
+                        case ".rtf":
+                            gridView1.ExportToRtf(exportFilePath);
+                            break;
+                        case ".pdf":
+                            gridView1.ExportToPdf(exportFilePath);
+                            break;
+                        case ".html":
+                            gridView1.ExportToHtml(exportFilePath);
+                            break;
+                        case ".mht":
+                            gridView1.ExportToMht(exportFilePath);
+                            break;
+                        default:
+                            break;
+                    }
+                  
 
-            //    // Print band header
-            //    BandedGridView view = dtGridView;
-            //    view.ExpandAllGroups();
-            //    object[] data = new object[view.VisibleColumns.Count];
-            //    excelManager.BandedGridHeader2Excel(view, false, 1, 1, "headerRangeName");
-            //    excelManager.SetTitleRows();
-            //    excelManager.SelectRange()
-            //               .SetFontFamily("Times New Roman");
-
-            //    //waitDialogForm.SetCaption(String.Format("{0} - {1}%", "Đang xuất excel ...", 50));
-
-            //    excelManager.GridData2Excel(dtGridView, 2, 1, false, false, "", false, false);
-
-            //    excelManager.SelectRange(excelManager.WorkingRange.Row + excelManager.WorkingRange.Rows.Count, excelManager.WorkingRange.Column,
-            //        excelManager.WorkingRange.Row + excelManager.WorkingRange.Rows.Count, excelManager.WorkingRange.Column + excelManager.WorkingRange.Columns.Count - 1);
-
-
-            //    // Save working range
-            //    excelManager.MoveRange(2, 0);
-            //    //int maxCol = 12;
-            //    //int xtraCol = 2;
-
-            //    int sr = excelManager.WorkingRange.Row + 1;
-            //    int sc = excelManager.WorkingRange.Column;
-            //    int er = excelManager.WorkingRange.Row + 1;
-            //    int ec = excelManager.WorkingRange.Column + excelManager.WorkingRange.Columns.Count - 1;
-
-            //    //excelManager.SelectRange(8, 1, 8, maxCol).SetRowHeight("", 45);           
-
-            //    excelManager.SelectRange(12, 2, er, ec).AutoFitColumn();
-            //    excelManager.SelectRange(12, 2, er, ec).SetNumberFormat("#,#0");
-
-            //}
-            //catch (Exception)
-            //{
-            //    XtraMessageBox.Show("Lỗi trong quá trình xuất Excel.\nVui lòng kiểm tra lại biểu mẫu hoặc tài liệu đang mở.", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //finally
-            //{
-            //    //Marshal.ReleaseComObject(excelSheet);
-            //    //Marshal.ReleaseComObject(excelBook);
-            //    //Marshal.ReleaseComObject(books);
-            //    //Marshal.ReleaseComObject(excel);
-
-            //    waitDialogForm.Close();
-            //}
+                    if (File.Exists(exportFilePath))
+                    {
+                        try
+                        {
+                            //Try to open the file and let windows decide how to open it.
+                            MessageBox.Show("Xuất dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            System.Diagnostics.Process.Start(exportFilePath);
+                        }
+                        catch
+                        {
+                            String msg = "The file could not be opened." + Environment.NewLine + Environment.NewLine + "Path: " + exportFilePath;
+                            MessageBox.Show(msg, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        String msg = "The file could not be saved." + Environment.NewLine + Environment.NewLine + "Path: " + exportFilePath;
+                        MessageBox.Show(msg, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
 
 
 
@@ -425,24 +404,25 @@ namespace QL3Lop2
         {
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
             DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
-            dt = _cv3360_qn.Select_QN_NTru(FromDate, ToDate1);
-            dtGridView.DataSource = dt;
+            dt = _cv3360_qn.Select_QN_NTru(FromDate, ToDate1);           
+            gridControl1.DataSource = dt;
         }
 
         private void cv3360Bqp_Khac_NgTru_Click(object sender, EventArgs e)
         {
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
             DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
-            dt = _cv3360_khac.Select_QN_NgTru(FromDate, ToDate1);
-            dtGridView.DataSource = dt;
+            dt = _cv3360_khac.Select_QN_NgTru(FromDate, ToDate1);           
+            gridControl1.DataSource = dt;
         }
 
         private void cv3360Bqp_Khac_NTru_Click(object sender, EventArgs e)
         {
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
             DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
-            dt = _cv3360_khac.Select_QN_NTru(FromDate, ToDate1);
-            dtGridView.DataSource = dt;
+            dt = _cv3360_khac.Select_QN_NTru(FromDate, ToDate1);           
+            gridControl1.DataSource = dt;
+           
         }
 
     }

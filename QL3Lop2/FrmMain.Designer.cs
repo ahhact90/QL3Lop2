@@ -30,7 +30,6 @@
         {
             this.btConnect = new System.Windows.Forms.Button();
             this.btIn = new System.Windows.Forms.Button();
-            this.dtGridView = new System.Windows.Forms.DataGridView();
             this.dte_tungay = new DevExpress.XtraEditors.TimeEdit();
             this.btIn2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -50,9 +49,12 @@
             this.cv3360Bqp_QN_NTru = new System.Windows.Forms.Button();
             this.cv3360Bqp_Khac_NTru = new System.Windows.Forms.Button();
             this.exportExcel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtGridView)).BeginInit();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.dte_tungay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_denngay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btConnect
@@ -76,14 +78,6 @@
             this.btIn.Text = "In Mau 21";
             this.btIn.UseVisualStyleBackColor = true;
             this.btIn.Click += new System.EventHandler(this.btIn_Click);
-            // 
-            // dtGridView
-            // 
-            this.dtGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridView.Location = new System.Drawing.Point(12, 122);
-            this.dtGridView.Name = "dtGridView";
-            this.dtGridView.Size = new System.Drawing.Size(898, 275);
-            this.dtGridView.TabIndex = 1;
             // 
             // dte_tungay
             // 
@@ -286,11 +280,27 @@
             this.exportExcel.UseVisualStyleBackColor = true;
             this.exportExcel.Click += new System.EventHandler(this.exportExcel_Click);
             // 
+            // gridControl1
+            // 
+            this.gridControl1.Location = new System.Drawing.Point(7, 89);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(978, 268);
+            this.gridControl1.TabIndex = 22;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 637);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.exportExcel);
             this.Controls.Add(this.cv3360Bqp_Khac_NTru);
             this.Controls.Add(this.cv3360Bqp_QN_NTru);
@@ -310,14 +320,14 @@
             this.Controls.Add(this.btIn2);
             this.Controls.Add(this.dte_denngay);
             this.Controls.Add(this.dte_tungay);
-            this.Controls.Add(this.dtGridView);
             this.Controls.Add(this.btIn);
             this.Controls.Add(this.btConnect);
             this.Name = "FrmMain";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dtGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_tungay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_denngay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,7 +337,6 @@
 
         private System.Windows.Forms.Button btConnect;
         private System.Windows.Forms.Button btIn;
-        private System.Windows.Forms.DataGridView dtGridView;
         private DevExpress.XtraEditors.TimeEdit dte_tungay;
         private System.Windows.Forms.Button btIn2;
         private System.Windows.Forms.TextBox textBox1;
@@ -347,6 +356,8 @@
         private System.Windows.Forms.Button cv3360Bqp_QN_NTru;
         private System.Windows.Forms.Button cv3360Bqp_Khac_NTru;
         private System.Windows.Forms.Button exportExcel;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
 
