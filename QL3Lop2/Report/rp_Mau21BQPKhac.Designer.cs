@@ -46,6 +46,7 @@
             this.dS_Mau211 = new QL3Lop2.Report.DS_Mau21();
             this.dataTableTableAdapter = new QL3Lop2.Report.DS_Mau21TableAdapters.DataTableTableAdapter();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
@@ -99,7 +100,6 @@
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Mau211)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
@@ -257,6 +257,16 @@
             this.xrlTo});
             this.ReportHeader.HeightF = 121.25F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrLabel15
+            // 
+            this.xrLabel15.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(337.5F, 0F);
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(119.7916F, 21.875F);
+            this.xrLabel15.StylePriority.UseForeColor = false;
+            this.xrLabel15.Text = "BHYT_BQP_Khac";
             // 
             // xrLabel1
             // 
@@ -736,7 +746,8 @@
             // xrTableCell10
             // 
             this.xrTableCell10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable.group_name")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DataTable.group_name"),
+            new DevExpress.XtraReports.UI.XRBinding("Bookmark", null, "DataTable.group_name")});
             this.xrTableCell10.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.StylePriority.UseFont = false;
@@ -757,16 +768,6 @@
             this.xrTableCell11.Summary = xrSummary2;
             this.xrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell11.Weight = 1.9056321716308586D;
-            // 
-            // xrLabel15
-            // 
-            this.xrLabel15.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(337.5F, 0F);
-            this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(119.7916F, 21.875F);
-            this.xrLabel15.StylePriority.UseForeColor = false;
-            this.xrLabel15.Text = "BHYT_BQP_Khac";
             // 
             // rp_Mau21BQPKhac
             // 
