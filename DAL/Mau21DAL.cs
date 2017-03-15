@@ -49,7 +49,7 @@ namespace DAL
         }
         public DataSet Select_non()
         {            
-            var sql = "select * from his_insurance_service_detail_get('2016-12-01 0:0:0|2016-12-31 23:59:59|19|3')";
+            var sql = "select * from his_insurance_service_detail_get('2016-12-01 0:0:0|2016-12-31 23:59:59|21|3')";
             sql = string.Format(sql);
             return ExecuteDataset(sql);
            
