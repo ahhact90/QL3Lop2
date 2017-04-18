@@ -111,7 +111,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(516, 46);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
+            this.textBox1.Size = new System.Drawing.Size(147, 21);
             this.textBox1.TabIndex = 5;
             // 
             // btnMau21QN
@@ -226,7 +226,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(405, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 16;
             this.label3.Text = "Chọn Mẫu Báo Cáo:";
             // 
@@ -299,7 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 637);
+            this.ClientSize = new System.Drawing.Size(1029, 740);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.exportExcel);
             this.Controls.Add(this.cv3360Bqp_Khac_NTru);
