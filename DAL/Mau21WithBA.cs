@@ -67,10 +67,10 @@ namespace DAL
         #endregion
         #region Mau21WithBA
 
-        public DataSet SelectWithMedical(DateTime to, DateTime from)
+        public DataSet SelectWithMedical(string mIndex, string mMedical)
         {
-            var sql = "select * from his_insurance_service_detail_get_qn('{0}|{1}|20|3')";
-            sql = string.Format(sql, to.ToString("yyyy-MM-dd HH:mm:ss"), from.ToString("yyyy-MM-dd HH:mm:ss"));
+            var sql = "select * from his_insurance_service_detail_get_with_medical('{0}|{1}')";
+            sql = string.Format(sql,mIndex,mMedical);
             return ExecuteDataset(sql);
         }
 
