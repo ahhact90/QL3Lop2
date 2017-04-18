@@ -61,7 +61,6 @@
   <ItemGroup>
     <Compile Include="Converter.cs" />
     <Compile Include="Currency.cs" />
-    <Compile Include="ExcelManager.cs" />
     <Compile Include="ExtensionMethodSetting.cs" />
     <Compile Include="FileFolder.cs" />
     <Compile Include="IBaseDAL.cs" />
