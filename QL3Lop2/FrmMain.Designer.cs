@@ -51,10 +51,18 @@
             this.exportExcel = new System.Windows.Forms.Button();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtIndex = new DevExpress.XtraEditors.TextEdit();
+            this.btnMau21WithBA = new DevExpress.XtraEditors.SimpleButton();
+            this.txtBA = new System.Windows.Forms.TextBox();
+            this.btnMau20WithBA = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dte_tungay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_denngay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btConnect
@@ -244,7 +252,7 @@
             // 
             this.cv3360Bqp_Khac_NgTru.Location = new System.Drawing.Point(817, 479);
             this.cv3360Bqp_Khac_NgTru.Name = "cv3360Bqp_Khac_NgTru";
-            this.cv3360Bqp_Khac_NgTru.Size = new System.Drawing.Size(80, 47);
+            this.cv3360Bqp_Khac_NgTru.Size = new System.Drawing.Size(79, 47);
             this.cv3360Bqp_Khac_NgTru.TabIndex = 18;
             this.cv3360Bqp_Khac_NgTru.Text = "3360 BQP Khác Ngoại Trú";
             this.cv3360Bqp_Khac_NgTru.UseVisualStyleBackColor = true;
@@ -272,7 +280,7 @@
             // 
             // exportExcel
             // 
-            this.exportExcel.Location = new System.Drawing.Point(424, 541);
+            this.exportExcel.Location = new System.Drawing.Point(424, 537);
             this.exportExcel.Name = "exportExcel";
             this.exportExcel.Size = new System.Drawing.Size(128, 46);
             this.exportExcel.TabIndex = 21;
@@ -295,11 +303,76 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(13, 589);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(68, 13);
+            this.labelControl1.TabIndex = 24;
+            this.labelControl1.Text = "Chọn Mẫu BC:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(13, 634);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(32, 13);
+            this.labelControl2.TabIndex = 25;
+            this.labelControl2.Text = "Số BA:";
+            // 
+            // txtIndex
+            // 
+            this.txtIndex.Location = new System.Drawing.Point(96, 586);
+            this.txtIndex.Name = "txtIndex";
+            this.txtIndex.Size = new System.Drawing.Size(118, 20);
+            this.txtIndex.TabIndex = 26;
+            // 
+            // btnMau21WithBA
+            // 
+            this.btnMau21WithBA.Location = new System.Drawing.Point(572, 537);
+            this.btnMau21WithBA.Name = "btnMau21WithBA";
+            this.btnMau21WithBA.Size = new System.Drawing.Size(107, 46);
+            this.btnMau21WithBA.TabIndex = 27;
+            this.btnMau21WithBA.Text = "Mẫu 21 BA";
+            this.btnMau21WithBA.Click += new System.EventHandler(this.btnMau21WithBA_Click);
+            // 
+            // txtBA
+            // 
+            this.txtBA.Location = new System.Drawing.Point(91, 612);
+            this.txtBA.Multiline = true;
+            this.txtBA.Name = "txtBA";
+            this.txtBA.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtBA.Size = new System.Drawing.Size(660, 49);
+            this.txtBA.TabIndex = 28;
+            // 
+            // btnMau20WithBA
+            // 
+            this.btnMau20WithBA.Location = new System.Drawing.Point(686, 537);
+            this.btnMau20WithBA.Name = "btnMau20WithBA";
+            this.btnMau20WithBA.Size = new System.Drawing.Size(124, 46);
+            this.btnMau20WithBA.TabIndex = 29;
+            this.btnMau20WithBA.Text = "Mẫu 20 BA";
+            this.btnMau20WithBA.Click += new System.EventHandler(this.btnMau20WithBA_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(817, 535);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(97, 48);
+            this.simpleButton1.TabIndex = 30;
+            this.simpleButton1.Text = "Mẫu 19 BA";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 740);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnMau20WithBA);
+            this.Controls.Add(this.txtBA);
+            this.Controls.Add(this.btnMau21WithBA);
+            this.Controls.Add(this.txtIndex);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.exportExcel);
             this.Controls.Add(this.cv3360Bqp_Khac_NTru);
@@ -328,6 +401,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dte_denngay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,6 +432,13 @@
         private System.Windows.Forms.Button exportExcel;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txtIndex;
+        private DevExpress.XtraEditors.SimpleButton btnMau21WithBA;
+        private System.Windows.Forms.TextBox txtBA;
+        private DevExpress.XtraEditors.SimpleButton btnMau20WithBA;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
 

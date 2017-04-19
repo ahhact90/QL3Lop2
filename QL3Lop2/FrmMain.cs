@@ -32,6 +32,7 @@ namespace QL3Lop2
         DAL.Mau21BQPKhacDAL _M21Khac = new DAL.Mau21BQPKhacDAL();
         DAL.CV3360BQP_QN _cv3360_qn = new DAL.CV3360BQP_QN();
         DAL.CV3360BQP_Khac _cv3360_khac = new DAL.CV3360BQP_Khac();
+        DAL.Mau21WithBA _Mau21WithBA = new DAL.Mau21WithBA();
 
         #endregion
 
@@ -423,6 +424,71 @@ namespace QL3Lop2
             dt = _cv3360_khac.Select_QN_NTru(FromDate, ToDate1);           
             gridControl1.DataSource = dt;
            
+        }
+
+        private void btnMau21WithBA_Click(object sender, EventArgs e)
+        {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            string n = txtIndex.Text;
+            string BA = txtBA.Text;
+            txtBA.SelectAll();
+            txtBA.Focus();
+            ds = _Mau21WithBA.SelectWithMedical(n,BA);
+
+            try
+            {
+                if (ds == null)
+                {
+                    MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Close();
+                }
+
+            }
+            catch (Exception)
+            {
+
+               
+            }
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            Report.rp_Mau21WithBA f21 = new Report.rp_Mau21WithBA(dateNgayBD1, dateNgaKT1);
+            f21.DataSource = ds;
+            f21.DataMember = ds.Tables[0].TableName;
+            f21.ShowPreview();
+
+        }
+
+        private void btnMau20WithBA_Click(object sender, EventArgs e)
+        {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            string n = txtIndex.Text;
+            string BA = txtBA.Text;
+            txtBA.SelectAll();
+            txtBA.Focus();
+            ds = _Mau21WithBA.SelectWithMedical(n, BA);
+
+            try
+            {
+                if (ds == null)
+                {
+                    MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Close();
+                }
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            Report.rp_Mau20WithBA f20 = new Report.rp_Mau20WithBA(dateNgayBD1, dateNgaKT1);
+            f20.DataSource = ds;
+            f20.DataMember = ds.Tables[0].TableName;
+            f20.ShowPreview();
         }
 
     }
