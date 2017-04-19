@@ -360,6 +360,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(97, 48);
             this.simpleButton1.TabIndex = 30;
             this.simpleButton1.Text = "Mẫu 19 BA";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // FrmMain
             // 

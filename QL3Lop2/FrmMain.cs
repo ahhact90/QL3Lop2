@@ -491,6 +491,38 @@ namespace QL3Lop2
             f20.ShowPreview();
         }
 
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
+            DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
+            string n = txtIndex.Text;
+            string BA = txtBA.Text;
+            txtBA.SelectAll();
+            txtBA.Focus();
+            ds = _Mau21WithBA.SelectWithMedical(n, BA);
+
+            try
+            {
+                if (ds == null)
+                {
+                    MessageBox.Show("Dữ liệu rỗng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Close();
+                }
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+            string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
+            Report.rp_Mau20WithBA f19 = new Report.rp_Mau20WithBA(dateNgayBD1, dateNgaKT1);
+            f19.DataSource = ds;
+            f19.DataMember = ds.Tables[0].TableName;
+            f19.ShowPreview();
+        }
+
     }
 }
 
