@@ -343,7 +343,7 @@ namespace QL3Lop2
             //// Ham xuat Excel Bang Dev Nhanh
             using (SaveFileDialog saveDialog = new SaveFileDialog())
             {
-                saveDialog.Filter = "Excel (2003)(.xls)|*.xls|Excel (2010-2013-2016) (.xlsx)|*.xlsx |RichText File (.rtf)|*.rtf |Pdf File (.pdf)|*.pdf |Html File (.html)|*.html";
+                saveDialog.Filter = "Excel (2003)(.xls)|*.xls|Excel (2010-2013-2016) (.xlsx)|*.xlsx |RichText File (.rtf)|*.rtf |Pdf File (.pdf)|*.pdf |Html File (.html)|*.html|All File (.*)|*.*";
                 if (saveDialog.ShowDialog() != DialogResult.Cancel)
                 {
                     string exportFilePath = saveDialog.FileName;
