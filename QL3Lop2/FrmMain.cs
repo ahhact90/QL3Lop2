@@ -517,7 +517,7 @@ namespace QL3Lop2
             }
             string dateNgayBD1 = dte_tungay.Time.ToString("dd-MM-yyyy HH:mm:ss");
             string dateNgaKT1 = dte_denngay.Time.ToString("dd-MM-yyyy HH:mm:ss");
-            Report.rp_Mau20WithBA f19 = new Report.rp_Mau20WithBA(dateNgayBD1, dateNgaKT1);
+            Report.rp_Mau19WithBA f19 = new Report.rp_Mau19WithBA(dateNgayBD1, dateNgaKT1);
             f19.DataSource = ds;
             f19.DataMember = ds.Tables[0].TableName;
             f19.ShowPreview();
