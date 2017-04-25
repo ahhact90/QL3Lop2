@@ -280,9 +280,9 @@
             // 
             // exportExcel
             // 
-            this.exportExcel.Location = new System.Drawing.Point(424, 537);
+            this.exportExcel.Location = new System.Drawing.Point(421, 537);
             this.exportExcel.Name = "exportExcel";
-            this.exportExcel.Size = new System.Drawing.Size(128, 46);
+            this.exportExcel.Size = new System.Drawing.Size(137, 46);
             this.exportExcel.TabIndex = 21;
             this.exportExcel.Text = "Xuất File Excel";
             this.exportExcel.UseVisualStyleBackColor = true;
