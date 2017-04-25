@@ -68,7 +68,7 @@ namespace DAL
         }
 
         #endregion
-        #region Mau 19 BQP_Khac
+        #region Mau 20 BQP_Khac
 
         public DataSet Select_Time(DateTime to, DateTime from)
         {
