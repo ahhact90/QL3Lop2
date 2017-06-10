@@ -88,6 +88,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDiaChi";
             this.Load += new System.EventHandler(this.FrmDiaChi_Load);
+            this.SizeChanged += new System.EventHandler(this.FrmDiaChi_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDiaChi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewDiaChi)).EndInit();
             this.ResumeLayout(false);
