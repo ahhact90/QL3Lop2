@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -151,9 +152,12 @@ namespace QL3Lop2
         private void txtDanToc_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {
+            {  
                 FrmDanToc frm = new FrmDanToc();
-                frm.ShowDialog();
+                var locationInForm = txtDanToc.Location;
+                var locationOnScreen = this.PointToScreen(locationInForm);
+                frm.Location = new Point(locationOnScreen.X, locationOnScreen.Y);               
+                frm.ShowDialog();                         
                 txtDanToc.Text = frm.Passvalue;
                 txtNgheNghiep.Focus();
             }
@@ -179,24 +183,11 @@ namespace QL3Lop2
         {
             if (e.KeyCode == Keys.Enter)
             {
-                /*
-                //Application.Run(new FrmDialog());
-                FrmDialog frm = new FrmDialog();
-                //frm.MdiParent = this;
-                //  this.Hide();
-                frm.StartPosition = FormStartPosition.CenterScreen; 
-                //frm.Left = 525;
-                //frm.Top = 330;
-                frm.ShowDialog(this);
-                txtNgheNghiep.Text = FrmDialog.a;
                
-                txtSoNha.Focus();
-                 * */
                 FrmNgheNghiep frm = new FrmNgheNghiep();
-                int width = this.Size.Width;
-                int height = this.Size.Height;
-                double height1 = height * 0.3;
-                frm.Top = Convert.ToInt16(height1);
+                var locationInForm = txtNgheNghiep.Location;
+                var locationOnScreen = this.PointToScreen(locationInForm);
+                frm.Location = new Point(locationOnScreen.X, locationOnScreen.Y);                  
                 frm.ShowDialog();
                 txtNgheNghiep.Text = frm.Passvalue;
                 txtSoNha.Focus();
@@ -218,12 +209,14 @@ namespace QL3Lop2
             {
                 _Diachi = txtDiachi.Text.ToString();
                 FrmDiaChi frm = new FrmDiaChi();
-                frm.Diachichitiet = txtDiachi.Text;
-                //frm.SetDesktopLocation(Cursor.Position.X, Cursor.Position.Y);
-                int width = this.Size.Width;
-                int height = this.Size.Height;
-                double height1 = height * 0.3;
-                frm.Top = Convert.ToInt16(height1);
+                frm.Diachichitiet = txtDiachi.Text;               
+                //int width = this.Size.Width;
+                //int height = this.Size.Height;
+                //double height1 = height * 0.2;
+                //frm.Top = Convert.ToInt16(height1);
+                var locationInForm = txtDiachi.Location;
+                var locationOnScreen = this.PointToScreen(locationInForm);
+                frm.Location = new Point(locationOnScreen.X, locationOnScreen.Y);    
                 frm.ShowDialog();
                 txtDiachi.Text = frm.Passvalue;
                 txtKieuKham.Focus();
@@ -252,21 +245,7 @@ namespace QL3Lop2
 
         private void txtNgheNghiep_Click(object sender, EventArgs e)
         {
-            //txtNgheNghiep.MaskBox.AutoCompleteCustomSource.Clear();
-            //dt = Reception.SearchTextbox();
-         
-            //foreach (DataRow r in dt.Rows)
-            //{
-            //    //getting all rows in the specific field|Column
-            //    var rw = r.Field<string>("name");       
-
-            //    //Set the properties of a textbox to make it auto suggest and append.
-            //    txtNgheNghiep.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            //    txtNgheNghiep.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            //    //adding all rows into the textbox
-            //    txtNgheNghiep.MaskBox.AutoCompleteCustomSource.Add(rw);
-
-            //} 
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

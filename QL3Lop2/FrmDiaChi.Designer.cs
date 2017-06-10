@@ -85,7 +85,7 @@
             this.Controls.Add(this.gridControlDiaChi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDiaChi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FrmDiaChi";
             this.Load += new System.EventHandler(this.FrmDiaChi_Load);
             this.SizeChanged += new System.EventHandler(this.FrmDiaChi_SizeChanged);

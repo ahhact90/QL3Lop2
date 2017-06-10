@@ -78,8 +78,8 @@ namespace QL3Lop2
         private void FrmDiaChi_SizeChanged(object sender, EventArgs e)
         {
 
-            gridControlDiaChi.Left = ClientSize.Width ;
-            gridControlDiaChi.Top = ClientSize.Height ;
+           // gridControlDiaChi.Left = ClientSize.Width ;
+           // gridControlDiaChi.Top = ClientSize.Height ;
         
         }
 

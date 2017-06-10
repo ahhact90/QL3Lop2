@@ -100,7 +100,7 @@
             this.Controls.Add(this.gridControlDanToc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDanToc";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FrmDanToc";
             this.Load += new System.EventHandler(this.FrmDanToc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDanToc)).EndInit();
