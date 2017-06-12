@@ -41,7 +41,7 @@
             this.gridControlDiaChi.Location = new System.Drawing.Point(1, 1);
             this.gridControlDiaChi.MainView = this.gridViewDiaChi;
             this.gridControlDiaChi.Name = "gridControlDiaChi";
-            this.gridControlDiaChi.Size = new System.Drawing.Size(394, 166);
+            this.gridControlDiaChi.Size = new System.Drawing.Size(381, 166);
             this.gridControlDiaChi.TabIndex = 0;
             this.gridControlDiaChi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDiaChi});
@@ -56,6 +56,7 @@
             this.gridViewDiaChi.Name = "gridViewDiaChi";
             this.gridViewDiaChi.OptionsView.ShowGroupPanel = false;
             this.gridViewDiaChi.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewDiaChi_RowClick);
+            this.gridViewDiaChi.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridViewDiaChi_RowStyle);
             this.gridViewDiaChi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridViewDiaChi_KeyDown);
             // 
             // Id

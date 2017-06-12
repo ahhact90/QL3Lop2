@@ -38,13 +38,11 @@
             // 
             // gridControlNgheNghiep
             // 
-            this.gridControlNgheNghiep.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControlNgheNghiep.Location = new System.Drawing.Point(-5, -2);
+            this.gridControlNgheNghiep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlNgheNghiep.Location = new System.Drawing.Point(0, 0);
             this.gridControlNgheNghiep.MainView = this.gridView1;
             this.gridControlNgheNghiep.Name = "gridControlNgheNghiep";
-            this.gridControlNgheNghiep.Size = new System.Drawing.Size(315, 262);
+            this.gridControlNgheNghiep.Size = new System.Drawing.Size(394, 272);
             this.gridControlNgheNghiep.TabIndex = 0;
             this.gridControlNgheNghiep.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -61,6 +59,7 @@
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
+            this.gridView1.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView1_RowStyle);
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
             // Id
@@ -86,7 +85,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(385, 272);
+            this.ClientSize = new System.Drawing.Size(394, 272);
             this.Controls.Add(this.gridControlNgheNghiep);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(520, 129);

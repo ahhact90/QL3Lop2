@@ -69,6 +69,7 @@
             this.grdViewDanToc.OptionsView.EnableAppearanceOddRow = true;
             this.grdViewDanToc.OptionsView.ShowGroupPanel = false;
             this.grdViewDanToc.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.grdViewDanToc_RowClick);
+            this.grdViewDanToc.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.grdViewDanToc_RowStyle);
             this.grdViewDanToc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdViewDanToc_KeyDown);
             // 
             // Id

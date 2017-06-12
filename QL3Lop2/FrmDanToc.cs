@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QL3Lop2
 {
@@ -64,6 +65,25 @@ namespace QL3Lop2
                 a = cellValue;
                 Passvalue = cellValue;
                 this.Hide();
+            }
+        }
+
+        private void grdViewDanToc_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (view == null) return;
+            if (e.RowHandle % 2 == 0)
+            {
+                e.Appearance.BackColor = Color.SeaShell;
+                e.Appearance.ForeColor = Color.Green;
+                e.HighPriority = true;
+
+            }
+            else
+            {
+                e.Appearance.BackColor = Color.WhiteSmoke;
+                e.Appearance.ForeColor = Color.IndianRed;
+                e.HighPriority = true;
             }
         }
     }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DevExpress.XtraGrid.Views.Grid;
 namespace QL3Lop2
 {
     public partial class FrmDiaChi : Form
@@ -81,6 +81,25 @@ namespace QL3Lop2
            // gridControlDiaChi.Left = ClientSize.Width ;
            // gridControlDiaChi.Top = ClientSize.Height ;
         
+        }
+
+        private void gridViewDiaChi_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (view == null) return;
+            if (e.RowHandle % 2 == 0)
+            {
+                e.Appearance.BackColor = Color.SeaShell;
+                e.Appearance.ForeColor = Color.Green;
+                e.HighPriority = true;
+
+            }
+            else
+            {
+                e.Appearance.BackColor = Color.WhiteSmoke;
+                e.Appearance.ForeColor = Color.IndianRed;
+                e.HighPriority = true;
+            }
         }
 
     }
