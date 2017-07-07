@@ -55,9 +55,9 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtIndex = new DevExpress.XtraEditors.TextEdit();
             this.btnMau21WithBA = new DevExpress.XtraEditors.SimpleButton();
-            this.txtBA = new System.Windows.Forms.TextBox();
             this.btnMau20WithBA = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.richtxtbox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dte_tungay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_denngay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -293,7 +293,7 @@
             this.gridControl1.Location = new System.Drawing.Point(7, 89);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(978, 268);
+            this.gridControl1.Size = new System.Drawing.Size(1010, 268);
             this.gridControl1.TabIndex = 22;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -335,15 +335,6 @@
             this.btnMau21WithBA.Text = "Mẫu 21 BA";
             this.btnMau21WithBA.Click += new System.EventHandler(this.btnMau21WithBA_Click);
             // 
-            // txtBA
-            // 
-            this.txtBA.Location = new System.Drawing.Point(91, 612);
-            this.txtBA.Multiline = true;
-            this.txtBA.Name = "txtBA";
-            this.txtBA.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtBA.Size = new System.Drawing.Size(660, 49);
-            this.txtBA.TabIndex = 28;
-            // 
             // btnMau20WithBA
             // 
             this.btnMau20WithBA.Location = new System.Drawing.Point(686, 537);
@@ -362,14 +353,22 @@
             this.simpleButton1.Text = "Mẫu 19 BA";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
+            // richtxtbox
+            // 
+            this.richtxtbox.Location = new System.Drawing.Point(96, 631);
+            this.richtxtbox.Name = "richtxtbox";
+            this.richtxtbox.Size = new System.Drawing.Size(949, 130);
+            this.richtxtbox.TabIndex = 31;
+            this.richtxtbox.Text = "";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 740);
+            this.ClientSize = new System.Drawing.Size(1249, 862);
+            this.Controls.Add(this.richtxtbox);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnMau20WithBA);
-            this.Controls.Add(this.txtBA);
             this.Controls.Add(this.btnMau21WithBA);
             this.Controls.Add(this.txtIndex);
             this.Controls.Add(this.labelControl2);
@@ -398,6 +397,7 @@
             this.Controls.Add(this.btConnect);
             this.Name = "FrmMain";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dte_tungay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_denngay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -437,9 +437,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtIndex;
         private DevExpress.XtraEditors.SimpleButton btnMau21WithBA;
-        private System.Windows.Forms.TextBox txtBA;
         private DevExpress.XtraEditors.SimpleButton btnMau20WithBA;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.RichTextBox richtxtbox;
     }
 }
 

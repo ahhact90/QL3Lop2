@@ -352,12 +352,12 @@ namespace QL3Lop2
                     
                     switch (fileExtenstion)
                     {
-                        case ".xls":
-                            gridView1.ExportToXls(exportFilePath);
-                            break;
                         case ".xlsx":
                             gridView1.ExportToXlsx(exportFilePath);
                             break;
+                        case ".xls":
+                            gridView1.ExportToXls(exportFilePath);
+                            break;                        
                         case ".rtf":
                             gridView1.ExportToRtf(exportFilePath);
                             break;
@@ -431,9 +431,12 @@ namespace QL3Lop2
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
             DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
             string n = txtIndex.Text;
-            string BA = txtBA.Text;
-            txtBA.SelectAll();
-            txtBA.Focus();
+            //string BA = txtBA.Text;
+            //txtBA.SelectAll();
+            //txtBA.Focus();
+            string BA = richtxtbox.Text;
+            richtxtbox.SelectAll();
+            richtxtbox.Focus();
             ds = _Mau21WithBA.SelectWithMedical(n,BA);
 
             try
@@ -464,9 +467,9 @@ namespace QL3Lop2
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
             DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
             string n = txtIndex.Text;
-            string BA = txtBA.Text;
-            txtBA.SelectAll();
-            txtBA.Focus();
+            string BA = richtxtbox.Text;
+            richtxtbox.SelectAll();
+            richtxtbox.Focus();
             ds = _Mau21WithBA.SelectWithMedical(n, BA);
 
             try
@@ -496,9 +499,9 @@ namespace QL3Lop2
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
             DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
             string n = txtIndex.Text;
-            string BA = txtBA.Text;
-            txtBA.SelectAll();
-            txtBA.Focus();
+            string BA = richtxtbox.Text;
+            richtxtbox.SelectAll();
+            richtxtbox.Focus();
             ds = _Mau21WithBA.SelectWithMedical(n, BA);
 
             try

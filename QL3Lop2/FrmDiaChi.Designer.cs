@@ -38,10 +38,11 @@
             // 
             // gridControlDiaChi
             // 
-            this.gridControlDiaChi.Location = new System.Drawing.Point(1, 1);
+            this.gridControlDiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlDiaChi.Location = new System.Drawing.Point(0, 0);
             this.gridControlDiaChi.MainView = this.gridViewDiaChi;
             this.gridControlDiaChi.Name = "gridControlDiaChi";
-            this.gridControlDiaChi.Size = new System.Drawing.Size(381, 166);
+            this.gridControlDiaChi.Size = new System.Drawing.Size(544, 257);
             this.gridControlDiaChi.TabIndex = 0;
             this.gridControlDiaChi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDiaChi});
@@ -81,7 +82,7 @@
             // FrmDiaChi
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(394, 167);
+            this.ClientSize = new System.Drawing.Size(544, 257);
             this.ControlBox = false;
             this.Controls.Add(this.gridControlDiaChi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

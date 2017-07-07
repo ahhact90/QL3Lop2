@@ -38,10 +38,11 @@
             // 
             // gridControlDanToc
             // 
-            this.gridControlDanToc.Location = new System.Drawing.Point(1, 1);
+            this.gridControlDanToc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlDanToc.Location = new System.Drawing.Point(0, 0);
             this.gridControlDanToc.MainView = this.grdViewDanToc;
             this.gridControlDanToc.Name = "gridControlDanToc";
-            this.gridControlDanToc.Size = new System.Drawing.Size(248, 220);
+            this.gridControlDanToc.Size = new System.Drawing.Size(326, 244);
             this.gridControlDanToc.TabIndex = 0;
             this.gridControlDanToc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdViewDanToc});
@@ -96,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(251, 218);
+            this.ClientSize = new System.Drawing.Size(326, 244);
             this.ControlBox = false;
             this.Controls.Add(this.gridControlDanToc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
