@@ -58,6 +58,8 @@
             this.btnMau20WithBA = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.richtxtbox = new System.Windows.Forms.RichTextBox();
+            this.btn_3360_QN_NgTru = new System.Windows.Forms.Button();
+            this.btn_3360_BQP_NoiTru = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dte_tungay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_denngay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -280,7 +282,7 @@
             // 
             // exportExcel
             // 
-            this.exportExcel.Location = new System.Drawing.Point(421, 537);
+            this.exportExcel.Location = new System.Drawing.Point(259, 535);
             this.exportExcel.Name = "exportExcel";
             this.exportExcel.Size = new System.Drawing.Size(137, 46);
             this.exportExcel.TabIndex = 21;
@@ -328,7 +330,7 @@
             // 
             // btnMau21WithBA
             // 
-            this.btnMau21WithBA.Location = new System.Drawing.Point(572, 537);
+            this.btnMau21WithBA.Location = new System.Drawing.Point(421, 537);
             this.btnMau21WithBA.Name = "btnMau21WithBA";
             this.btnMau21WithBA.Size = new System.Drawing.Size(107, 46);
             this.btnMau21WithBA.TabIndex = 27;
@@ -337,16 +339,16 @@
             // 
             // btnMau20WithBA
             // 
-            this.btnMau20WithBA.Location = new System.Drawing.Point(686, 537);
+            this.btnMau20WithBA.Location = new System.Drawing.Point(539, 535);
             this.btnMau20WithBA.Name = "btnMau20WithBA";
-            this.btnMau20WithBA.Size = new System.Drawing.Size(124, 46);
+            this.btnMau20WithBA.Size = new System.Drawing.Size(104, 46);
             this.btnMau20WithBA.TabIndex = 29;
             this.btnMau20WithBA.Text = "Mẫu 20 BA";
             this.btnMau20WithBA.Click += new System.EventHandler(this.btnMau20WithBA_Click);
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(817, 535);
+            this.simpleButton1.Location = new System.Drawing.Point(669, 534);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(97, 48);
             this.simpleButton1.TabIndex = 30;
@@ -361,11 +363,33 @@
             this.richtxtbox.TabIndex = 31;
             this.richtxtbox.Text = "";
             // 
+            // btn_3360_QN_NgTru
+            // 
+            this.btn_3360_QN_NgTru.Location = new System.Drawing.Point(781, 531);
+            this.btn_3360_QN_NgTru.Name = "btn_3360_QN_NgTru";
+            this.btn_3360_QN_NgTru.Size = new System.Drawing.Size(115, 48);
+            this.btn_3360_QN_NgTru.TabIndex = 32;
+            this.btn_3360_QN_NgTru.Text = "3360 BQP QN Ngoại Trú BA";
+            this.btn_3360_QN_NgTru.UseVisualStyleBackColor = true;
+            this.btn_3360_QN_NgTru.Click += new System.EventHandler(this.btn_3360_QN_NgTru_Click);
+            // 
+            // btn_3360_BQP_NoiTru
+            // 
+            this.btn_3360_BQP_NoiTru.Location = new System.Drawing.Point(910, 531);
+            this.btn_3360_BQP_NoiTru.Name = "btn_3360_BQP_NoiTru";
+            this.btn_3360_BQP_NoiTru.Size = new System.Drawing.Size(106, 47);
+            this.btn_3360_BQP_NoiTru.TabIndex = 33;
+            this.btn_3360_BQP_NoiTru.Text = "3360 BQP QN Nội Trú BA";
+            this.btn_3360_BQP_NoiTru.UseVisualStyleBackColor = true;
+            this.btn_3360_BQP_NoiTru.Click += new System.EventHandler(this.btn_3360_BQP_NoiTru_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1249, 862);
+            this.Controls.Add(this.btn_3360_BQP_NoiTru);
+            this.Controls.Add(this.btn_3360_QN_NgTru);
             this.Controls.Add(this.richtxtbox);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnMau20WithBA);
@@ -440,6 +464,8 @@
         private DevExpress.XtraEditors.SimpleButton btnMau20WithBA;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.RichTextBox richtxtbox;
+        private System.Windows.Forms.Button btn_3360_QN_NgTru;
+        private System.Windows.Forms.Button btn_3360_BQP_NoiTru;
     }
 }
 

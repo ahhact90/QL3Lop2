@@ -526,6 +526,26 @@ namespace QL3Lop2
             f19.ShowPreview();
         }
 
+        private void btn_3360_QN_NgTru_Click(object sender, EventArgs e)
+        {
+            DataTable dt1 = new DataTable();
+            string BA = richtxtbox.Text;
+            richtxtbox.SelectAll();
+            richtxtbox.Focus();
+            dt1 = _cv3360_qn.Select_QN_With_BA_NgoaiTru(BA);
+            gridControl1.DataSource = dt1;
+        }
+
+        private void btn_3360_BQP_NoiTru_Click(object sender, EventArgs e)
+        {
+            DataTable dt1 = new DataTable();
+            string BA = richtxtbox.Text;
+            richtxtbox.SelectAll();
+            richtxtbox.Focus();
+            dt1 = _cv3360_qn.Select_QN_With_BA_NoiTru(BA);
+            gridControl1.DataSource = dt1;
+        }
+
     }
 }
 
