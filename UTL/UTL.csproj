@@ -70,6 +70,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendBHYT.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="Size.cs" />
     <Compile Include="StringExtension.cs" />
