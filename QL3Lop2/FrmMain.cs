@@ -312,8 +312,7 @@ namespace QL3Lop2
         {
             DateTime FromDate = Convert.ToDateTime(dte_tungay.Time);
             DateTime ToDate1 = Convert.ToDateTime(dte_denngay.Time);
-            dt = _cv3360_qn.Select_QN_NgTru(FromDate, ToDate1);
-           
+            dt = _cv3360_qn.Select_QN_NgTru(FromDate, ToDate1);           
             gridControl1.DataSource = dt;
         }        
         /// <summary>
